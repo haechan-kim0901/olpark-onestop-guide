@@ -1,0 +1,9 @@
+# 파이썬, 주피터 임시 파일
+__pycache__/
+.ipynb_checkpoints/
+# 운영체제 파일
+.DS_Store
+Thumbs.db
+# 용량 큰 원본 CSV 는 올리지 않음 (data/raw/README.md 참고)
+data/raw/*.csv
+data/raw/*.xlsx

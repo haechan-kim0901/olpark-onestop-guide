@@ -1,0 +1,573 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>올팍 공연일 가이드</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap">
+<style>
+/* Layout: one phone-width column, sticky top bar, fixed bottom tab bar; desktop centers the column on a quiet ground */
+:root{
+  --ground:#e9eef0; --bg:#f7f9f9; --card:#ffffff; --fg:#14222b; --muted:#5d6d76; --line:#d9e1e4;
+  --brand:#0f4c5c; --brand-ink:#ffffff; --accent:#e8a33a; --accent-soft:#fbefd9;
+  --ok:#2f8a57; --ok-soft:#e1f2e8; --warn:#c98a0b; --warn-soft:#fdf1d6; --bad:#c43d32; --bad-soft:#fbe3e0;
+  --bar-a:#0f4c5c; --bar-b:#b9c7cc; --park:#dfeadf; --water:#cfe3ec; --road:#ffffff;
+  --display:"IBM Plex Sans KR","Noto Sans KR",system-ui,sans-serif;
+  --body:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo",sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ground:#0b1215; --bg:#111b20; --card:#18252b; --fg:#e6eef1; --muted:#97a8b0; --line:#2a3a41;
+  --brand:#5fb3c6; --brand-ink:#0b1a1f; --accent:#f0b552; --accent-soft:#3a2f1b;
+  --ok:#5cc28a; --ok-soft:#173226; --warn:#e7b245; --warn-soft:#382c12; --bad:#f07a6e; --bad-soft:#3d1f1c;
+  --bar-a:#5fb3c6; --bar-b:#3d5059; --park:#1c2e24; --water:#1b3440; --road:#2a3a41; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ground:#0b1215; --bg:#111b20; --card:#18252b; --fg:#e6eef1; --muted:#97a8b0; --line:#2a3a41;
+  --brand:#5fb3c6; --brand-ink:#0b1a1f; --accent:#f0b552; --accent-soft:#3a2f1b;
+  --ok:#5cc28a; --ok-soft:#173226; --warn:#e7b245; --warn-soft:#382c12; --bad:#f07a6e; --bad-soft:#3d1f1c;
+  --bar-a:#5fb3c6; --bar-b:#3d5059; --park:#1c2e24; --water:#1b3440; --road:#2a3a41; color-scheme:dark}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{background:var(--ground);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
+.app{max-width:440px;margin:0 auto;min-height:100%;background:var(--bg);position:relative;padding-bottom:calc(72px + env(safe-area-inset-bottom,0px))}
+@media (min-width:500px){.app{box-shadow:0 0 0 1px var(--line)}}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--brand)}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--brand);color:var(--brand-ink);
+  padding-block:12px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  display:flex;align-items:center;gap:10px}
+.top h1{font-family:var(--display);font-size:17px;margin:0;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.back{background:none;border:0;color:inherit;font-size:20px;padding:0 4px;cursor:pointer;line-height:1}
+.lang{display:flex;border:1px solid color-mix(in srgb,var(--brand-ink) 45%,transparent);border-radius:999px;overflow:hidden}
+.lang button{background:none;border:0;color:inherit;font:600 12px var(--body);padding:5px 10px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--brand-ink);color:var(--brand)}
+.replay{background:var(--accent-soft);color:var(--fg);font-size:12px;padding-block:6px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;justify-content:space-between;gap:8px}
+.replay b{font-variant-numeric:tabular-nums}
+main{padding-block:16px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:16px}
+h2{font-family:var(--display);font-size:20px;margin:0;text-wrap:balance}
+h3{font-family:var(--display);font-size:15px;margin:0 0 8px}
+.sub{color:var(--muted);font-size:13px;margin:2px 0 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px}
+.src{font-size:11.5px;color:var(--muted);margin-top:10px;border-top:1px dashed var(--line);padding-top:8px}
+.tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.04em;padding:2px 8px;border-radius:999px}
+.tag.ex{background:var(--accent-soft);color:var(--fg)}
+/* show cards */
+.show{display:flex;gap:12px;align-items:stretch;text-align:left;width:100%;cursor:pointer;font:inherit;color:inherit}
+.show:hover,.show:focus-visible{border-color:var(--brand)}
+.poster{width:72px;flex:none;border-radius:10px;display:flex;align-items:flex-end;padding:8px;color:#fff;font:700 11px var(--display);line-height:1.2}
+.show .meta{min-width:0;display:flex;flex-direction:column;gap:2px}
+.show .t{font-weight:700;font-size:15px}
+.show .v,.show .d{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+/* notice */
+.notice{background:var(--bad-soft);border:1px solid color-mix(in srgb,var(--bad) 40%,transparent);border-radius:14px;padding:12px 14px;display:flex;gap:10px}
+.notice .ic{width:22px;height:22px;flex:none;border-radius:50%;background:var(--bad);color:var(--card);display:grid;place-items:center;font-weight:700;font-size:13px}
+.notice p{margin:0;font-size:14px}
+.notice small{color:var(--muted);display:block;margin-top:2px}
+/* timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;position:relative}
+.tl div{text-align:center;font-size:12px;color:var(--muted)}
+.tl b{display:block;font-size:15px;color:var(--fg);font-variant-numeric:tabular-nums}
+.tl .dot{width:12px;height:12px;border-radius:50%;margin:0 auto 6px;background:var(--line);border:2px solid var(--card);box-shadow:0 0 0 2px var(--line)}
+.tl .now .dot{background:var(--accent);box-shadow:0 0 0 2px var(--accent)}
+.tl::before{content:"";position:absolute;left:12.5%;right:12.5%;top:6px;height:2px;background:var(--line)}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tile{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tile:hover,.tile:focus-visible{border-color:var(--brand)}
+.tile span{font-size:11.5px;color:var(--muted)}
+.tile b{font-size:15px}
+.tile em{font-style:normal;font-size:11.5px;color:var(--brand)}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:700;padding:3px 9px;border-radius:999px;white-space:nowrap}
+.pill::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.g-ok{background:var(--ok-soft);color:var(--ok)} .g-warn{background:var(--warn-soft);color:var(--warn)} .g-bad{background:var(--bad-soft);color:var(--bad)}
+/* chart */
+.chartwrap{overflow-x:auto}
+svg text{font-family:var(--body)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin-bottom:6px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.lot{display:grid;grid-template-columns:1fr auto;gap:6px 10px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.lot:first-of-type{border-top:0}
+.lot .n{font-weight:700}
+.lot .bar{grid-column:1/-1;height:8px;border-radius:4px;background:var(--line);overflow:hidden}
+.lot .bar i{display:block;height:100%}
+.lot .c{grid-column:1/-1;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tip{background:var(--accent-soft);border-radius:12px;padding:12px 14px;font-size:14px}
+/* safety */
+.big{display:flex;align-items:center;gap:14px}
+.big .temp{font:700 40px/1 var(--display);font-variant-numeric:tabular-nums}
+.big .temp small{font-size:16px;font-weight:500;color:var(--muted)}
+.hours{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}
+.hours div{text-align:center;border-radius:8px;padding:6px 0;font-size:11px;font-variant-numeric:tabular-nums}
+.hours b{display:block;font-size:13px}
+.hours .cur{outline:2px solid var(--fg);outline-offset:-2px}
+.rules{width:100%;border-collapse:collapse;font-size:13px}
+.rules td{padding:7px 4px;border-top:1px solid var(--line);vertical-align:top}
+.rules td:first-child{width:72px}
+ul.prep{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+input[type=range]{width:100%;accent-color:var(--brand)}
+/* map */
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:999px;padding:5px 12px;font:500 13px var(--body);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:var(--brand-ink)}
+.mapbox{border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--card)}
+.mk{cursor:pointer}
+.mk:focus{outline:none}
+.mk:focus-visible circle,.mk:focus-visible rect{stroke:var(--accent);stroke-width:3}
+.info{display:flex;gap:12px;align-items:flex-start}
+.info .sw{width:14px;height:14px;border-radius:4px;flex:none;margin-top:4px}
+/* tab bar */
+nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:6;display:flex;justify-content:center;pointer-events:none}
+nav.tabs .in{pointer-events:auto;width:100%;max-width:440px;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);
+  padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
+nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0 9px;font-size:11px;color:var(--muted);text-decoration:none}
+nav.tabs a svg{width:22px;height:22px}
+nav.tabs a[aria-current="page"]{color:var(--brand);font-weight:700}
+/* dashboard */
+.hero{border-radius:16px;padding:16px;color:#fff;display:flex;flex-direction:column;gap:12px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 30%,rgba(0,0,0,.35));pointer-events:none}
+.hero>*{position:relative;z-index:1}
+.hero .row{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+.hero .ht{font:700 21px/1.3 var(--display);text-wrap:balance;margin:4px 0 2px}
+.hero .hv{font-size:13px;opacity:.9;font-variant-numeric:tabular-nums}
+.hero .tag{background:rgba(255,255,255,.22);color:#fff}
+.cd{background:rgba(0,0,0,.28);border-radius:12px;padding:10px 12px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.cd b{font:700 30px/1 var(--display);font-variant-numeric:tabular-nums}
+.cd span{font-size:13px;opacity:.92}
+.prog{height:6px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden}
+.prog i{display:block;height:100%;background:#fff;border-radius:3px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);font-size:11.5px;opacity:.95;font-variant-numeric:tabular-nums}
+.steps div:nth-child(2),.steps div:nth-child(3){text-align:center}.steps div:last-child{text-align:right}
+.steps b{display:block;font-size:13px}
+.steps .on{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.todo{border:2px solid var(--brand);border-radius:14px;padding:14px;background:var(--card)}
+.todo .lab{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--brand);text-transform:uppercase}
+.todo p{margin:4px 0 0;font-size:16px;font-weight:700;line-height:1.45;text-wrap:pretty}
+.todo small{display:block;margin-top:6px;color:var(--muted);font-size:13px}
+.chg{display:grid;grid-template-columns:1fr auto 1fr;gap:8px;align-items:center;margin-top:8px}
+.chg div{border-radius:10px;padding:8px 10px;font-size:13px;min-width:0}
+.chg .was{background:var(--card);color:var(--muted);text-decoration:line-through}
+.chg .now{background:var(--card);font-weight:700;border:1.5px solid var(--bad)}
+.chg .arrow{color:var(--bad);font-weight:700}
+.linkbtn{background:none;border:0;padding:0;margin-top:8px;color:var(--brand);font:700 13px var(--body);cursor:pointer}
+.stat{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px;text-align:left;font:inherit;color:inherit;cursor:pointer;display:flex;flex-direction:column;gap:8px;min-width:0}
+.sc:hover,.sc:focus-visible{border-color:var(--brand)}
+.sc.wide{grid-column:1/-1}
+.sc .hd{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);font-weight:500}
+.sc .hd em{font-style:normal;color:var(--brand);font-weight:700}
+.sc .val{font:700 22px/1.1 var(--display);font-variant-numeric:tabular-nums}
+.sc .val small{font-size:13px;font-weight:500;color:var(--muted)}
+.strip{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;align-items:end;height:36px}
+.strip i{display:block;border-radius:3px 3px 1px 1px}
+.strip i.cur{outline:2px solid var(--fg);outline-offset:1px}
+.striplab{display:flex;justify-content:space-between;font-size:10.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.mini{display:flex;flex-direction:column;gap:6px}
+.mini div{display:grid;grid-template-columns:44px 1fr 32px;gap:6px;align-items:center;font-size:11.5px;font-variant-numeric:tabular-nums}
+.mini span.b{height:6px;border-radius:3px;background:var(--line);overflow:hidden}
+.mini span.b i{display:block;height:100%}
+.route{display:flex;flex-direction:column;gap:6px;font-size:13px}
+.route div{display:flex;gap:8px;align-items:center}
+.route .n{width:20px;height:20px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--card)}
+button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (prefers-reduced-motion:no-preference){.lot .bar i{transition:width .4s ease}}
+</style>
+
+<div class="app">
+  <header class="top">
+    <button class="back" id="back" aria-label="back" hidden>‹</button>
+    <h1 id="title"></h1>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="lang-ko" data-l="ko">한</button><button id="lang-en" data-l="en">EN</button>
+    </div>
+  </header>
+  <div class="replay" id="replay"></div>
+  <main id="view"></main>
+</div>
+<nav class="tabs"><div class="in" id="tabs"></div></nav>
+
+<script>
+/* ===== 샘플 데이터 (실제 데모에서는 API, JSON 파일로 교체) ===== */
+const DEMO = { date:"2025-08-09", now:16 }; // 2025년 공연일 재생 모드, 데모 시각 16시
+
+const SHOWS = [
+  { id:"s1", venue:"dome", poster:["#0f4c5c","#e8a33a"],
+    title:{ko:"아티스트 A 월드투어 서울", en:"Artist A World Tour Seoul"},
+    date:"2025-08-09", start:"18:00", gate:"16:30", end:"20:40", arrive:"15:30" },
+  { id:"s2", venue:"hall", poster:["#6b3fa0","#f07a6e"],
+    title:{ko:"밴드 B 단독 콘서트", en:"Band B Live Concert"},
+    date:"2025-08-09", start:"19:00", gate:"18:00", end:"21:10", arrive:"17:20" },
+  { id:"s3", venue:"lawn", poster:["#2f8a57","#cfe3ec"],
+    title:{ko:"여름밤 야외 페스티벌", en:"Summer Night Outdoor Festival"},
+    date:"2025-08-09", start:"17:00", gate:"14:00", end:"22:00", arrive:"13:30" }
+];
+
+// 공지: 팀이 JSON으로 직접 입력 (가상 예시)
+const NOTICES = {
+  s1:[{ when:{ko:"공연 전날 20:10", en:"Day before, 20:10"}, topic:{ko:"팔찌 배부처 변경",en:"Wristband pickup moved"},
+        from:{ko:"남2문 광장",en:"South Gate 2 Plaza"}, to:{ko:"88잔디마당 입구",en:"88 Lawn entrance"}, place:"lawn" }],
+  s2:[{ when:{ko:"오늘 11:00", en:"Today, 11:00"}, topic:{ko:"입장 시각 변경",en:"Door time changed"},
+        from:{ko:"17:30",en:"17:30"}, to:{ko:"18:00",en:"18:00"}, place:"hall" }],
+  s3:[{ when:{ko:"오늘 09:30", en:"Today, 09:30"}, topic:{ko:"반입 물품 추가 허용",en:"More items allowed"},
+        from:{ko:"우산 반입 불가",en:"No umbrellas"}, to:{ko:"우산, 양산, 생수 1병 허용",en:"Umbrellas, parasols, 1 water bottle OK"}, place:"lawn" }]
+};
+
+// 2025 공연일 vs 비공연일 시간대별 평균 입차 (3개 주차장 합계, 샘플 값)
+let HOURS = [10,11,12,13,14,15,16,17,18,19,20,21,22];
+let ENTRY_SHOW = [42,58,74,96,138,214,318,402,356,188,84,46,28];
+let ENTRY_NORM = [36,44,52,55,58,61,57,52,46,40,31,22,14];
+
+// 실시간 주차현황 위젯 (API 응답 형식 흉내, 샘플 값)
+const LOTS = [
+  { id:"e2", name:{ko:"동2문 주차장",en:"East Gate 2 Lot"}, cap:310, used:288 },
+  { id:"s2", name:{ko:"남2문 주차장",en:"South Gate 2 Lot"}, cap:420, used:331 },
+  { id:"n2", name:{ko:"북2문 주차장",en:"North Gate 2 Lot"}, cap:260, used:142 }
+];
+
+// 기상청 단기예보 체감온도 (14~21시, 샘플 값)
+const FEELS = { 14:33.8, 15:34.6, 16:34.1, 17:33.2, 18:32.1, 19:30.4, 20:29.1, 21:28.0 };
+
+// 현장 지도 고정 좌표 (개략도 좌표계 360x300)
+const PLACES = [
+  { id:"dome", type:"venue", x:252, y:196, ly:-18, name:{ko:"KSPO DOME",en:"KSPO DOME"}, desc:{ko:"올림픽공원역 3번 출구에서 도보 약 7분",en:"About 7 min walk from Olympic Park Stn Exit 3"} },
+  { id:"hall", type:"venue", x:222, y:238, ly:-16, name:{ko:"올림픽홀",en:"Olympic Hall"}, desc:{ko:"올림픽공원역 3번 출구에서 도보 약 5분",en:"About 5 min walk from Olympic Park Stn Exit 3"} },
+  { id:"arena", type:"venue", x:292, y:220, name:{ko:"핸드볼경기장",en:"Handball Arena"}, desc:{ko:"올림픽공원역 3번 출구 바로 앞",en:"Right outside Olympic Park Stn Exit 3"} },
+  { id:"lawn", type:"lawn", x:178, y:104, name:{ko:"88잔디마당",en:"88 Lawn"}, desc:{ko:"개방 06:00~22:00, 그늘 적음. 오늘 팔찌 배부처",en:"Open 06:00 to 22:00, little shade. Today's wristband pickup"} },
+  { id:"st-m", type:"station", x:30, y:150, name:{ko:"몽촌토성역 (8호선)",en:"Mongchontoseong Stn (Line 8)"}, desc:{ko:"1번 출구, 평화의문 방향",en:"Exit 1, toward Peace Gate"} },
+  { id:"st-o", type:"station", x:334, y:182, name:{ko:"올림픽공원역 (5, 9호선)",en:"Olympic Park Stn (Line 5, 9)"}, desc:{ko:"3번 출구, 공연장과 가장 가까움",en:"Exit 3, closest to the venues"} },
+  { id:"st-h", type:"station", x:110, y:282, name:{ko:"한성백제역 (9호선)",en:"Hanseong Baekje Stn (Line 9)"}, desc:{ko:"1번 출구, 남1문 방향",en:"Exit 1, toward South Gate 1"} },
+  { id:"p-e2", type:"parking", x:330, y:118, lot:"e2", name:{ko:"동2문 주차장",en:"East Gate 2 Lot"}, desc:{ko:"공연장과 가깝지만 가장 먼저 참",en:"Closest to venues, fills first"} },
+  { id:"p-s2", type:"parking", x:190, y:278, lot:"s2", name:{ko:"남2문 주차장",en:"South Gate 2 Lot"}, desc:{ko:"규모가 가장 큼",en:"Largest lot"} },
+  { id:"p-n2", type:"parking", x:206, y:26, lot:"n2", name:{ko:"북2문 주차장",en:"North Gate 2 Lot"}, desc:{ko:"공연장까지 도보 약 15분, 여유가 많음",en:"About 15 min walk to venues, usually spaces left"} }
+];
+const TYPE_COLOR = { venue:"var(--brand)", station:"var(--accent)", parking:"var(--muted)", lawn:"var(--ok)" };
+
+/* ===== 화면 문구 (미리 번역해 고정) ===== */
+const T = {
+  ko:{ app:"올팍 공연일 가이드", replay:"2025년 공연일 재생 모드", demoTime:"데모 시각",
+    homeH:"어떤 공연을 보러 오셨나요?", homeSub:"공연을 고르면 도착부터 귀가까지 필요한 정보를 한 화면에 모아 드립니다.",
+    exData:"예시", exNote:"공연명과 공지는 가상 예시입니다.",
+    tabs:["공연","대시보드","주차","대기 안전","지도"],
+    noticeH:"변경 공지", timeline:["도착 권장","입장","공연","퇴장"],
+    toDoors:"입장 시작까지", toShow:"공연 시작까지", min:"분", hr:"시간", inShow:"공연 중", afterShow:"공연 종료",
+    nowLab:"지금 할 일", seeMap:"지도에서 위치 보기 ›",
+    todo:{before:(s)=>`${s.arrive}까지 도착하도록 출발하세요. 지하철이 가장 빠릅니다.`, arrive:(s,n)=>n?`${L(n.to)}에서 팔찌를 받고 입장 줄로 이동하세요.`:`입장 줄로 이동하세요. 입장은 ${s.gate}부터입니다.`,
+      entry:(s)=>`입장이 시작됐습니다. 공연은 ${s.start}에 시작해요.`, show:()=>`공연 중입니다. 퇴장 때 올림픽공원역이 가장 붐빕니다.`, after:()=>`공연이 끝났습니다. 몽촌토성역으로 가면 덜 붐빕니다.`},
+    heatAdd:"체감온도가 높아 그늘에서 기다리고 물을 챙기세요.", coldAdd:"추위가 심해 실내에서 기다리세요.",
+    wait:"대기 안전", park:"주차", route:"가는 길", routeSteps:["올림픽공원역 3번 출구","도보 약 7분","{v}"],
+    lotShort:{e2:"동2문",s2:"남2문",n2:"북2문"}, walk:"도보 7분",
+    tileSafety:"지금 대기 안전", tileParking:"주차장", tileStation:"가까운 역", more:"자세히",
+    lotsFull:(n)=>`3곳 중 ${n}곳 혼잡`, stationShort:"올림픽공원역 3번",
+    parkH:"주차장 혼잡 안내", parkSub:"지난해 공연일에는 몇 시에 차가 몰렸을까요?",
+    chartH:"시간대별 평균 입차 대수", lgShow:"2025 공연일 평균", lgNorm:"비공연일 평균",
+    peak:(h,v)=>`공연일 입차는 ${h}시에 가장 많습니다 (시간당 평균 ${v}대). 비공연일의 약 ${Math.round(v/ENTRY_NORM[HOURS.indexOf(h)])}배입니다.`,
+    liveH:"실시간 주차현황", updated:"업데이트", cars:"대", of:"/", st:{ok:"여유",warn:"혼잡",bad:"만차 임박"},
+    tip:"동2문과 남2문은 16시 이후 빠르게 찹니다. 지하철 5, 9호선 올림픽공원역 3번 출구를 이용하면 공연장까지 도보 5~7분입니다.",
+    srcChart:"데이터: 한국체육산업개발 '차량입출차, 공연, 날씨정보 등 연계 데이터' 2025년 기준으로 계산 (현재 화면은 샘플 값)",
+    srcLive:"데이터: 한국체육산업개발 실시간 주차현황 API (현재 화면은 샘플 응답). 장기주차 차량 때문에 실제와 차이가 날 수 있습니다.",
+    safeH:"대기 안전 등급", safeSub:"야외에서 기다리는 동안의 더위, 추위 위험을 알려 드립니다.",
+    feels:"체감온도", nowAt:(h)=>`${h}시 기준`, hourly:"오늘 시간대별 등급",
+    grade:{ok:"안전",warn:"주의",bad:"경고"},
+    gradeMsg:{ok:"야외 대기에 큰 위험이 없습니다.",warn:"30분마다 그늘에서 쉬고 물을 자주 마시세요.",bad:"야외 대기를 줄이세요. 그늘, 실내에서 기다리다 입장 시각에 맞춰 이동하세요."},
+    prepH:"준비물", prep:{ok:["편한 신발","보조배터리"],warn:["물 500ml 이상","모자, 양산","보조배터리"],bad:["물 1L 이상","모자, 양산, 휴대용 선풍기","쿨링 타월","보조배터리"]},
+    rulesH:"등급 기준 (체감온도)", rules:[["안전","31도 미만, -5도 초과"],["주의","31도 이상 33도 미만, 또는 -5도 이하"],["경고","33도 이상(폭염주의보 기준), 또는 -10도 이하"]],
+    tryH:"체감온도를 바꿔 보기", tryNote:"발표용 시연 기능입니다. 슬라이더를 움직이면 등급과 준비물이 바뀝니다.", reset:"예보값으로",
+    srcSafe:"데이터: 기상청 단기예보 조회서비스 체감온도 (현재 화면은 샘플 값). 등급 기준은 팀이 정한 규칙입니다.",
+    mapH:"현장 지도", mapSub:"공연장, 역 출구, 잔디마당, 주차장 위치입니다. 표시를 눌러 보세요.",
+    filters:{all:"전체",venue:"공연장",station:"역",parking:"주차장",lawn:"잔디마당"},
+    myVenue:"내 공연장", mapNote:"개략도이며 실제 거리, 방향과 다를 수 있습니다. 데모에서는 Leaflet 지도에 같은 좌표를 올립니다.",
+    srcMap:"데이터: 한국체육산업개발 잔디시설정보(개방시간), 위치는 팀이 직접 정리한 고정 좌표",
+    lake:"몽촌호", pick:"표시를 눌러 정보를 확인하세요." },
+  en:{ app:"Olympic Park Show Day Guide", replay:"Replaying a 2025 show day", demoTime:"Demo time",
+    homeH:"Which show are you here for?", homeSub:"Pick a show and see everything from arrival to heading home on one screen.",
+    exData:"SAMPLE", exNote:"Show names and notices are fictional examples.",
+    tabs:["Shows","Today","Parking","Wait safety","Map"],
+    noticeH:"Change notice", timeline:["Arrive by","Doors","Show","Ends"],
+    toDoors:"Doors open in", toShow:"Show starts in", min:"min", hr:"h", inShow:"Show in progress", afterShow:"Show ended",
+    nowLab:"Do this now", seeMap:"See it on the map ›",
+    todo:{before:(s)=>`Leave so you arrive by ${s.arrive}. The subway is fastest.`, arrive:(s,n)=>n?`Pick up your wristband at the ${L(n.to)}, then join the entry line.`:`Join the entry line. Doors open at ${s.gate}.`,
+      entry:(s)=>`Doors are open. The show starts at ${s.start}.`, show:()=>`Show in progress. Olympic Park Station gets busiest at exit time.`, after:()=>`The show has ended. Mongchontoseong Station is less crowded.`},
+    heatAdd:"It feels very hot: wait in the shade and bring water.", coldAdd:"It is very cold: wait indoors.",
+    wait:"Wait safety", park:"Parking", route:"Getting there", routeSteps:["Olympic Park Stn Exit 3","About 7 min walk","{v}"],
+    lotShort:{e2:"East 2",s2:"South 2",n2:"North 2"}, walk:"7 min walk",
+    tileSafety:"Wait safety now", tileParking:"Parking", tileStation:"Nearest station", more:"Details",
+    lotsFull:(n)=>`${n} of 3 busy`, stationShort:"Olympic Park Exit 3",
+    parkH:"Parking crowding", parkSub:"When did cars pile in on last year's show days?",
+    chartH:"Average cars entering per hour", lgShow:"2025 show-day average", lgNorm:"Non-show-day average",
+    peak:(h,v)=>`Show-day entries peak at ${h}:00 (avg ${v} cars per hour), about ${Math.round(v/ENTRY_NORM[HOURS.indexOf(h)])}x a normal day.`,
+    liveH:"Live parking status", updated:"Updated", cars:"", of:"/", st:{ok:"Spaces",warn:"Busy",bad:"Almost full"},
+    tip:"East Gate 2 and South Gate 2 fill fast after 16:00. Take Subway Line 5 or 9 to Olympic Park Station, Exit 3: a 5 to 7 minute walk to the venues.",
+    srcChart:"Data: KSPO 'vehicle entry, show and weather linked dataset', computed for 2025 (sample values shown)",
+    srcLive:"Data: KSPO real-time parking API (sample response shown). Long-stay vehicles can skew the counts.",
+    safeH:"Wait safety level", safeSub:"Heat and cold risk while you wait outdoors.",
+    feels:"Feels like", nowAt:(h)=>`at ${h}:00`, hourly:"Today by hour",
+    grade:{ok:"Safe",warn:"Caution",bad:"Warning"},
+    gradeMsg:{ok:"No major risk for waiting outdoors.",warn:"Rest in the shade every 30 minutes and drink water often.",bad:"Limit outdoor waiting. Stay in shade or indoors and come back at door time."},
+    prepH:"What to bring", prep:{ok:["Comfortable shoes","Power bank"],warn:["500 ml+ water","Hat or parasol","Power bank"],bad:["1 L+ water","Hat, parasol, handheld fan","Cooling towel","Power bank"]},
+    rulesH:"Levels (feels-like temperature)", rules:[["Safe","Below 31°C and above -5°C"],["Caution","31°C to under 33°C, or -5°C and below"],["Warning","33°C and above (heat advisory level), or -10°C and below"]],
+    tryH:"Try another temperature", tryNote:"Presentation demo. Move the slider to see the level and checklist change.", reset:"Back to forecast",
+    srcSafe:"Data: Korea Meteorological Administration short-term forecast (sample values shown). Levels are our team's rule.",
+    mapH:"Site map", mapSub:"Venues, station exits, the lawn and parking lots. Tap a marker.",
+    filters:{all:"All",venue:"Venues",station:"Stations",parking:"Parking",lawn:"Lawn"},
+    myVenue:"Your venue", mapNote:"Schematic, not to scale. The demo will place the same coordinates on a Leaflet map.",
+    srcMap:"Data: KSPO lawn facility info (opening hours); positions are fixed coordinates set by our team",
+    lake:"Mongchon Lake", pick:"Tap a marker for details." }
+};
+
+/* ===== 상태와 유틸 ===== */
+const store = { get(k,d){ try{ return localStorage.getItem(k) ?? d }catch(e){ return d } }, set(k,v){ try{ localStorage.setItem(k,v) }catch(e){} } };
+const state = { lang: store.get("lang","ko"), show: store.get("show","s1"), temp:null, filter:"all", place:null };
+const VIEWS = ["home","dash","parking","safety","map"];
+const t = () => T[state.lang];
+const L = (o) => o[state.lang];
+const show = () => SHOWS.find(s => s.id === state.show) || SHOWS[0];
+const place = (id) => PLACES.find(p => p.id === id);
+function gradeOf(c){ if (c >= 33 || c <= -10) return "bad"; if (c >= 31 || c <= -5) return "warn"; return "ok"; }
+function lotState(l){ const r = l.used / l.cap; return r >= .9 ? "bad" : r >= .7 ? "warn" : "ok"; }
+const G = { ok:"g-ok", warn:"g-warn", bad:"g-bad" };
+const GC = { ok:"var(--ok)", warn:"var(--warn)", bad:"var(--bad)" };
+const pill = (g, label) => `<span class="pill ${G[g]}">${label}</span>`;
+function currentView(){ const h = location.hash.slice(1); return VIEWS.includes(h) ? h : "home"; }
+function go(v){ if (location.hash.slice(1) === v) render(); else location.hash = v; }
+
+/* ===== 화면 1: 공연 선택 ===== */
+function viewHome(){
+  return `
+  <div><h2>${t().homeH}</h2><p class="sub">${t().homeSub}</p></div>
+  ${SHOWS.map(s => `
+    <button class="card show" data-show="${s.id}">
+      <div class="poster" style="background:linear-gradient(160deg,${s.poster[0]},${s.poster[1]})">${L(place(s.venue).name)}</div>
+      <div class="meta">
+        <span class="tag ex" style="align-self:flex-start">${t().exData}</span>
+        <span class="t">${L(s.title)}</span>
+        <span class="v">${L(place(s.venue).name)}</span>
+        <span class="d">${s.date}  ${s.start}</span>
+      </div>
+    </button>`).join("")}
+  <p class="sub">${t().exNote}</p>`;
+}
+
+/* ===== 화면 1-2: 공연 대시보드 ===== */
+const toMin = (hhmm) => { const [h,m] = hhmm.split(":").map(Number); return h*60 + m; };
+function dur(m){ const h = Math.floor(m/60), r = m % 60; return h ? `${h}${t().hr} ${r}${t().min}` : `${r}${t().min}`; }
+function viewDash(){
+  const s = show(), nowM = DEMO.now*60, feel = FEELS[DEMO.now], g = gradeOf(feel);
+  const marks = [s.arrive, s.gate, s.start, s.end].map(toMin);
+  const phase = nowM < marks[0] ? "before" : nowM < marks[1] ? "arrive" : nowM < marks[2] ? "entry" : nowM < marks[3] ? "show" : "after";
+  const idx = { before:-1, arrive:0, entry:1, show:2, after:3 }[phase];
+  const pct = Math.max(0, Math.min(100, (nowM - marks[0]) / (marks[3] - marks[0]) * 100));
+  const notice = (NOTICES[s.id]||[])[0];
+  const cd = phase === "before" || phase === "arrive" ? [t().toDoors, dur(marks[1]-nowM)]
+           : phase === "entry" ? [t().toShow, dur(marks[2]-nowM)] : [phase === "show" ? t().inShow : t().afterShow, ""];
+  const pickup = phase === "arrive" && notice && notice.place === "lawn" ? notice : null;
+  let todo = t().todo[phase](s, pickup);
+  const add = feel >= 33 ? t().heatAdd : feel <= -10 ? t().coldAdd : "";
+  const vs = Object.values(FEELS), vmax = 38;
+  return `
+  <section class="hero" style="background:linear-gradient(150deg,${s.poster[0]},${s.poster[1]})">
+    <div class="row"><div><span class="tag">${t().exData}</span>
+      <div class="ht">${L(s.title)}</div><div class="hv">${L(place(s.venue).name)}  |  ${s.date}  ${s.start}</div></div></div>
+    <div class="cd"><span>${cd[0]}</span><b>${cd[1]}</b></div>
+    <div><div class="prog"><i style="width:${pct}%"></i></div></div>
+    <div class="steps">${[s.arrive,s.gate,s.start,s.end].map((x,i)=>`<div class="${i===idx?"on":""}"><b>${x}</b>${t().timeline[i]}</div>`).join("")}</div>
+  </section>
+
+  <div class="todo"><div class="lab">${t().nowLab}</div><p>${todo}</p>${add?`<small>${add}</small>`:""}</div>
+
+  ${notice ? `
+  <div class="notice" role="alert"><div class="ic">!</div>
+    <div style="flex:1;min-width:0"><p><b>${L(notice.topic)}</b></p><small>${L(notice.when)}  <span class="tag ex">${t().exData}</span></small>
+      <div class="chg"><div class="was">${L(notice.from)}</div><span class="arrow">→</span><div class="now">${L(notice.to)}</div></div>
+      <button class="linkbtn" data-goplace="${notice.place}">${t().seeMap}</button></div></div>` : ""}
+
+  <div class="stat">
+    <button class="sc wide" data-go="safety">
+      <div class="hd"><span>${t().wait}</span><em>${t().more} ›</em></div>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+        <div class="val">${feel.toFixed(1)}°<small> ${t().feels}</small></div>${pill(g, t().grade[g])}</div>
+      <div class="strip">${Object.entries(FEELS).map(([h,v])=>`<i class="${+h===DEMO.now?"cur":""}" style="height:${Math.max(15,(v-20)/(vmax-20)*100)}%;background:${GC[gradeOf(v)]}"></i>`).join("")}</div>
+      <div class="striplab"><span>${Object.keys(FEELS)[0]}${state.lang==="ko"?"시":":00"}</span><span>${Object.keys(FEELS).slice(-1)[0]}${state.lang==="ko"?"시":":00"}</span></div>
+    </button>
+    <button class="sc" data-go="parking">
+      <div class="hd"><span>${t().park}</span><em>›</em></div>
+      <div class="mini">${LOTS.map(l=>{const st=lotState(l),r=Math.round(l.used/l.cap*100);return `<div><span>${t().lotShort[l.id]}</span><span class="b"><i style="width:${r}%;background:${GC[st]}"></i></span><span>${r}%</span></div>`}).join("")}</div>
+    </button>
+    <button class="sc" data-go="map">
+      <div class="hd"><span>${t().route}</span><em>›</em></div>
+      <div class="route">${t().routeSteps.map((x,i)=>`<div><span class="n" style="background:${["var(--accent)","var(--muted)","var(--brand)"][i]}">${i+1}</span><span>${x.replace("{v}", L(place(s.venue).name))}</span></div>`).join("")}</div>
+    </button>
+  </div>`;
+}
+
+/* ===== 화면 2: 주차장 혼잡 안내 ===== */
+function chartSVG(){
+  const W = 360, H = 200, pl = 34, pr = 8, pt = 10, pb = 26;
+  // 세로축 최댓값: 데이터에 맞춰 자동 조정 (3칸 눈금이 딱 떨어지도록)
+  const top = Math.max(...ENTRY_SHOW, ...ENTRY_NORM, 1), step = Math.ceil(top * 1.08 / 3 / 10) * 10, max = step * 3;
+  const iw = W - pl - pr, ih = H - pt - pb, bw = iw / HOURS.length;
+  const y = v => pt + ih - (v / max) * ih;
+  let g = "";
+  [0, step, step*2, max].forEach(v => {
+    g += `<line x1="${pl}" x2="${W-pr}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)" stroke-width="1"/>`;
+    g += `<text x="${pl-6}" y="${y(v)+4}" font-size="10" text-anchor="end" fill="var(--muted)">${v}</text>`;
+  });
+  const peakI = ENTRY_SHOW.indexOf(Math.max(...ENTRY_SHOW));
+  HOURS.forEach((h, i) => {
+    const x = pl + i * bw, w = (bw - 4) / 2;
+    g += `<rect x="${x+2}" y="${y(ENTRY_NORM[i])}" width="${w}" height="${pt+ih-y(ENTRY_NORM[i])}" rx="2" fill="var(--bar-b)"/>`;
+    g += `<rect x="${x+2+w}" y="${y(ENTRY_SHOW[i])}" width="${w}" height="${pt+ih-y(ENTRY_SHOW[i])}" rx="2" fill="${i===peakI?"var(--accent)":"var(--bar-a)"}"/>`;
+    if (i % 2 === 0) g += `<text x="${x+bw/2}" y="${H-8}" font-size="10" text-anchor="middle" fill="var(--muted)">${h}${state.lang==="ko"?"시":""}</text>`;
+    if (h === DEMO.now) g += `<line x1="${x+bw/2}" x2="${x+bw/2}" y1="${pt}" y2="${pt+ih}" stroke="var(--fg)" stroke-dasharray="3 3" stroke-width="1"/>`;
+  });
+  const px = pl + peakI * bw + bw/2 + (bw-4)/4;
+  g += `<text x="${px}" y="${y(ENTRY_SHOW[peakI])-4}" font-size="10" font-weight="700" text-anchor="middle" fill="var(--fg)">${ENTRY_SHOW[peakI]}</text>`;
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="${t().chartH}">${g}</svg>`;
+}
+function viewParking(){
+  const peakI = ENTRY_SHOW.indexOf(Math.max(...ENTRY_SHOW));
+  return `
+  <div><h2>${t().parkH}</h2><p class="sub">${t().parkSub}</p></div>
+  <div class="card">
+    <h3>${t().chartH}</h3>
+    <div class="legend"><span><i style="background:var(--bar-a)"></i>${t().lgShow}</span><span><i style="background:var(--bar-b)"></i>${t().lgNorm}</span></div>
+    <div class="chartwrap">${chartSVG()}</div>
+    <p style="margin:8px 0 0;font-size:14px">${t().peak(HOURS[peakI], ENTRY_SHOW[peakI])}</p>
+    <div class="src">${t().srcChart}</div>
+  </div>
+  <div class="card">
+    <h3 style="display:flex;justify-content:space-between;align-items:center;gap:8px">${t().liveH}<span class="sub" style="font-weight:400">${t().updated} ${DEMO.now}:02</span></h3>
+    ${LOTS.map(l => { const s = lotState(l), r = Math.round(l.used/l.cap*100); return `
+      <div class="lot"><span class="n">${L(l.name)}</span>${pill(s, t().st[s])}
+        <div class="bar"><i style="width:${r}%;background:${GC[s]}"></i></div>
+        <span class="c">${l.used}${t().cars} ${t().of} ${l.cap}${t().cars}  (${r}%)</span></div>`; }).join("")}
+    <div class="src">${t().srcLive}</div>
+  </div>
+  <div class="tip">${t().tip}</div>`;
+}
+
+/* ===== 화면 3: 대기 안전 등급 ===== */
+function viewSafety(){
+  const fc = FEELS[DEMO.now], c = state.temp ?? fc, g = gradeOf(c);
+  return `
+  <div><h2>${t().safeH}</h2><p class="sub">${t().safeSub}</p></div>
+  <div class="card" style="border-color:${GC[g]}">
+    <div class="big">
+      <div class="temp">${c.toFixed(1)}<small>°C</small></div>
+      <div><div class="sub" style="margin:0 0 4px">${t().feels}, ${t().nowAt(DEMO.now)}</div>${pill(g, t().grade[g])}</div>
+    </div>
+    <p style="margin:10px 0 0">${t().gradeMsg[g]}</p>
+  </div>
+  <div class="card">
+    <h3>${t().hourly}</h3>
+    <div class="hours">${Object.entries(FEELS).map(([h,v]) => { const gg = gradeOf(v); return `
+      <div class="${G[gg]} ${+h===DEMO.now?"cur":""}">${h}${state.lang==="ko"?"시":""}<b>${Math.round(v)}°</b></div>`; }).join("")}</div>
+  </div>
+  <div class="card"><h3>${t().prepH}</h3><ul class="prep">${t().prep[g].map(x => `<li>${x}</li>`).join("")}</ul></div>
+  <div class="card">
+    <h3>${t().tryH}</h3>
+    <label class="sub" for="temp-range" style="display:block;margin:0 0 6px">${t().tryNote}</label>
+    <input type="range" id="temp-range" min="-15" max="38" step="0.5" value="${c}">
+    <div style="display:flex;justify-content:space-between;font-size:12px;color:var(--muted)"><span>-15°</span><span>38°</span></div>
+    <button class="chip" id="temp-reset" style="margin-top:8px">${t().reset}</button>
+  </div>
+  <div class="card">
+    <h3>${t().rulesH}</h3>
+    <table class="rules">${t().rules.map((r,i) => `<tr><td>${pill(["ok","warn","bad"][i], r[0])}</td><td>${r[1]}</td></tr>`).join("")}</table>
+    <div class="src">${t().srcSafe}</div>
+  </div>`;
+}
+
+/* ===== 화면 4: 현장 지도 ===== */
+function mapSVG(){
+  const venue = show().venue;
+  const vis = p => state.filter === "all" || p.type === state.filter;
+  let m = `
+    <rect width="360" height="300" fill="var(--bg)"/>
+    <path d="M48 70 Q60 22 150 16 L300 20 Q352 30 350 110 L346 230 Q340 290 250 292 L80 290 Q24 282 22 200 Z" fill="var(--park)" stroke="var(--line)" stroke-width="2"/>
+    <path d="M70 150 Q80 120 120 128 Q150 140 140 175 Q128 205 95 196 Q66 186 70 150 Z" fill="var(--water)"/>
+    <text x="105" y="166" font-size="10" text-anchor="middle" fill="var(--muted)">${t().lake}</text>
+    <path d="M30 150 L110 150 M178 104 L252 196 M334 182 L252 196 M190 278 L222 238 M206 26 L178 104 M330 118 L292 220 M110 282 L150 230 L222 238" stroke="var(--road)" stroke-width="4" fill="none" stroke-linecap="round"/>`;
+  PLACES.filter(vis).forEach(p => {
+    const sel = state.place === p.id, mine = p.id === venue, col = TYPE_COLOR[p.type];
+    let shape;
+    if (p.type === "parking") {
+      const lot = LOTS.find(l => l.id === p.lot), ls = lotState(lot);
+      shape = `<rect x="-10" y="-10" width="20" height="20" rx="4" fill="${GC[ls]}" stroke="var(--card)" stroke-width="2"/><text y="4" font-size="11" font-weight="700" text-anchor="middle" fill="var(--card)">P</text>`;
+    } else if (p.type === "station") {
+      shape = `<circle r="10" fill="${col}" stroke="var(--card)" stroke-width="2"/><text y="4" font-size="10" font-weight="700" text-anchor="middle" fill="var(--card)">M</text>`;
+    } else {
+      shape = `<circle r="${mine?12:9}" fill="${col}" stroke="${mine?"var(--accent)":"var(--card)"}" stroke-width="${mine?4:2}"/>`;
+    }
+    const nm = L(p.name).replace(/ \(.*\)/, "");
+    const anchor = p.x > 290 ? "end" : p.x < 60 ? "start" : "middle";
+    const lx = anchor === "end" ? 8 : anchor === "start" ? -8 : 0;
+    m += `<g class="mk" tabindex="0" role="button" data-place="${p.id}" transform="translate(${p.x} ${p.y})" aria-label="${L(p.name)}">
+      ${sel ? `<circle r="17" fill="none" stroke="var(--fg)" stroke-width="2" stroke-dasharray="3 3"/>` : ""}
+      ${shape}
+      <text x="${lx}" y="${p.ly ?? (p.y > 260 ? -16 : 24)}" font-size="10.5" font-weight="${mine||sel?700:500}" text-anchor="${anchor}" fill="var(--fg)">${nm}${mine?" ★":""}</text></g>`;
+  });
+  return `<svg viewBox="0 0 360 300" width="100%" role="img" aria-label="${t().mapH}">${m}</svg>`;
+}
+function viewMap(){
+  const p = state.place ? place(state.place) : place(show().venue);
+  let extra = "";
+  if (p.type === "parking") { const l = LOTS.find(x => x.id === p.lot), s = lotState(l); extra = ` ${pill(s, t().st[s])}`; }
+  if (p.id === show().venue) extra += ` <span class="tag ex">${t().myVenue}</span>`;
+  return `
+  <div><h2>${t().mapH}</h2><p class="sub">${t().mapSub}</p></div>
+  <div class="chips">${Object.entries(t().filters).map(([k,v]) => `<button class="chip" data-filter="${k}" aria-pressed="${state.filter===k}">${v}</button>`).join("")}</div>
+  <div class="mapbox">${mapSVG()}</div>
+  <div class="card info"><span class="sw" style="background:${TYPE_COLOR[p.type]}"></span>
+    <div><b>${L(p.name)}</b>${extra}<p style="margin:4px 0 0;font-size:14px">${L(p.desc)}</p></div></div>
+  <p class="sub">${t().mapNote}</p>
+  <div class="src" style="margin-top:0">${t().srcMap}</div>`;
+}
+
+/* ===== 렌더 ===== */
+const ICONS = [
+  '<path d="M4 6h16v12H4z M8 6v12 M4 10h4 M4 14h4" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+  '<path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 7h6V4h-6z" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+  '<rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 17V8h3a2.5 2.5 0 0 1 0 5h-3" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+  '<path d="M12 3v11 M9 14a3 3 0 1 0 6 0 M12 3a2 2 0 0 1 2 2v7.5a4 4 0 1 1-4 0V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+  '<path d="M12 21s-6-6.2-6-11a6 6 0 0 1 12 0c0 4.8-6 11-6 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2" fill="currentColor"/>'
+];
+function render(){
+  const v = currentView();
+  document.documentElement.lang = state.lang;
+  document.getElementById("title").textContent = v === "home" ? t().app : L(show().title);
+  document.getElementById("back").hidden = v === "home";
+  document.getElementById("replay").innerHTML = `<span>${t().replay}</span><span>${t().demoTime} <b>${DEMO.date} ${DEMO.now}:00</b></span>`;
+  ["ko","en"].forEach(l => document.getElementById("lang-"+l).setAttribute("aria-pressed", state.lang === l));
+  document.getElementById("tabs").innerHTML = VIEWS.map((x,i) =>
+    `<a href="#${x}" ${x===v?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[i]}</svg>${t().tabs[i]}</a>`).join("");
+  document.getElementById("view").innerHTML = { home:viewHome, dash:viewDash, parking:viewParking, safety:viewSafety, map:viewMap }[v]();
+  const r = document.getElementById("temp-range");
+  if (r) r.oninput = e => { state.temp = parseFloat(e.target.value); const y = scrollY; render(); scrollTo(0,y); document.getElementById("temp-range").focus(); };
+}
+
+document.addEventListener("click", e => {
+  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],#back,#temp-reset");
+  if (!el) return;
+  if (el.dataset.goplace){ state.place = el.dataset.goplace; state.filter = "all"; go("map"); }
+  else if (el.dataset.show){ state.show = el.dataset.show; state.place = null; store.set("show", state.show); go("dash"); }
+  else if (el.dataset.go) go(el.dataset.go);
+  else if (el.dataset.filter){ state.filter = el.dataset.filter; render(); }
+  else if (el.dataset.place){ state.place = el.dataset.place; render(); }
+  else if (el.dataset.l){ state.lang = el.dataset.l; store.set("lang", state.lang); render(); }
+  else if (el.id === "back") go(currentView() === "dash" ? "home" : "dash");
+  else if (el.id === "temp-reset"){ state.temp = null; render(); }
+});
+document.addEventListener("keydown", e => {
+  const g = e.target.closest && e.target.closest(".mk");
+  if (g && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); state.place = g.dataset.place; render(); }
+});
+addEventListener("hashchange", () => { render(); scrollTo(0,0); });
+
+/* ===== Colab 전처리 결과(JSON) 불러오기 =====
+   data/parking_entry.json 이 있으면 위 샘플 값을 실제 값으로 바꿔서 그림.
+   파일이 없거나 PC에서 index.html 을 그냥 더블클릭해 연 경우(file://)에는 샘플 값 그대로 보임. */
+fetch("data/parking_entry.json")
+  .then(r => r.ok ? r.json() : Promise.reject())
+  .then(d => { if (d.hours && d.entry_show && d.entry_norm){ HOURS = d.hours; ENTRY_SHOW = d.entry_show; ENTRY_NORM = d.entry_norm; } })
+  .catch(() => {})
+  .finally(render);
+</script>
