@@ -6,6 +6,7 @@
 
 - 데모 링크: `https://<계정이름>.github.io/olpark-onestop-guide/` (GitHub Pages 설정 후 생김, 아래 4번)
 - 팀: 조소영, 김해찬, 정한솔, 한성우, 차승우
+- **GitHub 처음이면 먼저 읽기**: [GitHub 사용 가이드 (PDF)](guide/GitHub_사용가이드.pdf)
 
 ## 폴더 구조
 
