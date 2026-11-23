@@ -1,9 +1,9 @@
 {
- "_설명": "행정안전부 한국지역정보개발원 공영 물품보관함 실시간 API 결과를 02_lockers_api 노트북으로 변환. total 은 API 에 없어 비움.",
+ "_설명": "scripts/update_lockers.py 가 공영 물품보관함 실시간 API 를 받아 자동 생성 (GitHub Actions 15분마다). total 은 API 에 없어 비움.",
  "sample": false,
  "source": "행정안전부 한국지역정보개발원_(전국 통합데이터) 공영 물품보관함 현황 실시간 정보 (공공데이터포털)",
- "fetched_at": "2026-11-23 10:20",
- "updated": "10:20",
+ "fetched_at": "2026-11-23 16:35",
+ "updated": "16:35",
  "lockers": [
   {
    "id": "TL935",
@@ -103,7 +103,7 @@
     },
     "M": {
      "total": null,
-     "empty": 7
+     "empty": 8
     },
     "L": {
      "total": null,
