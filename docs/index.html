@@ -238,6 +238,7 @@ const LOTS = [
 // 물품보관함 현황 (실시간 API 응답 형식 흉내, 샘플 값)
 // data/lockers.json 이 있으면 그 값으로 바뀜. 칸 수와 빈 칸은 가상 값, 공원 안 보관함은 가상 예시.
 let LOCKERS_UPDATED = "16:02";
+let LOCKERS_SAMPLE = true;   // lockers.json 의 "sample": false 이면 실제 API 값으로 표시
 let LOCKERS = [
   { id:"lk-st-o", x:318, y:160, near:["dome","hall","arena"], op:true, hours:"05:30~24:00",
     name:{ko:"올림픽공원역 보관함",en:"Olympic Park Stn Lockers"},
@@ -315,9 +316,10 @@ const T = {
     size:{S:"소형",M:"중형",L:"대형"}, sizeHint:{S:"가방, 겉옷",M:"백팩, 쇼핑백",L:"캐리어"},
     emptyN:(n)=>`빈 칸 ${n}`, lkSt:{ok:"여유",warn:"얼마 안 남음",bad:"만석",off:"운영 안 함"},
     recH:"내 공연장에서 가장 가까운 빈 보관함", recNone:"근처 보관함이 모두 찼습니다. 역 보관함을 이용하세요.",
-    hoursLab:"운영", lkNear:"근처", lkAll:"전체 보관함",
+    hoursLab:"운영", feeLab:"요금 보기", lkNear:"근처", lkAll:"전체 보관함",
+    srcLockerLive:"데이터: 행정안전부 한국지역정보개발원 '(전국 통합데이터) 공영 물품보관함 현황 실시간 정보' (공공데이터포털). 표시된 시각 기준 빈 칸 수이며, 전체 칸 수는 제공되지 않습니다.",
     lkTip:"공연 1~2시간 전부터 보관함이 빠르게 찹니다. 큰 짐은 역 보관함에 먼저 맡기고 오시면 편합니다.",
-    srcLocker:"데이터: 위치, 운영 여부는 서울교통공사 '지하철역 편의시설위치정보 물품보관함 현황'(서울 열린데이터광장, 5분 단위 갱신) 기준. 칸별 빈 칸 수는 공개 API가 없어 현재 화면은 샘플 값이며, 공원 안 임시 보관함은 가상 예시입니다." },
+    srcLocker:"현재 화면은 샘플 값입니다 (공원 안 임시 보관함은 가상 예시). 실제 값은 행정안전부 한국지역정보개발원 공영 물품보관함 실시간 API를 노트북 02로 변환해 넣습니다." },
   en:{ app:"Olympic Park Show Day Guide", replay:"Replaying a 2025 show day", demoTime:"Demo time",
     homeH:"Which show are you here for?", homeSub:"Pick a show and see everything from arrival to heading home on one screen.",
     exData:"SAMPLE", exNote:"Show names and notices are fictional examples.",
@@ -356,9 +358,10 @@ const T = {
     size:{S:"Small",M:"Medium",L:"Large"}, sizeHint:{S:"Bag, jacket",M:"Backpack",L:"Suitcase"},
     emptyN:(n)=>`${n} free`, lkSt:{ok:"Spaces",warn:"Few left",bad:"Full",off:"Closed"},
     recH:"Closest lockers with space", recNone:"Lockers near your venue are full. Try the station lockers.",
-    hoursLab:"Open", lkNear:"Near", lkAll:"All lockers",
+    hoursLab:"Open", feeLab:"See fees", lkNear:"Near", lkAll:"All lockers",
+    srcLockerLive:"Data: Ministry of the Interior and Safety / KLID nationwide public locker real-time API (data.go.kr). Free counts as of the time shown; total compartments are not provided.",
     lkTip:"Lockers fill up fast 1 to 2 hours before the show. Drop big bags at the station lockers first.",
-    srcLocker:"Data: locations and open status from Seoul Metro station locker dataset (Seoul Open Data Plaza, updated every 5 min). Per-size free counts have no public API yet, so sample values are shown; in-park pop-up lockers are fictional examples." }
+    srcLocker:"Sample values shown (in-park pop-up lockers are fictional). Real values come from the MOIS / KLID nationwide public locker real-time API via notebook 02." }
 };
 
 /* ===== 상태와 유틸 ===== */
@@ -377,8 +380,10 @@ const GC = { ok:"var(--ok)", warn:"var(--warn)", bad:"var(--bad)" };
 const pill = (g, label) => `<span class="pill ${G[g]}">${label}</span>`;
 function currentView(){ const h = location.hash.slice(1); return VIEWS.includes(h) || SUBVIEWS.includes(h) ? h : "home"; }
 // 보관함 상태: 빈 칸 0 = 만석, 15% 미만 = 얼마 안 남음, 그 외 = 여유
-const lkSum = (k) => Object.values(k.sizes).reduce((a,z) => ({ total:a.total+z.total, empty:a.empty+z.empty }), {total:0, empty:0});
-function sizeState(z){ return z.empty === 0 ? "bad" : z.empty / z.total < .15 ? "warn" : "ok"; }
+// 실제 API 는 전체 칸 수(total)를 주지 않아 null. 그때는 빈 칸 3개 이하를 '얼마 안 남음' 으로 봄
+const hasTotal = (z) => z.total != null;
+const lkSum = (k) => Object.values(k.sizes).reduce((a,z) => ({ total: a.total == null || !hasTotal(z) ? null : a.total + z.total, empty:a.empty+z.empty }), {total:0, empty:0});
+function sizeState(z){ return z.empty === 0 ? "bad" : (hasTotal(z) ? z.empty / z.total < .15 : z.empty <= 3) ? "warn" : "ok"; }
 function lockerState(k){ return k.op === false ? "off" : sizeState(lkSum(k)); }
 const lkPill = (st) => st === "off" ? `<span class="pill" style="background:var(--line);color:var(--muted)">${t().lkSt.off}</span>` : pill(st, t().lkSt[st]);
 // 내 공연장 근처에서 빈 칸이 있는 보관함을 먼저, 없으면 아무 곳이나 빈 칸 많은 순
@@ -392,7 +397,7 @@ function recLocker(){
 }
 function sizesHTML(k){
   return `<div class="sizes">${["S","M","L"].map(z => { const d = k.sizes[z]; if (!d) return ""; const st = sizeState(d); return `
-    <div class="s-${st}"><span>${t().size[z]}</span><b>${d.empty}<small> / ${d.total}</small></b><span>${t().sizeHint[z]}</span></div>`; }).join("")}</div>`;
+    <div class="s-${st}"><span>${t().size[z]}</span><b>${d.empty}${hasTotal(d) ? `<small> / ${d.total}</small>` : ""}</b><span>${t().sizeHint[z]}</span></div>`; }).join("")}</div>`;
 }
 function go(v){ if (location.hash.slice(1) === v) render(); else location.hash = v; }
 
@@ -556,19 +561,20 @@ function viewLocker(){
     <div class="card lk ${st==="off"?"off":""}">
       <div class="hd"><div><b>${L(k.name)}</b><div class="meta">${L(k.spot)}</div></div>${lkPill(st)}</div>
       ${sizesHTML(k)}
-      <div class="lkline"><span class="meta">${t().hoursLab} ${k.hours}  |  ${t().emptyN(sum.empty)} / ${sum.total}</span>
+      ${k.fee ? `<details class="meta"><summary>${t().feeLab}</summary><div style="white-space:pre-line;margin-top:4px">${k.fee}</div></details>` : ""}
+      <div class="lkline"><span class="meta">${k.hours ? `${t().hoursLab} ${k.hours}  |  ` : ""}${t().emptyN(sum.empty)}${sum.total != null ? ` / ${sum.total}` : ""}</span>
         <button class="linkbtn" style="margin:0" data-goplace="${k.id}">${t().seeMap}</button></div>
     </div>`; };
   return `
   <div><h2>${t().lockerH}</h2><p class="sub">${t().lockerSub}</p></div>
   <div class="card" style="border-color:${rec ? "var(--ok)" : "var(--bad)"}">
     <h3 style="display:flex;justify-content:space-between;align-items:center;gap:8px">${t().recH}<span class="sub" style="font-weight:400">${t().updated} ${LOCKERS_UPDATED}</span></h3>
-    ${rec ? `<div class="lkline"><b>${L(rec.name)}</b><span class="tag ex">${t().exData}</span></div><div class="meta sub" style="margin:2px 0 8px">${L(rec.spot)}</div>${sizesHTML(rec)}` : `<p style="margin:0">${t().recNone}</p>`}
+    ${rec ? `<div class="lkline"><b>${L(rec.name)}</b>${LOCKERS_SAMPLE ? `<span class="tag ex">${t().exData}</span>` : ""}</div><div class="meta sub" style="margin:2px 0 8px">${L(rec.spot)}</div>${sizesHTML(rec)}` : `<p style="margin:0">${t().recNone}</p>`}
   </div>
   <h3 style="margin:4px 0 0">${t().lkAll}</h3>
   ${lockersSorted().map(card).join("")}
   <div class="tip">${t().lkTip}</div>
-  <div class="src" style="margin-top:0">${t().srcLocker}</div>`;
+  <div class="src" style="margin-top:0">${LOCKERS_SAMPLE ? t().srcLocker : t().srcLockerLive}</div>`;
 }
 
 /* ===== 화면 4: 현장 지도 ===== */
@@ -671,6 +677,6 @@ addEventListener("hashchange", () => { render(); scrollTo(0,0); });
 const getJSON = (url) => fetch(url).then(r => r.ok ? r.json() : Promise.reject());
 Promise.allSettled([
   getJSON("data/parking_entry.json").then(d => { if (d.hours && d.entry_show && d.entry_norm){ HOURS = d.hours; ENTRY_SHOW = d.entry_show; ENTRY_NORM = d.entry_norm; } }),
-  getJSON("data/lockers.json").then(d => { if (Array.isArray(d.lockers) && d.lockers.length){ LOCKERS = d.lockers; if (d.updated) LOCKERS_UPDATED = d.updated; } })
+  getJSON("data/lockers.json").then(d => { if (Array.isArray(d.lockers) && d.lockers.length){ LOCKERS = d.lockers; if (d.updated) LOCKERS_UPDATED = d.updated; LOCKERS_SAMPLE = d.sample !== false; } })
 ]).finally(render);
 </script>
