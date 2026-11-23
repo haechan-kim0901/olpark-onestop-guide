@@ -2,7 +2,7 @@
 
 한국체육산업개발(주) 공공데이터 활용 경진대회 출품작입니다. (마감 2026-12-01 18:00)
 
-올림픽공원 공연 관객이 **공지, 주차 혼잡, 대기 안전(체감온도), 현장 지도**를 한 화면에서 한국어와 영어로 확인하는 모바일 웹 서비스의 MVP 데모입니다.
+올림픽공원 공연 관객이 **공지, 주차 혼잡, 대기 안전(체감온도), 물품보관함 빈 칸, 현장 지도**를 한 화면에서 한국어와 영어로 확인하는 모바일 웹 서비스의 MVP 데모입니다.
 
 - 데모 링크: `https://<계정이름>.github.io/olpark-onestop-guide/` (GitHub Pages 설정 후 생김, 아래 4번)
 - 팀: 조소영, 김해찬, 정한솔, 한성우, 차승우
@@ -15,7 +15,8 @@ olpark-onestop-guide/
 ├─ docs/                      ← 웹 데모 (GitHub Pages 가 이 폴더를 그대로 보여 줌)
 │  ├─ index.html              ← 화면 전체가 들어 있는 파일 하나 (HTML, CSS, JS)
 │  └─ data/
-│     └─ parking_entry.json   ← 노트북이 만든 주차 입차 평균 (지금은 샘플 값)
+│     ├─ parking_entry.json   ← 노트북이 만든 주차 입차 평균 (지금은 샘플 값)
+│     └─ lockers.json         ← 물품보관함 크기별 빈 칸 수 (지금은 샘플 값)
 ├─ notebooks/
 │  └─ 01_preprocess_parking.ipynb  ← Colab 전처리 노트북
 ├─ data/
@@ -37,6 +38,7 @@ olpark-onestop-guide/
 | 주차 혼잡 그래프 (`HOURS`, `ENTRY_SHOW`, `ENTRY_NORM`) | **JSON 연결 완료** (값은 샘플) | 노트북을 진짜 CSV로 실행 → JSON 교체 |
 | 공연 목록 (`SHOWS`), 공지 (`NOTICES`) | 샘플 | 공연 일정 데이터로 채우거나 팀이 직접 입력 |
 | 실시간 주차 (`LOTS`) | 샘플 | 실시간 주차 API 를 `fetch` 로 호출 |
+| 물품보관함 (`LOCKERS`) | **JSON 연결 완료** (값은 샘플) | `docs/data/lockers.json` 의 `empty`(빈 칸), `total`(전체 칸) 숫자만 고치면 화면이 바뀜. 실시간 API 가 생기면 같은 형식으로 변환 |
 | 체감온도 (`FEELS`) | 샘플 | 기상청 단기예보 API 또는 노트북 |
 | 지도 (`PLACES`) | 고정 좌표 | 그대로 사용 |
 
@@ -98,3 +100,33 @@ JSON 까지 반영된 화면은 아래 4번 GitHub Pages 링크에서 확인하�
 | 11/27~29 | 웹 데모 실제 데이터 연결, GitHub Pages 배포 |
 | 11/30 | 최종 점검 |
 | 12/1 18:00 | data@ksponco.or.kr 메일 제출 (신청서, 기획서, 개인정보 동의서) |
+
+## 물품보관함 현황 화면 (대시보드 → 물품보관함 카드)
+
+- **보이는 곳**: 대시보드 맨 아래 `물품보관함` 카드 → 누르면 보관함 화면. 지도 탭에도 `보관함` 필터가 생김
+- **무엇을 보여 주나**: 보관함마다 소형, 중형, 대형 빈 칸 수와 상태(여유 / 얼마 안 남음 / 만석). 내 공연장 근처에서 빈 칸이 있는 보관함을 맨 위에 추천
+- **상태 기준**: 빈 칸 0 = 만석. 전체 칸 수를 알면 15% 미만, 모르면 3칸 이하 = 얼마 안 남음. 그 외 = 여유
+- **지금 값**: `docs/data/lockers.json` 은 샘플(`"sample": true`). 아래 방법으로 실제 값으로 바꾸면 화면의 '예시' 표시와 출처 문구가 자동으로 바뀜
+
+### 실제 데이터로 바꾸는 법 (인증키는 Colab 에서만)
+
+사용 API: **행정안전부 한국지역정보개발원_(전국 통합데이터) 공영 물품보관함 현황 실시간 정보** (공공데이터포털, REST)
+
+| 기능 | 주소 |
+|---|---|
+| 위치, 이름, 운영 시간 | `https://apis.data.go.kr/B551982/psl_v2/locker_info_v2` |
+| 크기, 요금 설명 | `https://apis.data.go.kr/B551982/psl_v2/locker_detail_info_v2` |
+| 크기별 지금 빈 칸 수 | `https://apis.data.go.kr/B551982/psl_v2/locker_realtime_use_v2` |
+
+요청 값: `serviceKey`(인증키), `type=JSON`, `pageNo`, `numOfRows`(1000 이하), 필요하면 `stdgCd`(지역 코드, 서울 1100000000). 정상이면 결과 코드 `K0`, `K3 NODATA_ERROR` 는 키는 정상인데 데이터가 없다는 뜻 (노트북이 지역 코드를 넣어 자동 재시도).
+
+1. `notebooks/02_lockers_api.ipynb` 를 Colab 으로 열기: [Colab 에서 바로 열기](https://colab.research.google.com/github/haechan-kim0901/olpark-onestop-guide/blob/main/notebooks/02_lockers_api.ipynb) → 메뉴 **런타임 → 모두 실행** ("Google 이 만들지 않은 노트북" 경고는 **무시하고 실행**)
+2. 위에서부터 실행. 1단계에서 인증키를 물어보면 붙여 넣기 (화면, 파일 어디에도 남지 않음)
+3. 3단계에 올림픽공원 1.5km 안 보관함 목록과 빈 칸이 출력됨
+4. 마지막 셀이 내려 준 `lockers.json` 을 GitHub `docs/data/` 에 업로드 (기존 파일 덮어쓰기)
+
+> **인증키를 `index.html`, GitHub, 노션, 단톡방에 넣지 마세요.** GitHub Pages 는 소스가 공개라서 키가 그대로 노출됩니다. 그래서 화면은 키 없이 JSON 만 읽습니다. 발표 직전에 노트북을 한 번 더 돌리면 최신 값이 됩니다.
+
+- 이 API 는 전체 칸 수를 주지 않아 화면은 빈 칸 수만 보여 줌
+- 2026-11-23 실제 실행 결과: 올림픽공원 1.5km 안 7곳 (올림픽공원역 5호선, 9호선, 몽촌토성, 한성백제, 강동구청, 송파나루, 방이). 공원 밖 먼 역은 지도 가장자리에 방향만 맞춰 표시
+- 공원 안 임시 보관함(KSPO DOME 앞, 88잔디마당)은 샘플에만 있는 가상 예시
