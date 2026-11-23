@@ -120,7 +120,7 @@ JSON 까지 반영된 화면은 아래 4번 GitHub Pages 링크에서 확인하�
 
 요청 값: `serviceKey`(인증키), `type=JSON`, `pageNo`, `numOfRows`(1000 이하), 필요하면 `stdgCd`(지역 코드, 서울 1100000000). 정상이면 결과 코드 `K0`, `K3 NODATA_ERROR` 는 키는 정상인데 데이터가 없다는 뜻 (노트북이 지역 코드를 넣어 자동 재시도).
 
-1. `notebooks/02_lockers_api.ipynb` 를 Colab 으로 열기 (1번 방법과 같음)
+1. `notebooks/02_lockers_api.ipynb` 를 Colab 으로 열기: [Colab 에서 바로 열기](https://colab.research.google.com/github/haechan-kim0901/olpark-onestop-guide/blob/main/notebooks/02_lockers_api.ipynb) → 메뉴 **런타임 → 모두 실행** ("Google 이 만들지 않은 노트북" 경고는 **무시하고 실행**)
 2. 위에서부터 실행. 1단계에서 인증키를 물어보면 붙여 넣기 (화면, 파일 어디에도 남지 않음)
 3. 3단계에 올림픽공원 1.5km 안 보관함 목록과 빈 칸이 출력됨
 4. 마지막 셀이 내려 준 `lockers.json` 을 GitHub `docs/data/` 에 업로드 (기존 파일 덮어쓰기)
