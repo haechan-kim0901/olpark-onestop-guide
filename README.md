@@ -130,3 +130,18 @@ JSON 까지 반영된 화면은 아래 4번 GitHub Pages 링크에서 확인하�
 - 이 API 는 전체 칸 수를 주지 않아 화면은 빈 칸 수만 보여 줌
 - 2026-11-23 실제 실행 결과: 올림픽공원 1.5km 안 7곳 (올림픽공원역 5호선, 9호선, 몽촌토성, 한성백제, 강동구청, 송파나루, 방이). 공원 밖 먼 역은 지도 가장자리에 방향만 맞춰 표시
 - 공원 안 임시 보관함(KSPO DOME 앞, 88잔디마당)은 샘플에만 있는 가상 예시
+
+### 자동 갱신 (GitHub Actions, 15분마다)
+
+`.github/workflows/update-lockers.yml` 이 15분마다 `scripts/update_lockers.py` 를 실행해 `docs/data/lockers.json` 을 새로 만들고 main 에 커밋합니다. 노트북 02 와 같은 전처리를 합니다. 데모 화면은 5분마다 이 파일을 다시 읽고, 카드에 "마지막 갱신" 시각을 보여 줍니다. 1시간 넘게 갱신이 없으면 빨간 글씨로 알려 줍니다.
+
+**처음 한 번만: 인증키 등록**
+1. 저장소 **Settings → Secrets and variables → Actions → New repository secret**
+2. Name: `DATA_GO_KR_KEY`, Secret: 공공데이터포털 **일반 인증키(Decoding)** 붙여 넣기 → **Add secret**
+3. **Actions** 탭 → 왼쪽 `물품보관함 자동 갱신` → **Run workflow** 로 바로 한 번 실행해 보기 (초록 체크면 성공)
+
+참고
+- GitHub 사정으로 실행이 몇 분 늦거나 가끔 건너뛸 수 있습니다
+- 저장소에 60일 동안 활동이 없으면 GitHub 가 예약 실행을 멈춥니다 (Actions 탭에서 다시 켜기)
+- 15분마다 "보관함 빈 칸 자동 갱신" 커밋이 쌓이는 것은 정상입니다
+- 멈추고 싶으면 Actions 탭 → 이 워크플로 → `...` → **Disable workflow**
