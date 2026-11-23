@@ -1,0 +1,23 @@
+{
+  "_설명": "물품보관함 현황 샘플. 실제 서비스에서는 이 형식 그대로 실시간 API 응답을 변환해 넣음. sizes 의 total=전체 칸, empty=빈 칸. x, y 는 화면 지도 좌표(360x300).",
+  "sample": true,
+  "updated": "16:02",
+  "lockers": [
+    { "id": "lk-st-o", "x": 318, "y": 160, "near": ["dome", "hall", "arena"], "op": true, "hours": "05:30~24:00",
+      "name": { "ko": "올림픽공원역 보관함", "en": "Olympic Park Stn Lockers" },
+      "spot": { "ko": "지하 1층 대합실, 3번 출구 방향", "en": "B1 concourse, toward Exit 3" },
+      "sizes": { "S": { "total": 24, "empty": 3 }, "M": { "total": 12, "empty": 0 }, "L": { "total": 6, "empty": 1 } } },
+    { "id": "lk-dome", "x": 212, "y": 200, "near": ["dome", "hall"], "op": true, "hours": "14:00~22:00",
+      "name": { "ko": "KSPO DOME 앞 임시 보관함", "en": "KSPO DOME Pop-up Lockers" },
+      "spot": { "ko": "공연일에만 운영, 매표소 왼쪽", "en": "Show days only, left of the box office" },
+      "sizes": { "S": { "total": 40, "empty": 11 }, "M": { "total": 20, "empty": 6 }, "L": { "total": 10, "empty": 2 } } },
+    { "id": "lk-lawn", "x": 146, "y": 84, "near": ["lawn"], "op": true, "hours": "12:00~22:30",
+      "name": { "ko": "88잔디마당 입구 보관함", "en": "88 Lawn Entrance Lockers" },
+      "spot": { "ko": "야외 공연일 운영, 팔찌 배부처 옆", "en": "Outdoor show days, next to wristband pickup" },
+      "sizes": { "S": { "total": 30, "empty": 0 }, "M": { "total": 16, "empty": 2 }, "L": { "total": 8, "empty": 0 } } },
+    { "id": "lk-st-m", "x": 58, "y": 124, "near": [], "op": true, "hours": "05:30~24:00",
+      "name": { "ko": "몽촌토성역 보관함", "en": "Mongchontoseong Stn Lockers" },
+      "spot": { "ko": "지하 1층, 1번 출구 방향", "en": "B1, toward Exit 1" },
+      "sizes": { "S": { "total": 16, "empty": 9 }, "M": { "total": 8, "empty": 5 }, "L": { "total": 4, "empty": 2 } } }
+  ]
+}

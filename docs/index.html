@@ -13,7 +13,7 @@
   --ground:#e9eef0; --bg:#f7f9f9; --card:#ffffff; --fg:#14222b; --muted:#5d6d76; --line:#d9e1e4;
   --brand:#0f4c5c; --brand-ink:#ffffff; --accent:#e8a33a; --accent-soft:#fbefd9;
   --ok:#2f8a57; --ok-soft:#e1f2e8; --warn:#c98a0b; --warn-soft:#fdf1d6; --bad:#c43d32; --bad-soft:#fbe3e0;
-  --bar-a:#0f4c5c; --bar-b:#b9c7cc; --park:#dfeadf; --water:#cfe3ec; --road:#ffffff;
+  --bar-a:#0f4c5c; --bar-b:#b9c7cc; --locker:#6a4fc4; --park:#dfeadf; --water:#cfe3ec; --road:#ffffff;
   --display:"IBM Plex Sans KR","Noto Sans KR",system-ui,sans-serif;
   --body:"Noto Sans KR",system-ui,-apple-system,"Apple SD Gothic Neo",sans-serif;
 }
@@ -21,12 +21,12 @@
   --ground:#0b1215; --bg:#111b20; --card:#18252b; --fg:#e6eef1; --muted:#97a8b0; --line:#2a3a41;
   --brand:#5fb3c6; --brand-ink:#0b1a1f; --accent:#f0b552; --accent-soft:#3a2f1b;
   --ok:#5cc28a; --ok-soft:#173226; --warn:#e7b245; --warn-soft:#382c12; --bad:#f07a6e; --bad-soft:#3d1f1c;
-  --bar-a:#5fb3c6; --bar-b:#3d5059; --park:#1c2e24; --water:#1b3440; --road:#2a3a41; color-scheme:dark}}
+  --bar-a:#5fb3c6; --bar-b:#3d5059; --locker:#a993f0; --park:#1c2e24; --water:#1b3440; --road:#2a3a41; color-scheme:dark}}
 :root[data-theme="dark"]{
   --ground:#0b1215; --bg:#111b20; --card:#18252b; --fg:#e6eef1; --muted:#97a8b0; --line:#2a3a41;
   --brand:#5fb3c6; --brand-ink:#0b1a1f; --accent:#f0b552; --accent-soft:#3a2f1b;
   --ok:#5cc28a; --ok-soft:#173226; --warn:#e7b245; --warn-soft:#382c12; --bad:#f07a6e; --bad-soft:#3d1f1c;
-  --bar-a:#5fb3c6; --bar-b:#3d5059; --park:#1c2e24; --water:#1b3440; --road:#2a3a41; color-scheme:dark}
+  --bar-a:#5fb3c6; --bar-b:#3d5059; --locker:#a993f0; --park:#1c2e24; --water:#1b3440; --road:#2a3a41; color-scheme:dark}
 *{box-sizing:border-box}
 html,body{height:100%}
 body{background:var(--ground);color:var(--fg);font-family:var(--body);font-size:15px;line-height:1.5}
@@ -168,6 +168,18 @@ nav.tabs a[aria-current="page"]{color:var(--brand);font-weight:700}
 .route{display:flex;flex-direction:column;gap:6px;font-size:13px}
 .route div{display:flex;gap:8px;align-items:center}
 .route .n{width:20px;height:20px;border-radius:50%;flex:none;display:grid;place-items:center;font-size:11px;font-weight:700;color:var(--card)}
+/* 물품보관함 */
+.sizes{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.sizes div{border:1px solid var(--line);border-radius:10px;padding:6px 8px;display:flex;flex-direction:column;gap:2px;font-size:11.5px;color:var(--muted)}
+.sizes div b{font:700 18px/1.1 var(--display);color:var(--fg);font-variant-numeric:tabular-nums}
+.sizes div b small{font-size:11px;font-weight:500;color:var(--muted)}
+.sizes div.s-bad{background:var(--bad-soft);border-color:transparent}
+.sizes div.s-warn{background:var(--warn-soft);border-color:transparent}
+.lk{display:flex;flex-direction:column;gap:8px}
+.lk .hd{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.lk .meta{font-size:12.5px;color:var(--muted)}
+.lk.off{opacity:.6}
+.lkline{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px}
 button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 @media (prefers-reduced-motion:no-preference){.lot .bar i{transition:width .4s ease}}
 </style>
@@ -223,6 +235,28 @@ const LOTS = [
   { id:"n2", name:{ko:"북2문 주차장",en:"North Gate 2 Lot"}, cap:260, used:142 }
 ];
 
+// 물품보관함 현황 (실시간 API 응답 형식 흉내, 샘플 값)
+// data/lockers.json 이 있으면 그 값으로 바뀜. 칸 수와 빈 칸은 가상 값, 공원 안 보관함은 가상 예시.
+let LOCKERS_UPDATED = "16:02";
+let LOCKERS = [
+  { id:"lk-st-o", x:318, y:160, near:["dome","hall","arena"], op:true, hours:"05:30~24:00",
+    name:{ko:"올림픽공원역 보관함",en:"Olympic Park Stn Lockers"},
+    spot:{ko:"지하 1층 대합실, 3번 출구 방향",en:"B1 concourse, toward Exit 3"},
+    sizes:{ S:{total:24, empty:3}, M:{total:12, empty:0}, L:{total:6, empty:1} } },
+  { id:"lk-dome", x:212, y:200, near:["dome","hall"], op:true, hours:"14:00~22:00",
+    name:{ko:"KSPO DOME 앞 임시 보관함",en:"KSPO DOME Pop-up Lockers"},
+    spot:{ko:"공연일에만 운영, 매표소 왼쪽",en:"Show days only, left of the box office"},
+    sizes:{ S:{total:40, empty:11}, M:{total:20, empty:6}, L:{total:10, empty:2} } },
+  { id:"lk-lawn", x:146, y:84, near:["lawn"], op:true, hours:"12:00~22:30",
+    name:{ko:"88잔디마당 입구 보관함",en:"88 Lawn Entrance Lockers"},
+    spot:{ko:"야외 공연일 운영, 팔찌 배부처 옆",en:"Outdoor show days, next to wristband pickup"},
+    sizes:{ S:{total:30, empty:0}, M:{total:16, empty:2}, L:{total:8, empty:0} } },
+  { id:"lk-st-m", x:58, y:124, near:[], op:true, hours:"05:30~24:00",
+    name:{ko:"몽촌토성역 보관함",en:"Mongchontoseong Stn Lockers"},
+    spot:{ko:"지하 1층, 1번 출구 방향",en:"B1, toward Exit 1"},
+    sizes:{ S:{total:16, empty:9}, M:{total:8, empty:5}, L:{total:4, empty:2} } }
+];
+
 // 기상청 단기예보 체감온도 (14~21시, 샘플 값)
 const FEELS = { 14:33.8, 15:34.6, 16:34.1, 17:33.2, 18:32.1, 19:30.4, 20:29.1, 21:28.0 };
 
@@ -239,7 +273,7 @@ const PLACES = [
   { id:"p-s2", type:"parking", x:190, y:278, lot:"s2", name:{ko:"남2문 주차장",en:"South Gate 2 Lot"}, desc:{ko:"규모가 가장 큼",en:"Largest lot"} },
   { id:"p-n2", type:"parking", x:206, y:26, lot:"n2", name:{ko:"북2문 주차장",en:"North Gate 2 Lot"}, desc:{ko:"공연장까지 도보 약 15분, 여유가 많음",en:"About 15 min walk to venues, usually spaces left"} }
 ];
-const TYPE_COLOR = { venue:"var(--brand)", station:"var(--accent)", parking:"var(--muted)", lawn:"var(--ok)" };
+const TYPE_COLOR = { venue:"var(--brand)", station:"var(--accent)", parking:"var(--muted)", lawn:"var(--ok)", locker:"var(--locker)" };
 
 /* ===== 화면 문구 (미리 번역해 고정) ===== */
 const T = {
@@ -272,11 +306,18 @@ const T = {
     rulesH:"등급 기준 (체감온도)", rules:[["안전","31도 미만, -5도 초과"],["주의","31도 이상 33도 미만, 또는 -5도 이하"],["경고","33도 이상(폭염주의보 기준), 또는 -10도 이하"]],
     tryH:"체감온도를 바꿔 보기", tryNote:"발표용 시연 기능입니다. 슬라이더를 움직이면 등급과 준비물이 바뀝니다.", reset:"예보값으로",
     srcSafe:"데이터: 기상청 단기예보 조회서비스 체감온도 (현재 화면은 샘플 값). 등급 기준은 팀이 정한 규칙입니다.",
-    mapH:"현장 지도", mapSub:"공연장, 역 출구, 잔디마당, 주차장 위치입니다. 표시를 눌러 보세요.",
-    filters:{all:"전체",venue:"공연장",station:"역",parking:"주차장",lawn:"잔디마당"},
+    mapH:"현장 지도", mapSub:"공연장, 역 출구, 잔디마당, 주차장, 보관함 위치입니다. 표시를 눌러 보세요.",
+    filters:{all:"전체",venue:"공연장",station:"역",parking:"주차장",locker:"보관함",lawn:"잔디마당"},
     myVenue:"내 공연장", mapNote:"개략도이며 실제 거리, 방향과 다를 수 있습니다. 데모에서는 Leaflet 지도에 같은 좌표를 올립니다.",
-    srcMap:"데이터: 한국체육산업개발 잔디시설정보(개방시간), 위치는 팀이 직접 정리한 고정 좌표",
-    lake:"몽촌호", pick:"표시를 눌러 정보를 확인하세요." },
+    srcMap:"데이터: 한국체육산업개발 잔디시설정보(개방시간), 위치는 팀이 직접 정리한 고정 좌표. 보관함 색 테두리는 빈 칸 상태(샘플 값)",
+    lake:"몽촌호", pick:"표시를 눌러 정보를 확인하세요.",
+    lockerT:"물품보관함", lockerH:"물품보관함 현황", lockerSub:"공연장 주변 보관함의 빈 칸 수를 크기별로 보여 드립니다.",
+    size:{S:"소형",M:"중형",L:"대형"}, sizeHint:{S:"가방, 겉옷",M:"백팩, 쇼핑백",L:"캐리어"},
+    emptyN:(n)=>`빈 칸 ${n}`, lkSt:{ok:"여유",warn:"얼마 안 남음",bad:"만석",off:"운영 안 함"},
+    recH:"내 공연장에서 가장 가까운 빈 보관함", recNone:"근처 보관함이 모두 찼습니다. 역 보관함을 이용하세요.",
+    hoursLab:"운영", lkNear:"근처", lkAll:"전체 보관함",
+    lkTip:"공연 1~2시간 전부터 보관함이 빠르게 찹니다. 큰 짐은 역 보관함에 먼저 맡기고 오시면 편합니다.",
+    srcLocker:"데이터: 위치, 운영 여부는 서울교통공사 '지하철역 편의시설위치정보 물품보관함 현황'(서울 열린데이터광장, 5분 단위 갱신) 기준. 칸별 빈 칸 수는 공개 API가 없어 현재 화면은 샘플 값이며, 공원 안 임시 보관함은 가상 예시입니다." },
   en:{ app:"Olympic Park Show Day Guide", replay:"Replaying a 2025 show day", demoTime:"Demo time",
     homeH:"Which show are you here for?", homeSub:"Pick a show and see everything from arrival to heading home on one screen.",
     exData:"SAMPLE", exNote:"Show names and notices are fictional examples.",
@@ -306,27 +347,53 @@ const T = {
     rulesH:"Levels (feels-like temperature)", rules:[["Safe","Below 31°C and above -5°C"],["Caution","31°C to under 33°C, or -5°C and below"],["Warning","33°C and above (heat advisory level), or -10°C and below"]],
     tryH:"Try another temperature", tryNote:"Presentation demo. Move the slider to see the level and checklist change.", reset:"Back to forecast",
     srcSafe:"Data: Korea Meteorological Administration short-term forecast (sample values shown). Levels are our team's rule.",
-    mapH:"Site map", mapSub:"Venues, station exits, the lawn and parking lots. Tap a marker.",
-    filters:{all:"All",venue:"Venues",station:"Stations",parking:"Parking",lawn:"Lawn"},
+    mapH:"Site map", mapSub:"Venues, station exits, the lawn, parking lots and lockers. Tap a marker.",
+    filters:{all:"All",venue:"Venues",station:"Stations",parking:"Parking",locker:"Lockers",lawn:"Lawn"},
     myVenue:"Your venue", mapNote:"Schematic, not to scale. The demo will place the same coordinates on a Leaflet map.",
-    srcMap:"Data: KSPO lawn facility info (opening hours); positions are fixed coordinates set by our team",
-    lake:"Mongchon Lake", pick:"Tap a marker for details." }
+    srcMap:"Data: KSPO lawn facility info (opening hours); positions are fixed coordinates set by our team. Locker outline color shows free space (sample values)",
+    lake:"Mongchon Lake", pick:"Tap a marker for details.",
+    lockerT:"Lockers", lockerH:"Locker availability", lockerSub:"Free locker spaces near the venues, by size.",
+    size:{S:"Small",M:"Medium",L:"Large"}, sizeHint:{S:"Bag, jacket",M:"Backpack",L:"Suitcase"},
+    emptyN:(n)=>`${n} free`, lkSt:{ok:"Spaces",warn:"Few left",bad:"Full",off:"Closed"},
+    recH:"Closest lockers with space", recNone:"Lockers near your venue are full. Try the station lockers.",
+    hoursLab:"Open", lkNear:"Near", lkAll:"All lockers",
+    lkTip:"Lockers fill up fast 1 to 2 hours before the show. Drop big bags at the station lockers first.",
+    srcLocker:"Data: locations and open status from Seoul Metro station locker dataset (Seoul Open Data Plaza, updated every 5 min). Per-size free counts have no public API yet, so sample values are shown; in-park pop-up lockers are fictional examples." }
 };
 
 /* ===== 상태와 유틸 ===== */
 const store = { get(k,d){ try{ return localStorage.getItem(k) ?? d }catch(e){ return d } }, set(k,v){ try{ localStorage.setItem(k,v) }catch(e){} } };
 const state = { lang: store.get("lang","ko"), show: store.get("show","s1"), temp:null, filter:"all", place:null };
-const VIEWS = ["home","dash","parking","safety","map"];
+const VIEWS = ["home","dash","parking","safety","map"];   // 아래 탭에 보이는 화면
+const SUBVIEWS = ["locker"];                                 // 탭 없이 대시보드에서 들어가는 화면
 const t = () => T[state.lang];
 const L = (o) => o[state.lang];
 const show = () => SHOWS.find(s => s.id === state.show) || SHOWS[0];
-const place = (id) => PLACES.find(p => p.id === id);
+const place = (id) => allPlaces().find(p => p.id === id);
 function gradeOf(c){ if (c >= 33 || c <= -10) return "bad"; if (c >= 31 || c <= -5) return "warn"; return "ok"; }
 function lotState(l){ const r = l.used / l.cap; return r >= .9 ? "bad" : r >= .7 ? "warn" : "ok"; }
 const G = { ok:"g-ok", warn:"g-warn", bad:"g-bad" };
 const GC = { ok:"var(--ok)", warn:"var(--warn)", bad:"var(--bad)" };
 const pill = (g, label) => `<span class="pill ${G[g]}">${label}</span>`;
-function currentView(){ const h = location.hash.slice(1); return VIEWS.includes(h) ? h : "home"; }
+function currentView(){ const h = location.hash.slice(1); return VIEWS.includes(h) || SUBVIEWS.includes(h) ? h : "home"; }
+// 보관함 상태: 빈 칸 0 = 만석, 15% 미만 = 얼마 안 남음, 그 외 = 여유
+const lkSum = (k) => Object.values(k.sizes).reduce((a,z) => ({ total:a.total+z.total, empty:a.empty+z.empty }), {total:0, empty:0});
+function sizeState(z){ return z.empty === 0 ? "bad" : z.empty / z.total < .15 ? "warn" : "ok"; }
+function lockerState(k){ return k.op === false ? "off" : sizeState(lkSum(k)); }
+const lkPill = (st) => st === "off" ? `<span class="pill" style="background:var(--line);color:var(--muted)">${t().lkSt.off}</span>` : pill(st, t().lkSt[st]);
+// 내 공연장 근처에서 빈 칸이 있는 보관함을 먼저, 없으면 아무 곳이나 빈 칸 많은 순
+function lockersSorted(){
+  const v = show().venue;
+  return [...LOCKERS].sort((a,b) => (b.near.includes(v) - a.near.includes(v)) || (lkSum(b).empty - lkSum(a).empty));
+}
+function recLocker(){
+  const v = show().venue;
+  return lockersSorted().find(k => k.op !== false && k.near.includes(v) && lkSum(k).empty > 0) || null;
+}
+function sizesHTML(k){
+  return `<div class="sizes">${["S","M","L"].map(z => { const d = k.sizes[z]; if (!d) return ""; const st = sizeState(d); return `
+    <div class="s-${st}"><span>${t().size[z]}</span><b>${d.empty}<small> / ${d.total}</small></b><span>${t().sizeHint[z]}</span></div>`; }).join("")}</div>`;
+}
 function go(v){ if (location.hash.slice(1) === v) render(); else location.hash = v; }
 
 /* ===== 화면 1: 공연 선택 ===== */
@@ -395,6 +462,12 @@ function viewDash(){
       <div class="hd"><span>${t().route}</span><em>›</em></div>
       <div class="route">${t().routeSteps.map((x,i)=>`<div><span class="n" style="background:${["var(--accent)","var(--muted)","var(--brand)"][i]}">${i+1}</span><span>${x.replace("{v}", L(place(s.venue).name))}</span></div>`).join("")}</div>
     </button>
+    ${(() => { const k = recLocker(); return `
+    <button class="sc wide" data-go="locker">
+      <div class="hd"><span>${t().lockerT}</span><em>${t().more} ›</em></div>
+      ${k ? `<div class="lkline"><b>${L(k.name)}</b>${lkPill(lockerState(k))}</div>${sizesHTML(k)}`
+          : `<div class="lkline">${t().recNone}</div>`}
+    </button>`; })()}
   </div>`;
 }
 
@@ -476,7 +549,32 @@ function viewSafety(){
   </div>`;
 }
 
+/* ===== 화면 3-2: 물품보관함 현황 (대시보드에서 들어감) ===== */
+function viewLocker(){
+  const v = show().venue, rec = recLocker();
+  const card = (k) => { const st = lockerState(k), sum = lkSum(k); return `
+    <div class="card lk ${st==="off"?"off":""}">
+      <div class="hd"><div><b>${L(k.name)}</b><div class="meta">${L(k.spot)}</div></div>${lkPill(st)}</div>
+      ${sizesHTML(k)}
+      <div class="lkline"><span class="meta">${t().hoursLab} ${k.hours}  |  ${t().emptyN(sum.empty)} / ${sum.total}</span>
+        <button class="linkbtn" style="margin:0" data-goplace="${k.id}">${t().seeMap}</button></div>
+    </div>`; };
+  return `
+  <div><h2>${t().lockerH}</h2><p class="sub">${t().lockerSub}</p></div>
+  <div class="card" style="border-color:${rec ? "var(--ok)" : "var(--bad)"}">
+    <h3 style="display:flex;justify-content:space-between;align-items:center;gap:8px">${t().recH}<span class="sub" style="font-weight:400">${t().updated} ${LOCKERS_UPDATED}</span></h3>
+    ${rec ? `<div class="lkline"><b>${L(rec.name)}</b><span class="tag ex">${t().exData}</span></div><div class="meta sub" style="margin:2px 0 8px">${L(rec.spot)}</div>${sizesHTML(rec)}` : `<p style="margin:0">${t().recNone}</p>`}
+  </div>
+  <h3 style="margin:4px 0 0">${t().lkAll}</h3>
+  ${lockersSorted().map(card).join("")}
+  <div class="tip">${t().lkTip}</div>
+  <div class="src" style="margin-top:0">${t().srcLocker}</div>`;
+}
+
 /* ===== 화면 4: 현장 지도 ===== */
+// 보관함도 지도 표시로 함께 그림 (LOCKERS 의 x, y 좌표 사용)
+const lockerPlaces = () => LOCKERS.map(k => ({ id:k.id, type:"locker", x:k.x, y:k.y, name:k.name, desc:k.spot, locker:k }));
+const allPlaces = () => [...PLACES, ...lockerPlaces()];
 function mapSVG(){
   const venue = show().venue;
   const vis = p => state.filter === "all" || p.type === state.filter;
@@ -486,12 +584,15 @@ function mapSVG(){
     <path d="M70 150 Q80 120 120 128 Q150 140 140 175 Q128 205 95 196 Q66 186 70 150 Z" fill="var(--water)"/>
     <text x="105" y="166" font-size="10" text-anchor="middle" fill="var(--muted)">${t().lake}</text>
     <path d="M30 150 L110 150 M178 104 L252 196 M334 182 L252 196 M190 278 L222 238 M206 26 L178 104 M330 118 L292 220 M110 282 L150 230 L222 238" stroke="var(--road)" stroke-width="4" fill="none" stroke-linecap="round"/>`;
-  PLACES.filter(vis).forEach(p => {
+  allPlaces().filter(vis).forEach(p => {
     const sel = state.place === p.id, mine = p.id === venue, col = TYPE_COLOR[p.type];
     let shape;
     if (p.type === "parking") {
       const lot = LOTS.find(l => l.id === p.lot), ls = lotState(lot);
       shape = `<rect x="-10" y="-10" width="20" height="20" rx="4" fill="${GC[ls]}" stroke="var(--card)" stroke-width="2"/><text y="4" font-size="11" font-weight="700" text-anchor="middle" fill="var(--card)">P</text>`;
+    } else if (p.type === "locker") {
+      const ls = lockerState(p.locker), c = ls === "off" ? "var(--muted)" : GC[ls];
+      shape = `<rect x="-8" y="-9" width="16" height="18" rx="3" fill="var(--locker)" stroke="${c}" stroke-width="3"/><path d="M-4 -3h8M-4 3h8" stroke="var(--card)" stroke-width="1.6"/>`;
     } else if (p.type === "station") {
       shape = `<circle r="10" fill="${col}" stroke="var(--card)" stroke-width="2"/><text y="4" font-size="10" font-weight="700" text-anchor="middle" fill="var(--card)">M</text>`;
     } else {
@@ -503,7 +604,7 @@ function mapSVG(){
     m += `<g class="mk" tabindex="0" role="button" data-place="${p.id}" transform="translate(${p.x} ${p.y})" aria-label="${L(p.name)}">
       ${sel ? `<circle r="17" fill="none" stroke="var(--fg)" stroke-width="2" stroke-dasharray="3 3"/>` : ""}
       ${shape}
-      <text x="${lx}" y="${p.ly ?? (p.y > 260 ? -16 : 24)}" font-size="10.5" font-weight="${mine||sel?700:500}" text-anchor="${anchor}" fill="var(--fg)">${nm}${mine?" ★":""}</text></g>`;
+      <text x="${lx}" y="${p.ly ?? (p.y > 260 ? -16 : 24)}" font-size="10.5" font-weight="${mine||sel?700:500}" text-anchor="${anchor}" fill="var(--fg)">${p.type==="locker"&&!sel?"":nm}${mine?" ★":""}</text></g>`;
   });
   return `<svg viewBox="0 0 360 300" width="100%" role="img" aria-label="${t().mapH}">${m}</svg>`;
 }
@@ -511,6 +612,7 @@ function viewMap(){
   const p = state.place ? place(state.place) : place(show().venue);
   let extra = "";
   if (p.type === "parking") { const l = LOTS.find(x => x.id === p.lot), s = lotState(l); extra = ` ${pill(s, t().st[s])}`; }
+  if (p.type === "locker") { extra = ` ${lkPill(lockerState(p.locker))} <span class="sub" style="font-size:12.5px;white-space:nowrap">${t().emptyN(lkSum(p.locker).empty)}</span>`; }
   if (p.id === show().venue) extra += ` <span class="tag ex">${t().myVenue}</span>`;
   return `
   <div><h2>${t().mapH}</h2><p class="sub">${t().mapSub}</p></div>
@@ -533,13 +635,13 @@ const ICONS = [
 function render(){
   const v = currentView();
   document.documentElement.lang = state.lang;
-  document.getElementById("title").textContent = v === "home" ? t().app : L(show().title);
+  document.getElementById("title").textContent = v === "home" ? t().app : v === "locker" ? t().lockerT : L(show().title);
   document.getElementById("back").hidden = v === "home";
   document.getElementById("replay").innerHTML = `<span>${t().replay}</span><span>${t().demoTime} <b>${DEMO.date} ${DEMO.now}:00</b></span>`;
   ["ko","en"].forEach(l => document.getElementById("lang-"+l).setAttribute("aria-pressed", state.lang === l));
   document.getElementById("tabs").innerHTML = VIEWS.map((x,i) =>
-    `<a href="#${x}" ${x===v?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[i]}</svg>${t().tabs[i]}</a>`).join("");
-  document.getElementById("view").innerHTML = { home:viewHome, dash:viewDash, parking:viewParking, safety:viewSafety, map:viewMap }[v]();
+    `<a href="#${x}" ${x===v||(x==="dash"&&SUBVIEWS.includes(v))?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[i]}</svg>${t().tabs[i]}</a>`).join("");
+  document.getElementById("view").innerHTML = { home:viewHome, dash:viewDash, parking:viewParking, safety:viewSafety, map:viewMap, locker:viewLocker }[v]();
   const r = document.getElementById("temp-range");
   if (r) r.oninput = e => { state.temp = parseFloat(e.target.value); const y = scrollY; render(); scrollTo(0,y); document.getElementById("temp-range").focus(); };
 }
@@ -562,12 +664,13 @@ document.addEventListener("keydown", e => {
 });
 addEventListener("hashchange", () => { render(); scrollTo(0,0); });
 
-/* ===== Colab 전처리 결과(JSON) 불러오기 =====
-   data/parking_entry.json 이 있으면 위 샘플 값을 실제 값으로 바꿔서 그림.
-   파일이 없거나 PC에서 index.html 을 그냥 더블클릭해 연 경우(file://)에는 샘플 값 그대로 보임. */
-fetch("data/parking_entry.json")
-  .then(r => r.ok ? r.json() : Promise.reject())
-  .then(d => { if (d.hours && d.entry_show && d.entry_norm){ HOURS = d.hours; ENTRY_SHOW = d.entry_show; ENTRY_NORM = d.entry_norm; } })
-  .catch(() => {})
-  .finally(render);
+/* ===== JSON 데이터 불러오기 =====
+   data/parking_entry.json : Colab 전처리 결과 (주차 그래프)
+   data/lockers.json       : 물품보관함 현황 (나중에 실시간 API 응답으로 교체)
+   파일이 없거나 PC에서 index.html 을 그냥 더블클릭해 연 경우(file://)에는 위 샘플 값 그대로 보임. */
+const getJSON = (url) => fetch(url).then(r => r.ok ? r.json() : Promise.reject());
+Promise.allSettled([
+  getJSON("data/parking_entry.json").then(d => { if (d.hours && d.entry_show && d.entry_norm){ HOURS = d.hours; ENTRY_SHOW = d.entry_show; ENTRY_NORM = d.entry_norm; } }),
+  getJSON("data/lockers.json").then(d => { if (Array.isArray(d.lockers) && d.lockers.length){ LOCKERS = d.lockers; if (d.updated) LOCKERS_UPDATED = d.updated; } })
+]).finally(render);
 </script>
