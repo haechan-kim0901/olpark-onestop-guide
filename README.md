@@ -20,11 +20,17 @@ olpark-onestop-guide/
 │     └─ weather.json         ← 올림픽공원 실시간 날씨 (15분마다 자동 갱신)
 ├─ notebooks/
 │  └─ 01_preprocess_parking.ipynb  ← Colab 전처리 노트북
-├─ data/
-│  ├─ raw/                    ← 원본 CSV (GitHub 에 안 올림, 출처만 기록)
-│  └─ processed/              ← 팀원과 나눌 작은 중간 결과
+├─ data/                      ← 팀 확인용 CSV (엑셀에서 바로 열림, 한글 안 깨짐)
+│  ├─ raw/                    ← 전처리 전: API 원본 그대로 (보관함, 날씨는 15분마다 자동)
+│  │  ├─ lockers/             ←   전국 보관함 위치, 요금, 빈 칸 (JSON + CSV)
+│  │  ├─ weather/             ←   기상청 초단기실황, 초단기예보 (JSON + CSV)
+│  │  └─ parking/             ←   지금은 합성 샘플(_SAMPLE). 진짜 CSV 는 용량 때문에 안 올림
+│  └─ processed/              ← 전처리 후: 화면에 쓰는 숫자를 표로
 └─ README.md
 ```
+
+> 웹 화면은 계속 `docs/data/*.json` 을 읽습니다. `data/` 의 CSV 는 사람이 확인하고 기획서 근거로 쓰는 용도입니다.
+> 자세한 파일 목록은 [`data/raw/README.md`](data/raw/README.md), [`data/processed/README.md`](data/processed/README.md).
 
 ## 데이터가 화면까지 가는 길
 

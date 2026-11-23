@@ -6,6 +6,12 @@ GitHub Actions 가 15분마다 실행합니다 (.github/workflows/update-lockers
   2. 올림픽공원 중심 1.5km 안 보관함만 고르기
   3. 보관함 번호(stlckId)로 세 표 합치기
   4. 화면용 형식(lockers.json)으로 바꾸기
+  5. 팀 확인용 CSV 저장 (엑셀에서 바로 열림)
+     - 전처리 전(원본): data/raw/lockers/ 에 API 3개 응답을 JSON, CSV 로 그대로
+     - 전처리 후(결과): data/processed/lockers_olympicpark.csv (올림픽공원 주변 보관함 한 줄씩)
+
+이미 있는 lockers.json 으로 결과 CSV 만 다시 만들려면 (인증키 필요 없음):
+  python scripts/update_lockers.py --csv-only
 
 인증키는 코드에 쓰지 않고, 환경 변수 DATA_GO_KR_KEY 로만 받습니다
 (GitHub 저장소 Settings > Secrets 에 등록한 값).
@@ -20,6 +26,8 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+from csv_out import PROCESSED, RAW, write_csv, write_raw_json
 
 API_BASE = "https://apis.data.go.kr/B551982/psl_v2"
 STDG_CD = "1100000000"  # 서울특별시. 지역 코드 없이 K3(데이터 없음)이면 이 값으로 다시 시도
@@ -76,10 +84,10 @@ def call(key, path):
         code, msg, items = call_once(key, path, extra)
         print(f"  {path} {extra or '(지역 코드 없음)'} -> {code} {msg} {len(items)}개")
         if code == "K0" and items:
-            return items
+            return items, extra
         if code not in ("K0", "K3"):
             raise RuntimeError(f"{path}: 결과 코드 {code} {msg}")
-    return []
+    return [], {}
 
 
 def dist_m(a_lat, a_lon, b_lat, b_lon):
@@ -193,13 +201,57 @@ def build(info, detail, realtime):
     }
 
 
+SIZE_KO = {"S": "소형", "M": "중형", "L": "대형"}
+VENUE_KO = {"dome": "KSPO DOME", "hall": "올림픽홀", "arena": "핸드볼경기장", "lawn": "88잔디마당"}
+PROCESSED_COLS = ["기준시각", "보관함ID", "보관함이름", "세부위치", "위도", "경도", "공원중심거리_m",
+                  "가까운공연장", "운영시간", "소형_빈칸", "중형_빈칸", "대형_빈칸", "요금설명", "출처"]
+
+
+def processed_rows(out):
+    """lockers.json 내용을 엑셀에서 보기 쉬운 표(한 보관함 한 줄)로 바꿈."""
+    rows = []
+    for k in out.get("lockers", []):
+        row = {
+            "기준시각": out.get("fetched_at", ""),
+            "보관함ID": k.get("id"),
+            "보관함이름": (k.get("name") or {}).get("ko", ""),
+            "세부위치": (k.get("spot") or {}).get("ko", ""),
+            "위도": k.get("lat"), "경도": k.get("lon"),
+            "공원중심거리_m": k.get("dist_m"),
+            "가까운공연장": ", ".join(VENUE_KO.get(v, v) for v in k.get("near", [])),
+            "운영시간": k.get("hours", ""),
+            # 엑셀 한 칸에 보이도록 줄바꿈을 ' / ' 로
+            "요금설명": " / ".join(x.strip() for x in str(k.get("fee") or "").splitlines() if x.strip()),
+            "출처": out.get("source", ""),
+        }
+        for s, ko in SIZE_KO.items():
+            row[f"{ko}_빈칸"] = ((k.get("sizes") or {}).get(s) or {}).get("empty")
+        rows.append(row)
+    return rows
+
+
+def save_processed_csv(out):
+    p = write_csv(PROCESSED / "lockers_olympicpark.csv", processed_rows(out), PROCESSED_COLS)
+    print(f"결과 CSV 저장: {p.relative_to(PROCESSED.parent.parent)}")
+
+
+def save_raw(name, api, extra, items, fetched_at):
+    params = {"type": "JSON", "numOfRows": 1000, **extra}
+    write_raw_json(RAW / "lockers" / f"{name}.json", api, params, items, fetched_at)
+    write_csv(RAW / "lockers" / f"{name}.csv", items)
+    print(f"원본 저장: data/raw/lockers/{name}.json, .csv ({len(items)}행)")
+
+
 def main():
+    if "--csv-only" in sys.argv:
+        save_processed_csv(json.loads(OUT.read_text(encoding="utf-8")))
+        return
     key = urllib.parse.unquote(os.environ.get("DATA_GO_KR_KEY", "").strip())
     if not key:
         sys.exit("DATA_GO_KR_KEY 가 없습니다. 저장소 Settings > Secrets and variables > Actions 에 등록하세요.")
-    info = call(key, "locker_info_v2")
-    detail = call(key, "locker_detail_info_v2")
-    realtime = call(key, "locker_realtime_use_v2")
+    info, info_q = call(key, "locker_info_v2")
+    detail, detail_q = call(key, "locker_detail_info_v2")
+    realtime, rt_q = call(key, "locker_realtime_use_v2")
     if not info or not realtime:
         sys.exit("위치 또는 실시간 데이터가 비어 있어 기존 파일을 그대로 둡니다.")
     out = build(info, detail, realtime)
@@ -207,6 +259,13 @@ def main():
         sys.exit("올림픽공원 주변 보관함이 0곳이라 기존 파일을 그대로 둡니다.")
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"보관함 {len(out['lockers'])}곳 저장, 기준 시각 {out['fetched_at']}")
+
+    # 팀 확인용: 전처리 전(원본 전국 자료) / 전처리 후(올림픽공원 주변 결과)
+    got = out["fetched_at"]  # API 기준 시각 (자료가 같으면 파일도 그대로)
+    save_raw("locker_info", "locker_info_v2 (보관함 위치, 운영 시간)", info_q, info, got)
+    save_raw("locker_detail", "locker_detail_info_v2 (크기, 요금)", detail_q, detail, got)
+    save_raw("locker_realtime", "locker_realtime_use_v2 (크기별 빈 칸)", rt_q, realtime, got)
+    save_processed_csv(out)
 
 
 if __name__ == "__main__":
