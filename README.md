@@ -118,7 +118,7 @@ JSON 까지 반영된 화면은 아래 4번 GitHub Pages 링크에서 확인하�
 | 크기, 요금 설명 | `https://apis.data.go.kr/B551982/psl_v2/locker_detail_info_v2` |
 | 크기별 지금 빈 칸 수 | `https://apis.data.go.kr/B551982/psl_v2/locker_realtime_use_v2` |
 
-요청 값: `serviceKey`(인증키), `type=JSON`, `pageNo`, `numOfRows`(1000 이하). 정상이면 결과 코드 `K0`.
+요청 값: `serviceKey`(인증키), `type=JSON`, `pageNo`, `numOfRows`(1000 이하), 필요하면 `stdgCd`(지역 코드, 서울 1100000000). 정상이면 결과 코드 `K0`, `K3 NODATA_ERROR` 는 키는 정상인데 데이터가 없다는 뜻 (노트북이 지역 코드를 넣어 자동 재시도).
 
 1. `notebooks/02_lockers_api.ipynb` 를 Colab 으로 열기 (1번 방법과 같음)
 2. 위에서부터 실행. 1단계에서 인증키를 물어보면 붙여 넣기 (화면, 파일 어디에도 남지 않음)
