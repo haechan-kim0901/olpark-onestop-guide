@@ -1,0 +1,3260 @@
+{
+ "api": "locker_realtime_use_v2 (크기별 빈 칸)",
+ "params": {
+  "type": "JSON",
+  "numOfRows": 1000
+ },
+ "fetched_at": "2026-11-24 09:00",
+ "count": 361,
+ "items": [
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "A042A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "A042B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "A042C",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "A042D",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "A042E",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "7",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "T0002",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "0",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "T0003",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "0",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL120",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL124",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL125",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL126A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL126B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL127A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL127B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL128A",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL128B",
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL128C",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL129A",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL129B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL130A",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL130B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL130C",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL130D",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL131A",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL131B",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL132A",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL132B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL132C",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL133A",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL133B",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL133C",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL133D",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "3",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL145",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL202A",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL202B",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL202C",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "24",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL203A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL203B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL204A",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL204B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL205A",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "23",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL205B",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL205C",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL205D",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL205E",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL206A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL206B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL207",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL208A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL208B",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL208C",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL209",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL210A",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "5",
+   "usePsbltySmlszStlckCnt": "24",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL2111",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL2112",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL2113",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL211A",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "24",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL211B",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL212A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261124091003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL212B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL212C",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL212D",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL212E",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL213",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL214A",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL214B",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "27",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL215",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL216A",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "31",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL216B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL216C",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL216D",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "7",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL216F",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL217",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL218A",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "27",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL218B",
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "10",
+   "usePsbltySmlszStlckCnt": "33",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL218C",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL219A",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "21",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL219B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL219C",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL220A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL220B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL221",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "21",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL222A",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "34",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL222B",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL223A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL223B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL224",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL225",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL226A",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL226B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL226C",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL227",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL228",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL229",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL230A",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL230B",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "16",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL231",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL232",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL233A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL233B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL2341",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL2342",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL2343",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL234A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL234B",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL234C",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "22",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL235",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL236A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL236B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL237",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL238A",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL238B",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL238C",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL239A",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "5",
+   "usePsbltySmlszStlckCnt": "20",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL239B",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "19",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL239C",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL239D",
+   "usePsbltyLrgszStlckCnt": "10",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "29",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL239E",
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "27",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL239F",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "0",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL240A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL240B",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL240C",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL240D",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL241",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL242",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL243A",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL243B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL320",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "7",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL321",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL322A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL322B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL323",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL324A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL324B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL325",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL326",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL327A",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "19",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL327B",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "23",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL327C",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL328A",
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "8",
+   "usePsbltySmlszStlckCnt": "26",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL328B",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "25",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL328C",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL332",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL333A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL333B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL334",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL335",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL336A",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL336B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL337A",
+   "usePsbltyLrgszStlckCnt": "9",
+   "usePsbltyMdmszStlckCnt": "5",
+   "usePsbltySmlszStlckCnt": "29",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL337B",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL338",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL339A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL339B",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "35",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL339E",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL341",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL342A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL342B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL343",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL344",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL345",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL346",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL347",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL348",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL349",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL349B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL350A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL350B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "4",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL351",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL352",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL409",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL410",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL411A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL411B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL412",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL413",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL414",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL415",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL416A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL416B",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL417",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL418A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL418B",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "21",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL419",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL420A",
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "30",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL420B",
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "27",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL420C",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL420D",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL423A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL423B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL424A",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL424B",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL424C",
+   "usePsbltyLrgszStlckCnt": "10",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "27",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL424D",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "10",
+   "usePsbltySmlszStlckCnt": "24",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL425A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL425B",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL425C",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL425D",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL427",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL428A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL428B",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL429",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "16",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL430",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL430B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL431",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "7",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL432A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL432B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL434",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL510",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL511",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL512",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "27",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL512B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL513",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL514",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "4",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL515",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL516",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL517",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL518",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL519",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL520",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL521A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL521B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL522",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL524",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL525",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL526",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "25",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL527A",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "30",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL527B",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL528",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL530",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL532",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL533A",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL533B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL533C",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "0",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL533D",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL533E",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL537",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL538",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL539",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL541",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL542",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL543",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL544",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL545",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL546",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL547A",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL547B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL548",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL549",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL550A",
+   "usePsbltyLrgszStlckCnt": "11",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "39",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL550C",
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "8",
+   "usePsbltySmlszStlckCnt": "34",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL551",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL552",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL553",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL610",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL611",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL613",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL615",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL616",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL617",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL618",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL619",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL619B",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL619C",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL620",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL621",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL623",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL624",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL625",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL626A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL626B",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL627",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL629",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL630A",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL630B",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "20",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL631",
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL632",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL637",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL638",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL639",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL640",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL641",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL642",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL643",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "4",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL646",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL647",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL710",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL711",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL712",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL714",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL715",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL716",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL717",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL718",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL719",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL720",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL721",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL722",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL723",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL724",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL726",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL728",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL729A",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL729B",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL730",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL731",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL732",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL733",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL735",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL736",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL737",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL738",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "7",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL739",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL740",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL741",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL742",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL743",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL745",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL749",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL810",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL812",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL813",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL815A",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL815B",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL816",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL818",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL819",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL820",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL926",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL928",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL929",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL931",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL932",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL934",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL935",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL937",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TL938",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TLP142",
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TLP549",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TLP550",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TLP551",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TLP553",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TLP554",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "1100000000",
+   "lclgvNm": "서울특별시",
+   "stlckId": "TLP555",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124090003"
+  },
+  {
+   "stdgCd": "4111000000",
+   "lclgvNm": "경기도 수원시",
+   "stlckId": "10001",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "0",
+   "totDt": "20261124091103"
+  },
+  {
+   "stdgCd": "4111000000",
+   "lclgvNm": "경기도 수원시",
+   "stlckId": "10002",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltySmlszStlckCnt": "0",
+   "totDt": "20261124091102"
+  },
+  {
+   "stdgCd": "4113000000",
+   "lclgvNm": "경기도 성남시",
+   "stlckId": "TL821",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4113000000",
+   "lclgvNm": "경기도 성남시",
+   "stlckId": "TL822",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4113000000",
+   "lclgvNm": "경기도 성남시",
+   "stlckId": "TL823",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4113000000",
+   "lclgvNm": "경기도 성남시",
+   "stlckId": "TL824",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4113000000",
+   "lclgvNm": "경기도 성남시",
+   "stlckId": "TL825",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4113000000",
+   "lclgvNm": "경기도 성남시",
+   "stlckId": "TL827",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4121000000",
+   "lclgvNm": "경기도 광명시",
+   "stlckId": "TL747",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4121000000",
+   "lclgvNm": "경기도 광명시",
+   "stlckId": "TL748",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4128000000",
+   "lclgvNm": "경기도 고양시",
+   "stlckId": "TL319",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261124091008"
+  },
+  {
+   "stdgCd": "4822000000",
+   "lclgvNm": "경상남도 통영시",
+   "stlckId": "tys00010001",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "12",
+   "usePsbltySmlszStlckCnt": "1",
+   "totDt": "20261124091002"
+  },
+  {
+   "stdgCd": "4822000000",
+   "lclgvNm": "경상남도 통영시",
+   "stlckId": "tys00010002",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "9",
+   "usePsbltySmlszStlckCnt": "1",
+   "totDt": "20261124091002"
+  },
+  {
+   "stdgCd": "4822000000",
+   "lclgvNm": "경상남도 통영시",
+   "stlckId": "tys00020001",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "11",
+   "usePsbltySmlszStlckCnt": "1",
+   "totDt": "20261124091002"
+  },
+  {
+   "stdgCd": "4822000000",
+   "lclgvNm": "경상남도 통영시",
+   "stlckId": "tys00020002",
+   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyMdmszStlckCnt": "14",
+   "usePsbltySmlszStlckCnt": "1",
+   "totDt": "20261124091002"
+  },
+  {
+   "stdgCd": "5183000000",
+   "lclgvNm": "강원특별자치도 양양군",
+   "stlckId": "1",
+   "usePsbltyLrgszStlckCnt": "11",
+   "usePsbltyMdmszStlckCnt": "22",
+   "usePsbltySmlszStlckCnt": "0",
+   "totDt": "20261124091002"
+  },
+  {
+   "stdgCd": "5183000000",
+   "lclgvNm": "강원특별자치도 양양군",
+   "stlckId": "2",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "12",
+   "usePsbltySmlszStlckCnt": "0",
+   "totDt": "20261124091006"
+  }
+ ]
+}
