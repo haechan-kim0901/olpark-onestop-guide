@@ -5,6 +5,12 @@ GitHub Actions 가 15분마다 실행합니다 (.github/workflows/update-weather
   1. 초단기실황(getUltraSrtNcst): 지금 기온, 1시간 강수량, 습도, 바람, 강수 형태
   2. 초단기예보(getUltraSrtFcst): 앞으로 6시간 기온, 하늘 상태, 강수 형태, 강수량
   3. 체감온도 계산 (겨울: 기상청 바람냉각 공식, 여름: 기상청 여름철 공식)
+  4. 팀 확인용 CSV 저장 (엑셀에서 바로 열림)
+     - 전처리 전(원본): data/raw/weather/ 에 API 2개 응답을 JSON, CSV 로 그대로
+     - 전처리 후(결과): data/processed/weather_now.csv (지금 1줄), weather_hours.csv (6시간 예보)
+
+이미 있는 weather.json 으로 결과 CSV 만 다시 만들려면 (인증키 필요 없음):
+  python scripts/update_weather.py --csv-only
 
 인증키는 코드에 쓰지 않고, 환경 변수 DATA_GO_KR_KEY 로만 받습니다
 (물품보관함과 같은 Secret. 공공데이터포털 인증키는 계정마다 하나라서 그대로 씁니다).
@@ -18,6 +24,8 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+from csv_out import PROCESSED, RAW, write_csv, write_raw_json
 
 API_BASE = "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0"
 OUT = Path(__file__).resolve().parent.parent / "docs" / "data" / "weather.json"
@@ -167,7 +175,44 @@ def build(ncst_base, ncst, fcst_base, fcst):
     }
 
 
+SKY_KO = {1: "맑음", 3: "구름많음", 4: "흐림"}
+PTY_KO = {0: "없음", 1: "비", 2: "비/눈", 3: "눈", 5: "빗방울", 6: "빗방울눈날림", 7: "눈날림"}
+CAT_KO = {"T1H": "기온(도)", "RN1": "1시간 강수량(mm)", "REH": "습도(%)", "WSD": "풍속(m/s)", "VEC": "풍향(도)",
+          "UUU": "동서바람성분(m/s)", "VVV": "남북바람성분(m/s)", "PTY": "강수형태(코드)", "SKY": "하늘상태(코드)",
+          "LGT": "낙뢰(kA)"}
+
+
+def save_processed_csv(out):
+    now = out.get("now", {})
+    write_csv(PROCESSED / "weather_now.csv", [{
+        "관측시각": out.get("fetched_at", ""), "기온_도": now.get("temp"), "체감온도_도": now.get("feels"),
+        "습도_퍼센트": now.get("humidity"), "풍속_ms": now.get("wind_ms"), "1시간강수량_mm": now.get("rain_1h_mm"),
+        "강수형태": PTY_KO.get(now.get("pty"), now.get("pty")), "하늘상태": SKY_KO.get(now.get("sky"), now.get("sky")),
+        "격자": f"nx={out.get('grid', {}).get('nx')}, ny={out.get('grid', {}).get('ny')}", "출처": out.get("source", ""),
+    }])
+    write_csv(PROCESSED / "weather_hours.csv", [{
+        "예보발표시각": out.get("forecast_base", ""), "예보시각": h.get("time"), "기온_도": h.get("temp"),
+        "체감온도_도": h.get("feels"), "하늘상태": SKY_KO.get(h.get("sky"), h.get("sky")),
+        "강수형태": PTY_KO.get(h.get("pty"), h.get("pty")), "강수량_mm": h.get("rain_mm"),
+    } for h in out.get("hours", [])])
+    print("결과 CSV 저장: data/processed/weather_now.csv, weather_hours.csv")
+
+
+def save_raw(name, op, base, items):
+    for i in items:  # 원본 열은 그대로 두고, 읽기 쉽게 항목 이름만 한 열 덧붙임
+        i.setdefault("category_ko", CAT_KO.get(i.get("category"), ""))
+    params = {"dataType": "JSON", "numOfRows": 1000, "nx": NX, "ny": NY,
+              "base_date": base.strftime("%Y%m%d"), "base_time": base.strftime("%H%M")}
+    # 받은 시각 대신 발표 시각을 적어서, 자료가 같으면 파일도 그대로 (쓸데없는 커밋 방지)
+    write_raw_json(RAW / "weather" / f"{name}.json", op, params, items, base.strftime("%Y-%m-%d %H:%M"))
+    write_csv(RAW / "weather" / f"{name}.csv", items)
+    print(f"원본 저장: data/raw/weather/{name}.json, .csv ({len(items)}행)")
+
+
 def main():
+    if "--csv-only" in sys.argv:
+        save_processed_csv(json.loads(OUT.read_text(encoding="utf-8")))
+        return
     key = urllib.parse.unquote(os.environ.get("DATA_GO_KR_KEY", "").strip())
     if not key:
         sys.exit("DATA_GO_KR_KEY 가 없습니다. 저장소 Settings > Secrets and variables > Actions 에 등록하세요.")
@@ -185,6 +230,12 @@ def main():
     out = build(ncst_base, ncst, fcst_base, fcst)
     OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"저장: {out['fetched_at']} 기준 {out['now']['temp']}도, 체감 {out['now']['feels']}도, 예보 {len(out['hours'])}시간")
+
+    # 팀 확인용: 전처리 전(기상청 원본) / 전처리 후(화면에 쓰는 값)
+    save_raw("ultra_srt_ncst", "getUltraSrtNcst (초단기실황)", ncst_base, ncst)
+    if fcst:
+        save_raw("ultra_srt_fcst", "getUltraSrtFcst (초단기예보)", fcst_base, fcst)
+    save_processed_csv(out)
 
 
 if __name__ == "__main__":
