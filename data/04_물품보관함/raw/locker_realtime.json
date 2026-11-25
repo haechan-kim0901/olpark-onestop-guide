@@ -4,7 +4,7 @@
   "type": "JSON",
   "numOfRows": 1000
  },
- "fetched_at": "2026-11-25 17:10",
+ "fetched_at": "2026-11-26 03:40",
  "count": 361,
  "items": [
   {
@@ -14,7 +14,7 @@
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -23,7 +23,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -32,7 +32,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -41,7 +41,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -50,7 +50,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -59,7 +59,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "0",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -68,25 +68,25 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "0",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL120",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL124",
    "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -95,7 +95,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -104,16 +104,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL126B",
    "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -121,35 +121,35 @@
    "stlckId": "TL127A",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL127B",
    "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL128A",
    "usePsbltyLrgszStlckCnt": "5",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "18",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL128B",
-   "usePsbltyLrgszStlckCnt": "5",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -158,34 +158,34 @@
    "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "13",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL129A",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL129B",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL130A",
-   "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "16",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -193,17 +193,17 @@
    "stlckId": "TL130B",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL130C",
-   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -211,8 +211,8 @@
    "stlckId": "TL130D",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -220,8 +220,8 @@
    "stlckId": "TL131A",
    "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -229,17 +229,17 @@
    "stlckId": "TL131B",
    "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "17",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL132A",
-   "usePsbltyLrgszStlckCnt": "5",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -247,53 +247,53 @@
    "stlckId": "TL132B",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL132C",
-   "usePsbltyLrgszStlckCnt": "4",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "17",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "16",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL133A",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL133B",
-   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyLrgszStlckCnt": "6",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL133C",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL133D",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "2",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "3",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -302,25 +302,25 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL202A",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "17",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL202B",
-   "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -329,34 +329,34 @@
    "usePsbltyLrgszStlckCnt": "8",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "24",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL203A",
-   "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL203B",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL204A",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -365,7 +365,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -373,35 +373,35 @@
    "stlckId": "TL205A",
    "usePsbltyLrgszStlckCnt": "8",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "21",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "23",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL205B",
-   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL205C",
    "usePsbltyLrgszStlckCnt": "6",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL205D",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -409,8 +409,8 @@
    "stlckId": "TL205E",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -418,8 +418,8 @@
    "stlckId": "TL206A",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -427,8 +427,8 @@
    "stlckId": "TL206B",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -436,26 +436,26 @@
    "stlckId": "TL207",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL208A",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL208B",
    "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -463,8 +463,8 @@
    "stlckId": "TL208C",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -473,16 +473,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL210A",
-   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyLrgszStlckCnt": "6",
    "usePsbltyMdmszStlckCnt": "6",
-   "usePsbltySmlszStlckCnt": "24",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "26",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -491,7 +491,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -500,7 +500,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -509,43 +509,43 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL211A",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "2",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "23",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL211B",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "0",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL212A",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "13",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL212B",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -553,53 +553,53 @@
    "stlckId": "TL212C",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "13",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL212D",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL212E",
-   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "18",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL213",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171003"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL214A",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL214B",
-   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "27",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "26",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -608,34 +608,34 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL216A",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "25",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "32",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL216B",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "17",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL216C",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "10",
-   "totDt": "20261125171003"
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -643,26 +643,26 @@
    "stlckId": "TL216D",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "3",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL216F",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL217",
    "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -671,7 +671,7 @@
    "usePsbltyLrgszStlckCnt": "6",
    "usePsbltyMdmszStlckCnt": "6",
    "usePsbltySmlszStlckCnt": "26",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -680,7 +680,7 @@
    "usePsbltyLrgszStlckCnt": "7",
    "usePsbltyMdmszStlckCnt": "10",
    "usePsbltySmlszStlckCnt": "35",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -689,16 +689,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL219A",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "18",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "20",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -707,7 +707,7 @@
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -715,62 +715,62 @@
    "stlckId": "TL219C",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL220A",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL220B",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL221",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "17",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "19",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL222A",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "6",
    "usePsbltyMdmszStlckCnt": "6",
-   "usePsbltySmlszStlckCnt": "28",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "36",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL222B",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "16",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL223A",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "13",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -779,7 +779,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -787,8 +787,8 @@
    "stlckId": "TL224",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -797,16 +797,16 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL226A",
    "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "10",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -815,16 +815,16 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL226C",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -832,17 +832,17 @@
    "stlckId": "TL227",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL228",
    "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -851,7 +851,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -859,17 +859,17 @@
    "stlckId": "TL230A",
    "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL230B",
-   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyLrgszStlckCnt": "6",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "19",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "20",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -878,7 +878,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -886,8 +886,8 @@
    "stlckId": "TL232",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -896,7 +896,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -904,8 +904,8 @@
    "stlckId": "TL233B",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -914,7 +914,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -923,7 +923,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -931,26 +931,26 @@
    "stlckId": "TL2343",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "4",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL234A",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL234B",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -958,8 +958,8 @@
    "stlckId": "TL234C",
    "usePsbltyLrgszStlckCnt": "8",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "19",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "22",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -967,17 +967,17 @@
    "stlckId": "TL235",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "2",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL236A",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -986,7 +986,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -995,7 +995,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1003,80 +1003,80 @@
    "stlckId": "TL238A",
    "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "16",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL238B",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL238C",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "3",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL239A",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "2",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL239B",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "6",
    "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL239C",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "3",
    "usePsbltySmlszStlckCnt": "10",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL239D",
-   "usePsbltyLrgszStlckCnt": "5",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "21",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "10",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "29",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL239E",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "26",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL239F",
-   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyLrgszStlckCnt": "6",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "0",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1084,44 +1084,44 @@
    "stlckId": "TL240A",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "13",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL240B",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "5",
-   "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL240C",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL240D",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL241",
-   "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1130,7 +1130,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1139,16 +1139,16 @@
    "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL243B",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1157,7 +1157,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1165,17 +1165,17 @@
    "stlckId": "TL321",
    "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "13",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL322A",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "4",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1184,7 +1184,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1193,7 +1193,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1202,7 +1202,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1211,7 +1211,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1220,7 +1220,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1228,44 +1228,44 @@
    "stlckId": "TL326",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL327A",
-   "usePsbltyLrgszStlckCnt": "5",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "16",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "21",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL327B",
-   "usePsbltyLrgszStlckCnt": "4",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "20",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "24",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL327C",
-   "usePsbltyLrgszStlckCnt": "4",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "8",
+   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL328A",
-   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyLrgszStlckCnt": "7",
    "usePsbltyMdmszStlckCnt": "8",
-   "usePsbltySmlszStlckCnt": "25",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "27",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1273,8 +1273,8 @@
    "stlckId": "TL328B",
    "usePsbltyLrgszStlckCnt": "8",
    "usePsbltyMdmszStlckCnt": "6",
-   "usePsbltySmlszStlckCnt": "22",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "25",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1283,16 +1283,16 @@
    "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "18",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL332",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1300,8 +1300,8 @@
    "stlckId": "TL333A",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1309,8 +1309,8 @@
    "stlckId": "TL333B",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1319,7 +1319,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1328,34 +1328,34 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL336A",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL336B",
    "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL337A",
-   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyLrgszStlckCnt": "9",
    "usePsbltyMdmszStlckCnt": "6",
-   "usePsbltySmlszStlckCnt": "22",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "30",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1364,7 +1364,7 @@
    "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1372,53 +1372,53 @@
    "stlckId": "TL338",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL339A",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL339B",
-   "usePsbltyLrgszStlckCnt": "9",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "29",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "10",
+   "usePsbltyMdmszStlckCnt": "5",
+   "usePsbltySmlszStlckCnt": "38",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL339E",
    "usePsbltyLrgszStlckCnt": "4",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "16",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL341",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "13",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "14",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL342A",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1426,26 +1426,26 @@
    "stlckId": "TL342B",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL343",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL344",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1454,7 +1454,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1463,7 +1463,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1472,7 +1472,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1481,25 +1481,25 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL349",
-   "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL349B",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1508,7 +1508,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1517,7 +1517,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1526,7 +1526,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1535,7 +1535,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1544,16 +1544,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL410",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1562,7 +1562,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1570,17 +1570,17 @@
    "stlckId": "TL411B",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL412",
    "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1588,8 +1588,8 @@
    "stlckId": "TL413",
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1598,16 +1598,16 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL415",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1615,8 +1615,8 @@
    "stlckId": "TL416A",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1625,16 +1625,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL417",
    "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1642,35 +1642,35 @@
    "stlckId": "TL418A",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL418B",
-   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "18",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "19",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL419",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL420A",
-   "usePsbltyLrgszStlckCnt": "4",
-   "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "25",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "6",
+   "usePsbltySmlszStlckCnt": "29",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1679,34 +1679,34 @@
    "usePsbltyLrgszStlckCnt": "7",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "27",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL420C",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL420D",
    "usePsbltyLrgszStlckCnt": "4",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "17",
-   "totDt": "20261125171003"
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL423A",
-   "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1715,16 +1715,16 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL424A",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1733,43 +1733,43 @@
    "usePsbltyLrgszStlckCnt": "8",
    "usePsbltyMdmszStlckCnt": "3",
    "usePsbltySmlszStlckCnt": "18",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL424C",
-   "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "20",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "9",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "26",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL424D",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "9",
-   "usePsbltySmlszStlckCnt": "23",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "10",
+   "usePsbltySmlszStlckCnt": "24",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL425A",
-   "usePsbltyLrgszStlckCnt": "5",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "6",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL425B",
    "usePsbltyLrgszStlckCnt": "8",
-   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1778,7 +1778,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1787,7 +1787,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1795,8 +1795,8 @@
    "stlckId": "TL427",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1805,7 +1805,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1814,16 +1814,16 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL429",
-   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1832,16 +1832,16 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL430B",
-   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1849,8 +1849,8 @@
    "stlckId": "TL431",
    "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1859,7 +1859,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1867,8 +1867,8 @@
    "stlckId": "TL432B",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1876,8 +1876,8 @@
    "stlckId": "TL434",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1886,7 +1886,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1895,25 +1895,25 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL512",
-   "usePsbltyLrgszStlckCnt": "4",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "24",
-   "totDt": "20261125171003"
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "28",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL512B",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1921,26 +1921,26 @@
    "stlckId": "TL513",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL514",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "4",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL515",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1948,8 +1948,8 @@
    "stlckId": "TL516",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1957,8 +1957,8 @@
    "stlckId": "TL517",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1966,8 +1966,8 @@
    "stlckId": "TL518",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "3",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1976,7 +1976,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -1984,17 +1984,17 @@
    "stlckId": "TL520",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "11",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL521A",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2002,8 +2002,8 @@
    "stlckId": "TL521B",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2012,7 +2012,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2021,7 +2021,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2029,26 +2029,26 @@
    "stlckId": "TL525",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL526",
-   "usePsbltyLrgszStlckCnt": "5",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "21",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "7",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "25",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL527A",
-   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "7",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "26",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "29",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2056,17 +2056,17 @@
    "stlckId": "TL527B",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL528",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2075,43 +2075,43 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL532",
-   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL533A",
    "usePsbltyLrgszStlckCnt": "9",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "22",
-   "totDt": "20261125171003"
+   "usePsbltyMdmszStlckCnt": "3",
+   "usePsbltySmlszStlckCnt": "33",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL533B",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL533C",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "6",
-   "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "17",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2120,7 +2120,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2129,7 +2129,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2137,8 +2137,8 @@
    "stlckId": "TL537",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2147,7 +2147,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2156,7 +2156,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2165,7 +2165,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2174,7 +2174,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2183,16 +2183,16 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL544",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2201,7 +2201,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2210,25 +2210,25 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL547A",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL547B",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2237,7 +2237,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2246,7 +2246,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2255,7 +2255,7 @@
    "usePsbltyLrgszStlckCnt": "11",
    "usePsbltyMdmszStlckCnt": "4",
    "usePsbltySmlszStlckCnt": "39",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2264,7 +2264,7 @@
    "usePsbltyLrgszStlckCnt": "8",
    "usePsbltyMdmszStlckCnt": "8",
    "usePsbltySmlszStlckCnt": "33",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2273,16 +2273,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL552",
    "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2291,7 +2291,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2300,7 +2300,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2309,7 +2309,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2318,7 +2318,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2326,8 +2326,8 @@
    "stlckId": "TL615",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2336,7 +2336,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2344,26 +2344,26 @@
    "stlckId": "TL617",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL618",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL619",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2372,7 +2372,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2381,7 +2381,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "15",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2389,26 +2389,26 @@
    "stlckId": "TL620",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "5",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL621",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "10",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL623",
-   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2417,7 +2417,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2426,25 +2426,25 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL626A",
-   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL626B",
-   "usePsbltyLrgszStlckCnt": "2",
+   "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2453,43 +2453,43 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL629",
    "usePsbltyLrgszStlckCnt": "4",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "13",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL630A",
-   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "12",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "13",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL630B",
-   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyLrgszStlckCnt": "5",
    "usePsbltyMdmszStlckCnt": "3",
    "usePsbltySmlszStlckCnt": "20",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL631",
-   "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "10",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "5",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2498,7 +2498,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2507,7 +2507,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2516,7 +2516,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2525,7 +2525,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2533,17 +2533,17 @@
    "stlckId": "TL640",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL641",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2552,7 +2552,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2561,7 +2561,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2570,7 +2570,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "1",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2579,7 +2579,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2588,7 +2588,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2597,7 +2597,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2606,7 +2606,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2614,8 +2614,8 @@
    "stlckId": "TL714",
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "4",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2623,8 +2623,8 @@
    "stlckId": "TL715",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2633,16 +2633,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL717",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2651,7 +2651,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2659,8 +2659,8 @@
    "stlckId": "TL719",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2668,8 +2668,8 @@
    "stlckId": "TL720",
    "usePsbltyLrgszStlckCnt": "4",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "14",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "15",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2677,8 +2677,8 @@
    "stlckId": "TL721",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "7",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2686,8 +2686,8 @@
    "stlckId": "TL722",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2696,7 +2696,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2705,16 +2705,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL726",
-   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2722,8 +2722,8 @@
    "stlckId": "TL728",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "4",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2732,7 +2732,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2740,17 +2740,17 @@
    "stlckId": "TL729B",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL730",
-   "usePsbltyLrgszStlckCnt": "1",
-   "usePsbltyMdmszStlckCnt": "1",
-   "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "3",
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "10",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2759,16 +2759,16 @@
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "10",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL732",
    "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "0",
-   "usePsbltySmlszStlckCnt": "11",
-   "totDt": "20261125171004"
+   "usePsbltyMdmszStlckCnt": "2",
+   "usePsbltySmlszStlckCnt": "12",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2777,7 +2777,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2785,8 +2785,8 @@
    "stlckId": "TL735",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "8",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2794,8 +2794,8 @@
    "stlckId": "TL736",
    "usePsbltyLrgszStlckCnt": "3",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "10",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2803,8 +2803,8 @@
    "stlckId": "TL737",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2813,7 +2813,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2822,7 +2822,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2830,17 +2830,17 @@
    "stlckId": "TL740",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL741",
    "usePsbltyLrgszStlckCnt": "2",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2848,8 +2848,8 @@
    "stlckId": "TL742",
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "9",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2858,7 +2858,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "8",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2867,7 +2867,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2876,7 +2876,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2885,7 +2885,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2894,7 +2894,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2903,7 +2903,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2911,8 +2911,8 @@
    "stlckId": "TL815A",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2920,8 +2920,8 @@
    "stlckId": "TL815B",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171003"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2930,7 +2930,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2939,7 +2939,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2948,7 +2948,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171003"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2957,25 +2957,25 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL926",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL928",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2983,8 +2983,8 @@
    "stlckId": "TL929",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "4",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -2993,16 +2993,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TL932",
-   "usePsbltyLrgszStlckCnt": "0",
-   "usePsbltyMdmszStlckCnt": "1",
+   "usePsbltyLrgszStlckCnt": "1",
+   "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3011,7 +3011,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3020,7 +3020,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3029,7 +3029,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3038,16 +3038,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
    "lclgvNm": "서울특별시",
    "stlckId": "TLP142",
-   "usePsbltyLrgszStlckCnt": "3",
-   "usePsbltyMdmszStlckCnt": "3",
-   "usePsbltySmlszStlckCnt": "17",
-   "totDt": "20261125171004"
+   "usePsbltyLrgszStlckCnt": "4",
+   "usePsbltyMdmszStlckCnt": "4",
+   "usePsbltySmlszStlckCnt": "18",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3055,8 +3055,8 @@
    "stlckId": "TLP549",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3065,7 +3065,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3074,7 +3074,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3082,8 +3082,8 @@
    "stlckId": "TLP553",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171004"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3092,7 +3092,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "1100000000",
@@ -3101,7 +3101,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171004"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "4111000000",
@@ -3110,7 +3110,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "0",
-   "totDt": "20261125171503"
+   "totDt": "20261126034701"
   },
   {
    "stdgCd": "4111000000",
@@ -3119,7 +3119,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "0",
    "usePsbltySmlszStlckCnt": "0",
-   "totDt": "20261125171503"
+   "totDt": "20261126034703"
   },
   {
    "stdgCd": "4113000000",
@@ -3127,8 +3127,8 @@
    "stlckId": "TL821",
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
-   "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171009"
+   "usePsbltySmlszStlckCnt": "6",
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "4113000000",
@@ -3137,7 +3137,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "9",
-   "totDt": "20261125171009"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "4113000000",
@@ -3146,7 +3146,7 @@
    "usePsbltyLrgszStlckCnt": "2",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "7",
-   "totDt": "20261125171009"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "4113000000",
@@ -3155,7 +3155,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171009"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "4113000000",
@@ -3164,7 +3164,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171009"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "4113000000",
@@ -3173,7 +3173,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171009"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "4121000000",
@@ -3182,7 +3182,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171009"
+   "totDt": "20261126034105"
   },
   {
    "stdgCd": "4121000000",
@@ -3191,16 +3191,16 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "5",
-   "totDt": "20261125171009"
+   "totDt": "20261126034105"
   },
   {
    "stdgCd": "4128000000",
    "lclgvNm": "경기도 고양시",
    "stlckId": "TL319",
-   "usePsbltyLrgszStlckCnt": "0",
+   "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "2",
    "usePsbltySmlszStlckCnt": "6",
-   "totDt": "20261125171009"
+   "totDt": "20261126034007"
   },
   {
    "stdgCd": "4822000000",
@@ -3209,7 +3209,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "12",
    "usePsbltySmlszStlckCnt": "1",
-   "totDt": "20261125171002"
+   "totDt": "20261126034003"
   },
   {
    "stdgCd": "4822000000",
@@ -3218,7 +3218,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "9",
    "usePsbltySmlszStlckCnt": "1",
-   "totDt": "20261125171002"
+   "totDt": "20261126034003"
   },
   {
    "stdgCd": "4822000000",
@@ -3227,7 +3227,7 @@
    "usePsbltyLrgszStlckCnt": "1",
    "usePsbltyMdmszStlckCnt": "11",
    "usePsbltySmlszStlckCnt": "1",
-   "totDt": "20261125171002"
+   "totDt": "20261126034003"
   },
   {
    "stdgCd": "4822000000",
@@ -3236,7 +3236,7 @@
    "usePsbltyLrgszStlckCnt": "0",
    "usePsbltyMdmszStlckCnt": "14",
    "usePsbltySmlszStlckCnt": "1",
-   "totDt": "20261125171002"
+   "totDt": "20261126034003"
   },
   {
    "stdgCd": "5183000000",
@@ -3245,7 +3245,7 @@
    "usePsbltyLrgszStlckCnt": "11",
    "usePsbltyMdmszStlckCnt": "22",
    "usePsbltySmlszStlckCnt": "0",
-   "totDt": "20261125171004"
+   "totDt": "20261126034005"
   },
   {
    "stdgCd": "5183000000",
@@ -3254,7 +3254,7 @@
    "usePsbltyLrgszStlckCnt": "6",
    "usePsbltyMdmszStlckCnt": "12",
    "usePsbltySmlszStlckCnt": "0",
-   "totDt": "20261125171006"
+   "totDt": "20261126034002"
   }
  ]
 }
