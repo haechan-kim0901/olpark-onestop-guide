@@ -1,6 +1,6 @@
 # 물품보관함 빈 칸 자동 갱신
 # 15분마다 scripts/update_lockers.py 를 실행해 docs/data/lockers.json 을 새로 만들고,
-# 팀 확인용 CSV(전처리 전 data/raw/lockers/, 전처리 후 data/processed/lockers_olympicpark.csv)도 함께 저장하고,
+# 팀 확인용 CSV(data/04_물품보관함/ 폴더: 전처리 전 raw/, 전처리 후 processed/lockers_olympicpark.csv)도 함께 저장하고,
 # 바뀐 내용이 있으면 main 에 커밋합니다. 그러면 GitHub Pages 데모에 1~2분 뒤 반영됩니다.
 # 인증키는 저장소 Settings > Secrets and variables > Actions 의 DATA_GO_KR_KEY 에서 읽습니다.
 # Actions 탭에서 "Run workflow" 버튼으로 바로 실행할 수도 있습니다.
@@ -36,7 +36,7 @@ jobs:
 
       - name: 바뀌었으면 커밋
         run: |
-          git add docs/data/lockers.json data/raw/lockers data/processed/lockers_olympicpark.csv
+          git add docs/data/lockers.json "data/04_물품보관함"
           if git diff --cached --quiet; then
             echo "변경 없음"
             exit 0

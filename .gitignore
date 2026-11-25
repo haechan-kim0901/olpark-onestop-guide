@@ -4,6 +4,7 @@ __pycache__/
 # 운영체제 파일
 .DS_Store
 Thumbs.db
-# 용량 큰 원본 CSV 는 올리지 않음 (data/raw/README.md 참고)
-data/raw/*.csv
-data/raw/*.xlsx
+# 용량 큰 진짜 주차 원본 CSV 는 올리지 않음 (data/05_주차장/README.md 참고). _SAMPLE 파일은 올림
+data/05_주차장/raw/*.csv
+!data/05_주차장/raw/*_SAMPLE*.csv
+data/*/raw/*.xlsx

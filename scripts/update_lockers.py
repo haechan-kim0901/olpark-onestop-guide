@@ -7,8 +7,8 @@ GitHub Actions 가 15분마다 실행합니다 (.github/workflows/update-lockers
   3. 보관함 번호(stlckId)로 세 표 합치기
   4. 화면용 형식(lockers.json)으로 바꾸기
   5. 팀 확인용 CSV 저장 (엑셀에서 바로 열림)
-     - 전처리 전(원본): data/raw/lockers/ 에 API 3개 응답을 JSON, CSV 로 그대로
-     - 전처리 후(결과): data/processed/lockers_olympicpark.csv (올림픽공원 주변 보관함 한 줄씩)
+     - 전처리 전(원본): data/04_물품보관함/raw/ 에 API 3개 응답을 JSON, CSV 로 그대로
+     - 전처리 후(결과): data/04_물품보관함/processed/lockers_olympicpark.csv (올림픽공원 주변 보관함 한 줄씩)
 
 이미 있는 lockers.json 으로 결과 CSV 만 다시 만들려면 (인증키 필요 없음):
   python scripts/update_lockers.py --csv-only
@@ -27,7 +27,10 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from csv_out import PROCESSED, RAW, write_csv, write_raw_json
+from csv_out import LOCKER_DIR, write_csv, write_raw_json
+
+RAW = LOCKER_DIR / "raw"
+PROCESSED = LOCKER_DIR / "processed"
 
 API_BASE = "https://apis.data.go.kr/B551982/psl_v2"
 STDG_CD = "1100000000"  # 서울특별시. 지역 코드 없이 K3(데이터 없음)이면 이 값으로 다시 시도
@@ -232,14 +235,14 @@ def processed_rows(out):
 
 def save_processed_csv(out):
     p = write_csv(PROCESSED / "lockers_olympicpark.csv", processed_rows(out), PROCESSED_COLS)
-    print(f"결과 CSV 저장: {p.relative_to(PROCESSED.parent.parent)}")
+    print(f"결과 CSV 저장: {p.relative_to(PROCESSED.parents[2])}")
 
 
 def save_raw(name, api, extra, items, fetched_at):
     params = {"type": "JSON", "numOfRows": 1000, **extra}
-    write_raw_json(RAW / "lockers" / f"{name}.json", api, params, items, fetched_at)
-    write_csv(RAW / "lockers" / f"{name}.csv", items)
-    print(f"원본 저장: data/raw/lockers/{name}.json, .csv ({len(items)}행)")
+    write_raw_json(RAW / f"{name}.json", api, params, items, fetched_at)
+    write_csv(RAW / f"{name}.csv", items)
+    print(f"원본 저장: data/04_물품보관함/raw/{name}.json, .csv ({len(items)}행)")
 
 
 def main():
