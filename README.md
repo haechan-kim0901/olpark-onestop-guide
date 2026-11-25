@@ -19,7 +19,9 @@ olpark-onestop-guide/
 │     ├─ lockers.json         ← 물품보관함 크기별 빈 칸 수 (15분마다 자동 갱신)
 │     └─ weather.json         ← 올림픽공원 실시간 날씨 (15분마다 자동 갱신)
 ├─ notebooks/
-│  └─ 01_preprocess_parking.ipynb  ← Colab 전처리 노트북
+│  ├─ 01_preprocess_parking.ipynb  ← 주차 전처리 노트북 (Colab)
+│  ├─ 02_lockers_api.ipynb         ← 물품보관함 처리 과정 보기 (실행 결과 저장돼 있음)
+│  └─ 03_weather_api.ipynb         ← 날씨 처리 과정 보기 (실행 결과 저장돼 있음)
 ├─ data/                      ← 팀 확인용 CSV (엑셀에서 바로 열림, 한글 안 깨짐)
 │  ├─ raw/                    ← 전처리 전: API 원본 그대로 (보관함, 날씨는 15분마다 자동)
 │  │  ├─ lockers/             ←   전국 보관함 위치, 요금, 빈 칸 (JSON + CSV)
@@ -128,10 +130,13 @@ JSON 까지 반영된 화면은 아래 4번 GitHub Pages 링크에서 확인하�
 
 요청 값: `serviceKey`(인증키), `type=JSON`, `pageNo`, `numOfRows`(1000 이하), 필요하면 `stdgCd`(지역 코드, 서울 1100000000). 정상이면 결과 코드 `K0`, `K3 NODATA_ERROR` 는 키는 정상인데 데이터가 없다는 뜻 (노트북이 지역 코드를 넣어 자동 재시도).
 
-1. `notebooks/02_lockers_api.ipynb` 를 Colab 으로 열기: [Colab 에서 바로 열기](https://colab.research.google.com/github/haechan-kim0901/olpark-onestop-guide/blob/main/notebooks/02_lockers_api.ipynb) → 메뉴 **런타임 → 모두 실행** ("Google 이 만들지 않은 노트북" 경고는 **무시하고 실행**)
-2. 위에서부터 실행. 1단계에서 인증키를 물어보면 붙여 넣기 (화면, 파일 어디에도 남지 않음)
-3. 3단계에 올림픽공원 1.5km 안 보관함 목록과 빈 칸이 출력됨
-4. 마지막 셀이 내려 준 `lockers.json` 을 GitHub `docs/data/` 에 업로드 (기존 파일 덮어쓰기)
+**처리 과정 보기:** `notebooks/02_lockers_api.ipynb` 를 GitHub 에서 클릭하면 실행 결과(표, 숫자)가 저장된 채로 보입니다. 실행하지 않아도 됩니다.
+가져오기, 정리(1.5km 고르기, 세 표 합치기, 화면 형식), 안정성(오류 대비, 점검표), 결과 형태 순서이고, 마지막에 자동 갱신 스크립트와 결과가 같은지 확인합니다.
+
+직접 돌려 보려면 [Colab 에서 바로 열기](https://colab.research.google.com/github/haechan-kim0901/olpark-onestop-guide/blob/main/notebooks/02_lockers_api.ipynb) → **런타임 → 모두 실행** ("Google 이 만들지 않은 노트북" 경고는 무시하고 실행).
+- 기본 `MODE = "saved"`: Actions 가 올려 둔 최근 원본으로 실행, **인증키 필요 없음**
+- `MODE = "live"`: 지금 API 를 부름. 인증키는 환경 변수 `DATA_GO_KR_KEY` 에서 읽고, 없으면 입력 칸이 뜸 (화면, 파일 어디에도 남지 않음)
+- 화면 값은 Actions 가 15분마다 자동으로 바꾸므로, 파일을 직접 올릴 필요는 없습니다
 
 > **인증키를 `index.html`, GitHub, 노션, 단톡방에 넣지 마세요.** GitHub Pages 는 소스가 공개라서 키가 그대로 노출됩니다. 그래서 화면은 키 없이 JSON 만 읽습니다. 발표 직전에 노트북을 한 번 더 돌리면 최신 값이 됩니다.
 
@@ -141,7 +146,7 @@ JSON 까지 반영된 화면은 아래 4번 GitHub Pages 링크에서 확인하�
 
 ### 자동 갱신 (GitHub Actions, 15분마다)
 
-`.github/workflows/update-lockers.yml` 이 15분마다 `scripts/update_lockers.py` 를 실행해 `docs/data/lockers.json` 을 새로 만들고 main 에 커밋합니다. 노트북 02 와 같은 전처리를 합니다. 데모 화면은 5분마다 이 파일을 다시 읽고, 카드에 "마지막 갱신" 시각을 보여 줍니다. 1시간 넘게 갱신이 없으면 빨간 글씨로 알려 줍니다.
+`.github/workflows/update-lockers.yml` 이 15분마다 `scripts/update_lockers.py` 를 실행해 `docs/data/lockers.json` 을 새로 만들고 main 에 커밋합니다. 노트북 02 와 같은 전처리를 합니다 (노트북 3단계에서 두 결과가 같은지 확인). 데모 화면은 5분마다 이 파일을 다시 읽고, 카드에 "마지막 갱신" 시각을 보여 줍니다. 1시간 넘게 갱신이 없으면 빨간 글씨로 알려 줍니다.
 
 **처음 한 번만: 인증키 등록**
 1. 저장소 **Settings → Secrets and variables → Actions → New repository secret**
@@ -173,6 +178,7 @@ JSON 까지 반영된 화면은 아래 4번 GitHub Pages 링크에서 확인하�
 - `.github/workflows/update-weather.yml` 이 15분마다 `scripts/update_weather.py` 실행 → `docs/data/weather.json` 저장 → 바뀌었으면 main 에 커밋. 기상청 자료가 한 시간에 한 번 바뀌어 커밋도 보통 한 시간에 하나
 - 인증키는 보관함과 같은 `DATA_GO_KR_KEY` Secret 을 그대로 씁니다 (공공데이터포털 인증키는 계정마다 하나)
 - 화면은 5분마다 파일을 다시 읽고, 관측 시각이 2시간 넘게 지나면 빨간 글씨로 알려 줌. 파일이 아직 없으면 '예시' 표시와 함께 샘플 값
+- **처리 과정 보기**: `notebooks/03_weather_api.ipynb` ([Colab 에서 열기](https://colab.research.google.com/github/haechan-kim0901/olpark-onestop-guide/blob/main/notebooks/03_weather_api.ipynb)). 격자 변환, 발표 시각 고르기, 세로 표를 시각별 표로, 강수량 글자를 숫자로, 체감온도, 안정성 점검을 단계별로 보여 줌. 실행 결과가 저장돼 있어 GitHub 에서 바로 읽을 수 있고, 기본 `saved` 모드는 인증키 없이 돌아감
 
 **처음 한 번 실행해 보기**: **Actions** 탭 → 왼쪽 `날씨 자동 갱신` → **Run workflow**. 초록 체크면 성공. 빨간 X 면 로그의 `날씨 데이터 받기` 단계를 열어 보세요. `SERVICE_KEY_IS_NOT_REGISTERED_ERROR` 는 기상청 API 활용 승인이 막 났을 때 키가 퍼지기까지(보통 1시간 안팎) 기다리면 해결됩니다.
 
