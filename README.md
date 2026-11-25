@@ -23,16 +23,15 @@ olpark-onestop-guide/
 │  ├─ 02_lockers_api.ipynb         ← 물품보관함 처리 과정 보기 (실행 결과 저장돼 있음)
 │  └─ 03_weather_api.ipynb         ← 날씨 처리 과정 보기 (실행 결과 저장돼 있음)
 ├─ data/                      ← 팀 확인용 CSV (엑셀에서 바로 열림, 한글 안 깨짐)
-│  ├─ raw/                    ← 전처리 전: API 원본 그대로 (보관함, 날씨는 15분마다 자동)
-│  │  ├─ lockers/             ←   전국 보관함 위치, 요금, 빈 칸 (JSON + CSV)
-│  │  ├─ weather/             ←   기상청 초단기실황, 초단기예보 (JSON + CSV)
-│  │  └─ parking/             ←   지금은 합성 샘플(_SAMPLE). 진짜 CSV 는 용량 때문에 안 올림
-│  └─ processed/              ← 전처리 후: 화면에 쓰는 숫자를 표로
+│  ├─ 01_공연정보/  02_공중화장실/  03_날씨/  04_물품보관함/
+│  ├─ 05_주차장/  06_공원볼거리/  07_주변관광정보/
+│  │     (각 폴더 안: raw/ 전처리 전, processed/ 전처리 후, README.md 담당과 출처)
+│  └─ README.md               ← 폴더 사용 약속 (파일 이름, _SAMPLE 등)
 └─ README.md
 ```
 
 > 웹 화면은 계속 `docs/data/*.json` 을 읽습니다. `data/` 의 CSV 는 사람이 확인하고 기획서 근거로 쓰는 용도입니다.
-> 자세한 파일 목록은 [`data/raw/README.md`](data/raw/README.md), [`data/processed/README.md`](data/processed/README.md).
+> 폴더 사용 약속은 [`data/README.md`](data/README.md), 데이터별 파일 목록은 각 폴더의 `README.md` 에 있습니다.
 
 ## 데이터가 화면까지 가는 길
 
@@ -77,7 +76,7 @@ olpark-onestop-guide/
    | 기획서, 발표 | 노션 (저장소 밖) |
 3. **파일 고치기**: 파일 열기 → 연필 아이콘(Edit) → 수정 → **Commit changes** → 무엇을 바꿨는지 한 줄로 적기 (예: `주차 그래프 제목 수정`)
 4. **새 파일 올리기**: 폴더에서 **Add file → Upload files**
-5. **원본 CSV 는 올리지 않기**: 용량 제한(파일당 100MB)과 개인정보 우려. 출처만 `data/raw/README.md` 에 기록
+5. **원본 CSV 는 올리지 않기**: 용량 제한(파일당 100MB)과 개인정보 우려. 출처만 `data/05_주차장/README.md` 에 기록
 6. 큰 변경은 **Issues** 탭에 할 일로 적고 담당자를 지정하면 누가 뭘 하는지 한눈에 보입니다
 
 ## 3. 내 PC 에서 화면 미리 보기

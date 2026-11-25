@@ -6,8 +6,8 @@ GitHub Actions 가 15분마다 실행합니다 (.github/workflows/update-weather
   2. 초단기예보(getUltraSrtFcst): 앞으로 6시간 기온, 하늘 상태, 강수 형태, 강수량
   3. 체감온도 계산 (겨울: 기상청 바람냉각 공식, 여름: 기상청 여름철 공식)
   4. 팀 확인용 CSV 저장 (엑셀에서 바로 열림)
-     - 전처리 전(원본): data/raw/weather/ 에 API 2개 응답을 JSON, CSV 로 그대로
-     - 전처리 후(결과): data/processed/weather_now.csv (지금 1줄), weather_hours.csv (6시간 예보)
+     - 전처리 전(원본): data/03_날씨/raw/ 에 API 2개 응답을 JSON, CSV 로 그대로
+     - 전처리 후(결과): data/03_날씨/processed/weather_now.csv (지금 1줄), weather_hours.csv (6시간 예보)
 
 이미 있는 weather.json 으로 결과 CSV 만 다시 만들려면 (인증키 필요 없음):
   python scripts/update_weather.py --csv-only
@@ -25,7 +25,10 @@ import urllib.request
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-from csv_out import PROCESSED, RAW, write_csv, write_raw_json
+from csv_out import WEATHER_DIR, write_csv, write_raw_json
+
+RAW = WEATHER_DIR / "raw"
+PROCESSED = WEATHER_DIR / "processed"
 
 API_BASE = "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0"
 OUT = Path(__file__).resolve().parent.parent / "docs" / "data" / "weather.json"
@@ -195,7 +198,7 @@ def save_processed_csv(out):
         "체감온도_도": h.get("feels"), "하늘상태": SKY_KO.get(h.get("sky"), h.get("sky")),
         "강수형태": PTY_KO.get(h.get("pty"), h.get("pty")), "강수량_mm": h.get("rain_mm"),
     } for h in out.get("hours", [])])
-    print("결과 CSV 저장: data/processed/weather_now.csv, weather_hours.csv")
+    print("결과 CSV 저장: data/03_날씨/processed/weather_now.csv, weather_hours.csv")
 
 
 def save_raw(name, op, base, items):
@@ -204,9 +207,9 @@ def save_raw(name, op, base, items):
     params = {"dataType": "JSON", "numOfRows": 1000, "nx": NX, "ny": NY,
               "base_date": base.strftime("%Y%m%d"), "base_time": base.strftime("%H%M")}
     # 받은 시각 대신 발표 시각을 적어서, 자료가 같으면 파일도 그대로 (쓸데없는 커밋 방지)
-    write_raw_json(RAW / "weather" / f"{name}.json", op, params, items, base.strftime("%Y-%m-%d %H:%M"))
-    write_csv(RAW / "weather" / f"{name}.csv", items)
-    print(f"원본 저장: data/raw/weather/{name}.json, .csv ({len(items)}행)")
+    write_raw_json(RAW / f"{name}.json", op, params, items, base.strftime("%Y-%m-%d %H:%M"))
+    write_csv(RAW / f"{name}.csv", items)
+    print(f"원본 저장: data/03_날씨/raw/{name}.json, .csv ({len(items)}행)")
 
 
 def main():
