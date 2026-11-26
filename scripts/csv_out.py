@@ -12,6 +12,7 @@ DATA = ROOT / "data"
 # 데이터 종류별 폴더 (각 폴더 안에 raw/ = 전처리 전, processed/ = 전처리 후)
 WEATHER_DIR = DATA / "03_날씨"
 LOCKER_DIR = DATA / "04_물품보관함"
+CROWD_DIR = DATA / "08_인구밀집도"
 
 
 def write_csv(path, rows, columns=None):
