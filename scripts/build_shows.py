@@ -7,8 +7,9 @@
 - data/01_공연정보/processed/ 안의 CSV 중 이름순으로 가장 마지막 파일 하나를 읽습니다.
   진짜 파일(_SAMPLE 이 없는 것)이 있으면 그걸 먼저 씁니다.
 - 꼭 있어야 하는 열: 공연명, 공연장, 공연일, 시작시각
-- 없어도 되는 열: 공연ID, 공연명_영문, 입장시각, 종료시각, 도착권장시각, 장르, 장르_영문
-  비어 있으면 입장 = 시작 90분 전, 도착 권장 = 입장 60분 전, 종료 = 시작 150분 후 로 채웁니다.
+- 없어도 되는 열: 공연ID, 공연명_영문, 종료시각, 장르, 장르_영문
+- 종료시각이 빈 칸이면 그대로 빈 칸으로 둡니다. 웹 화면이 '시작 + 2시간 30분 (예상)' 으로 보여 줍니다.
+  도착 권장 시각(시작 3시간 전)도 웹 화면이 계산합니다 (docs/index.html 의 ARRIVE_BEFORE, END_AFTER).
 - 공연장은 팀 표준이름(KSPO DOME, 올림픽홀, 핸드볼경기장, 88잔디마당)만 받습니다.
 """
 import csv
@@ -52,12 +53,6 @@ def ymd(v):
     return f"{int(d[0]):04d}-{int(d[1]):02d}-{int(d[2]):02d}"
 
 
-def shift(t, minutes):
-    h, m = map(int, t.split(":"))
-    total = max(0, min(23 * 60 + 59, h * 60 + m + minutes))
-    return f"{total // 60:02d}:{total % 60:02d}"
-
-
 def main():
     src = pick_csv()
     if src is None:
@@ -72,16 +67,14 @@ def main():
             if not (r.get("공연명") and venue and date and start):
                 skipped.append(f"{i}행 ({r.get('공연명') or '이름 없음'}, 공연장 '{r.get('공연장', '')}')")
                 continue
-            gate = hhmm(r.get("입장시각")) or shift(start, -90)
             genre = r.get("장르", "")
             shows.append({
                 "id": r.get("공연ID") or f"r{i}",
                 "venue": venue,
                 "title": {"ko": r["공연명"], "en": r.get("공연명_영문") or r["공연명"]},
                 "genre": {"ko": genre, "en": r.get("장르_영문") or GENRE_EN.get(genre, genre)},
-                "date": date, "start": start, "gate": gate,
-                "end": hhmm(r.get("종료시각")) or shift(start, 150),
-                "arrive": hhmm(r.get("도착권장시각")) or shift(gate, -60),
+                "date": date, "start": start,
+                "end": hhmm(r.get("종료시각")),
             })
     shows.sort(key=lambda s: (s["date"], s["start"]))
     now = datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d %H:%M")

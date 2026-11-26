@@ -1,13 +1,13 @@
-﻿공연ID,공연명,공연명_영문,공연장,공연일,시작시각,입장시각,종료시각,도착권장시각,장르,장르_영문
-s1,아티스트 A 월드투어 서울,Artist A World Tour Seoul,KSPO DOME,2025-08-09,18:00,16:30,20:40,15:30,콘서트,Concert
-s2,밴드 B 단독 콘서트,Band B Live Concert,올림픽홀,2025-08-09,19:00,18:00,21:10,17:20,콘서트,Concert
-s3,여름밤 야외 페스티벌,Summer Night Outdoor Festival,88잔디마당,2025-08-09,17:00,14:00,22:00,13:30,페스티벌,Festival
-s4,그룹 C 팬미팅,Group C Fan Meeting,핸드볼경기장,2025-08-10,17:00,15:30,19:30,14:30,팬미팅,Fan meeting
-s5,아티스트 A 월드투어 서울 (2일차),Artist A World Tour Seoul (Day 2),KSPO DOME,2025-08-10,17:00,15:30,19:40,14:30,콘서트,Concert
-s6,인디 밴드 연합 공연,Indie Band Showcase,올림픽홀,2025-08-15,18:00,17:00,20:30,16:20,콘서트,Concert
-s7,광복절 기념 시민 음악회,Liberation Day Citizens' Concert,88잔디마당,2025-08-15,19:30,18:00,21:30,17:30,클래식,Classical
-s8,가수 D 전국투어 서울,Singer D Nationwide Tour Seoul,핸드볼경기장,2025-08-16,18:00,16:30,20:30,15:30,콘서트,Concert
-s9,힙합 페스티벌 E,Hip-hop Festival E,KSPO DOME,2025-08-23,16:00,14:00,22:00,13:00,페스티벌,Festival
-s10,뮤지컬 갈라 콘서트,Musical Gala Concert,올림픽홀,2025-08-24,15:00,14:00,17:30,13:20,뮤지컬,Musical
-s11,그룹 F 데뷔 10주년 콘서트,Group F 10th Anniversary Concert,KSPO DOME,2025-08-30,18:00,16:30,21:00,15:30,콘서트,Concert
-s12,가을맞이 재즈 피크닉,Autumn Jazz Picnic,88잔디마당,2025-08-31,16:00,14:30,20:00,14:00,페스티벌,Festival
+﻿공연ID,공연명,공연명_영문,공연장,공연일,시작시각,종료시각,장르,장르_영문
+s1,아티스트 A 월드투어 서울,Artist A World Tour Seoul,KSPO DOME,2025-08-09,18:00,20:40,콘서트,Concert
+s2,밴드 B 단독 콘서트,Band B Live Concert,올림픽홀,2025-08-09,19:00,,콘서트,Concert
+s3,여름밤 야외 페스티벌,Summer Night Outdoor Festival,88잔디마당,2025-08-09,17:00,22:00,페스티벌,Festival
+s4,그룹 C 팬미팅,Group C Fan Meeting,핸드볼경기장,2025-08-10,17:00,,팬미팅,Fan meeting
+s5,아티스트 A 월드투어 서울 (2일차),Artist A World Tour Seoul (Day 2),KSPO DOME,2025-08-10,17:00,19:40,콘서트,Concert
+s6,인디 밴드 연합 공연,Indie Band Showcase,올림픽홀,2025-08-15,18:00,,콘서트,Concert
+s7,광복절 기념 시민 음악회,Liberation Day Citizens' Concert,88잔디마당,2025-08-15,19:30,21:30,클래식,Classical
+s8,가수 D 전국투어 서울,Singer D Nationwide Tour Seoul,핸드볼경기장,2025-08-16,18:00,,콘서트,Concert
+s9,힙합 페스티벌 E,Hip-hop Festival E,KSPO DOME,2025-08-23,16:00,22:00,페스티벌,Festival
+s10,뮤지컬 갈라 콘서트,Musical Gala Concert,올림픽홀,2025-08-24,15:00,,뮤지컬,Musical
+s11,그룹 F 데뷔 10주년 콘서트,Group F 10th Anniversary Concert,KSPO DOME,2025-08-30,18:00,21:00,콘서트,Concert
+s12,가을맞이 재즈 피크닉,Autumn Jazz Picnic,88잔디마당,2025-08-31,16:00,,페스티벌,Festival

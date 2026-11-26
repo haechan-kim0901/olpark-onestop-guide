@@ -155,9 +155,10 @@ nav.tabs a[aria-current="page"]{color:var(--brand);font-weight:700}
 .cd span{font-size:13px;opacity:.92}
 .prog{height:6px;border-radius:3px;background:rgba(255,255,255,.25);overflow:hidden}
 .prog i{display:block;height:100%;background:#fff;border-radius:3px}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);font-size:11.5px;opacity:.95;font-variant-numeric:tabular-nums}
-.steps div:nth-child(2),.steps div:nth-child(3){text-align:center}.steps div:last-child{text-align:right}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);font-size:11.5px;opacity:.95;font-variant-numeric:tabular-nums}
+.steps div:nth-child(2){text-align:center}.steps div:last-child{text-align:right}
 .steps b{display:block;font-size:13px}
+.tlnote{margin:-4px 0 0;font-size:11.5px;opacity:.88;line-height:1.4}
 .steps .on{font-weight:700;text-decoration:underline;text-underline-offset:3px}
 .todo{border:2px solid var(--brand);border-radius:14px;padding:14px;background:var(--card)}
 .todo .lab{font-size:12px;font-weight:700;letter-spacing:.02em;color:var(--brand);text-transform:uppercase}
@@ -239,19 +240,33 @@ const DEMO = { date:"2025-08-09", now:16 }; // 2025년 공연일 재생 모드, 
 // 아래는 파일이 없을 때 보이는 샘플. 공연명은 모두 가상 예시입니다.
 let SHOWS_SAMPLE = true;
 let SHOWS = [
-  ["s1","dome","아티스트 A 월드투어 서울","Artist A World Tour Seoul","2025-08-09","18:00","16:30","20:40","15:30","콘서트","Concert"],
-  ["s2","hall","밴드 B 단독 콘서트","Band B Live Concert","2025-08-09","19:00","18:00","21:10","17:20","콘서트","Concert"],
-  ["s3","lawn","여름밤 야외 페스티벌","Summer Night Outdoor Festival","2025-08-09","17:00","14:00","22:00","13:30","페스티벌","Festival"],
-  ["s4","arena","그룹 C 팬미팅","Group C Fan Meeting","2025-08-10","17:00","15:30","19:30","14:30","팬미팅","Fan meeting"],
-  ["s5","dome","아티스트 A 월드투어 서울 (2일차)","Artist A World Tour Seoul (Day 2)","2025-08-10","17:00","15:30","19:40","14:30","콘서트","Concert"],
-  ["s6","hall","인디 밴드 연합 공연","Indie Band Showcase","2025-08-15","18:00","17:00","20:30","16:20","콘서트","Concert"],
-  ["s7","lawn","광복절 기념 시민 음악회","Liberation Day Citizens' Concert","2025-08-15","19:30","18:00","21:30","17:30","클래식","Classical"],
-  ["s8","arena","가수 D 전국투어 서울","Singer D Nationwide Tour Seoul","2025-08-16","18:00","16:30","20:30","15:30","콘서트","Concert"],
-  ["s9","dome","힙합 페스티벌 E","Hip-hop Festival E","2025-08-23","16:00","14:00","22:00","13:00","페스티벌","Festival"],
-  ["s10","hall","뮤지컬 갈라 콘서트","Musical Gala Concert","2025-08-24","15:00","14:00","17:30","13:20","뮤지컬","Musical"],
-  ["s11","dome","그룹 F 데뷔 10주년 콘서트","Group F 10th Anniversary Concert","2025-08-30","18:00","16:30","21:00","15:30","콘서트","Concert"],
-  ["s12","lawn","가을맞이 재즈 피크닉","Autumn Jazz Picnic","2025-08-31","16:00","14:30","20:00","14:00","페스티벌","Festival"]
-].map(([id,venue,ko,en,date,start,gate,end,arrive,gk,ge]) => ({ id, venue, title:{ko,en}, genre:{ko:gk,en:ge}, date, start, gate, end, arrive }));
+  ["s1","dome","아티스트 A 월드투어 서울","Artist A World Tour Seoul","2025-08-09","18:00","20:40","콘서트","Concert"],
+  ["s2","hall","밴드 B 단독 콘서트","Band B Live Concert","2025-08-09","19:00","","콘서트","Concert"],
+  ["s3","lawn","여름밤 야외 페스티벌","Summer Night Outdoor Festival","2025-08-09","17:00","22:00","페스티벌","Festival"],
+  ["s4","arena","그룹 C 팬미팅","Group C Fan Meeting","2025-08-10","17:00","","팬미팅","Fan meeting"],
+  ["s5","dome","아티스트 A 월드투어 서울 (2일차)","Artist A World Tour Seoul (Day 2)","2025-08-10","17:00","19:40","콘서트","Concert"],
+  ["s6","hall","인디 밴드 연합 공연","Indie Band Showcase","2025-08-15","18:00","","콘서트","Concert"],
+  ["s7","lawn","광복절 기념 시민 음악회","Liberation Day Citizens' Concert","2025-08-15","19:30","21:30","클래식","Classical"],
+  ["s8","arena","가수 D 전국투어 서울","Singer D Nationwide Tour Seoul","2025-08-16","18:00","","콘서트","Concert"],
+  ["s9","dome","힙합 페스티벌 E","Hip-hop Festival E","2025-08-23","16:00","22:00","페스티벌","Festival"],
+  ["s10","hall","뮤지컬 갈라 콘서트","Musical Gala Concert","2025-08-24","15:00","","뮤지컬","Musical"],
+  ["s11","dome","그룹 F 데뷔 10주년 콘서트","Group F 10th Anniversary Concert","2025-08-30","18:00","21:00","콘서트","Concert"],
+  ["s12","lawn","가을맞이 재즈 피크닉","Autumn Jazz Picnic","2025-08-31","16:00","","페스티벌","Festival"]
+].map(([id,venue,ko,en,date,start,end,gk,ge]) => ({ id, venue, title:{ko,en}, genre:{ko:gk,en:ge}, date, start, end }));
+// 타임라인 규칙: 공연 데이터에는 시작 시각과 종료 시각(빈 칸일 때 있음)만 있음
+//   도착 권장 = 시작 - ARRIVE_BEFORE (공연장별로 바꿀 수 있음, 지금은 모두 3시간)
+//   퇴장     = 종료 시각, 빈 칸이면 시작 + 2시간 30분 (예상 표시)
+const ARRIVE_BEFORE = { dome:180, hall:180, arena:180, lawn:180 };
+const END_AFTER = 150;
+const toMin = (hhmm) => { const [h,m] = String(hhmm).split(":").map(Number); return h*60 + m; };
+const fmtMin = (m) => { m = ((m % 1440) + 1440) % 1440; return `${String(Math.floor(m/60)).padStart(2,"0")}:${String(m%60).padStart(2,"0")}`; };
+function timeline(s){
+  const st = toMin(s.start), est = !s.end;
+  let en = est ? st + END_AFTER : toMin(s.end);
+  if (en <= st) en += 1440;               // 자정을 넘겨 끝나는 공연
+  const ar = st - (ARRIVE_BEFORE[s.venue] ?? 180);
+  return { arrive:ar, start:st, end:en, endEst:est };
+}
 // 포스터 색: 공연장마다 기본 색 두 쌍을 번갈아 씀 (데이터에 poster 가 없을 때)
 const POSTER = { dome:[["#0f4c5c","#e8a33a"],["#123a6b","#5fb3c6"]], hall:[["#6b3fa0","#f07a6e"],["#4a2d7a","#e8a33a"]],
   arena:[["#8a3b12","#f0b552"],["#5c2a0f","#f07a6e"]], lawn:[["#2f8a57","#cfe3ec"],["#1f6b43","#f0b552"]] };
@@ -338,11 +353,10 @@ const T = {
     resN:(n)=>`공연 ${n}개`, noRes:(q)=>`"${q}"에 맞는 공연이 없어요.`, noResTip:"철자를 확인하거나 공연장 필터를 '전체'로 바꿔 보세요.", resetAll:"검색 초기화",
     today:"데모 오늘", wd:["일","월","화","수","목","금","토"], dayFmt:(y,m,d,w)=>`${m}월 ${d}일 (${w})`,
     tabs:["공연","대시보드","주차","대기 안전","지도"],
-    noticeH:"변경 공지", timeline:["도착 권장","입장","공연","퇴장"],
+    noticeH:"변경 공지", timeline:["도착 권장","공연 시작","퇴장"], endEst:"퇴장 (예상)", tlNote:(est)=>est?"퇴장 시각은 시작 후 2시간 30분으로 잡은 예상이에요. 공연 상황에 따라 바뀔 수 있어요.":"시각은 공연 상황에 따라 바뀔 수 있어요.",
     toDoors:"입장 시작까지", toShow:"공연 시작까지", min:"분", hr:"시간", inShow:"공연 중", afterShow:"공연 종료",
     nowLab:"지금 할 일", seeMap:"지도에서 위치 보기 ›",
-    todo:{before:(s)=>`${s.arrive}까지 도착하도록 출발하세요. 지하철이 가장 빠릅니다.`, arrive:(s,n)=>n?`${L(n.to)}에서 팔찌를 받고 입장 줄로 이동하세요.`:`입장 줄로 이동하세요. 입장은 ${s.gate}부터입니다.`,
-      entry:(s)=>`입장이 시작됐습니다. 공연은 ${s.start}에 시작해요.`, show:()=>`공연 중입니다. 퇴장 때 올림픽공원역이 가장 붐빕니다.`, after:()=>`공연이 끝났습니다. 몽촌토성역으로 가면 덜 붐빕니다.`},
+    todo:{before:(s)=>`${fmtMin(timeline(s).arrive)}까지 도착하도록 출발하세요. 지하철이 가장 빠릅니다.`, arrive:(s,n)=>n?`${L(n.to)}에서 팔찌를 받고 입장 줄로 이동하세요.`:`공연장 주변에 도착할 시간이에요. 입장 시각은 예매처 공지를 확인하고 입장 줄로 이동하세요.`, show:()=>`공연 중입니다. 퇴장 때 올림픽공원역이 가장 붐빕니다.`, after:()=>`공연이 끝났습니다. 몽촌토성역으로 가면 덜 붐빕니다.`},
     heatAdd:"체감온도가 높아 그늘에서 기다리고 물을 챙기세요.", coldAdd:"추위가 심해 실내에서 기다리세요.",
     wait:"대기 안전", park:"주차", route:"가는 길", routeSteps:["올림픽공원역 3번 출구","도보 약 7분","{v}"],
     lotShort:{e2:"동2문",s2:"남2문",n2:"북2문"}, walk:"도보 7분",
@@ -398,11 +412,10 @@ const T = {
     resN:(n)=>`${n} show${n===1?"":"s"}`, noRes:(q)=>`No shows match "${q}".`, noResTip:"Check the spelling or set the venue filter to All.", resetAll:"Reset search",
     today:"Demo today", wd:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], dayFmt:(y,m,d,w)=>`${w}, ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m-1]} ${d}`,
     tabs:["Shows","Today","Parking","Wait safety","Map"],
-    noticeH:"Change notice", timeline:["Arrive by","Doors","Show","Ends"],
+    noticeH:"Change notice", timeline:["Arrive by","Show starts","Ends"], endEst:"Ends (est.)", tlNote:(est)=>est?"End time is an estimate (2 h 30 min after the start) and may change on the day.":"Times may change on the day.",
     toDoors:"Doors open in", toShow:"Show starts in", min:"min", hr:"h", inShow:"Show in progress", afterShow:"Show ended",
     nowLab:"Do this now", seeMap:"See it on the map ›",
-    todo:{before:(s)=>`Leave so you arrive by ${s.arrive}. The subway is fastest.`, arrive:(s,n)=>n?`Pick up your wristband at the ${L(n.to)}, then join the entry line.`:`Join the entry line. Doors open at ${s.gate}.`,
-      entry:(s)=>`Doors are open. The show starts at ${s.start}.`, show:()=>`Show in progress. Olympic Park Station gets busiest at exit time.`, after:()=>`The show has ended. Mongchontoseong Station is less crowded.`},
+    todo:{before:(s)=>`Leave so you arrive by ${fmtMin(timeline(s).arrive)}. The subway is fastest.`, arrive:(s,n)=>n?`Pick up your wristband at the ${L(n.to)}, then join the entry line.`:`Time to be near the venue. Check your ticket notice for door time, then join the entry line.`, show:()=>`Show in progress. Olympic Park Station gets busiest at exit time.`, after:()=>`The show has ended. Mongchontoseong Station is less crowded.`},
     heatAdd:"It feels very hot: wait in the shade and bring water.", coldAdd:"It is very cold: wait indoors.",
     wait:"Wait safety", park:"Parking", route:"Getting there", routeSteps:["Olympic Park Stn Exit 3","About 7 min walk","{v}"],
     lotShort:{e2:"East 2",s2:"South 2",n2:"North 2"}, walk:"7 min walk",
@@ -625,17 +638,15 @@ function viewHome(){
 }
 
 /* ===== 화면 1-2: 공연 대시보드 ===== */
-const toMin = (hhmm) => { const [h,m] = hhmm.split(":").map(Number); return h*60 + m; };
-function dur(m){ const h = Math.floor(m/60), r = m % 60; return h ? `${h}${t().hr} ${r}${t().min}` : `${r}${t().min}`; }
+function dur(m){ const h = Math.floor(m/60), r = m % 60; return h ? (r ? `${h}${t().hr} ${r}${t().min}` : `${h}${t().hr}`) : `${r}${t().min}`; }
 function viewDash(){
   const s = show(), nowM = DEMO.now*60, feel = FEELS[DEMO.now], g = gradeOf(feel);
-  const marks = [s.arrive, s.gate, s.start, s.end].map(toMin);
-  const phase = nowM < marks[0] ? "before" : nowM < marks[1] ? "arrive" : nowM < marks[2] ? "entry" : nowM < marks[3] ? "show" : "after";
-  const idx = { before:-1, arrive:0, entry:1, show:2, after:3 }[phase];
-  const pct = Math.max(0, Math.min(100, (nowM - marks[0]) / (marks[3] - marks[0]) * 100));
+  const tl = timeline(s), marks = [tl.arrive, tl.start, tl.end];
+  const phase = nowM < marks[0] ? "before" : nowM < marks[1] ? "arrive" : nowM < marks[2] ? "show" : "after";
+  const idx = { before:-1, arrive:0, show:1, after:2 }[phase];
+  const pct = Math.max(0, Math.min(100, (nowM - marks[0]) / (marks[2] - marks[0]) * 100));
   const notice = (NOTICES[s.id]||[])[0];
-  const cd = phase === "before" || phase === "arrive" ? [t().toDoors, dur(marks[1]-nowM)]
-           : phase === "entry" ? [t().toShow, dur(marks[2]-nowM)] : [phase === "show" ? t().inShow : t().afterShow, ""];
+  const cd = phase === "before" || phase === "arrive" ? [t().toShow, dur(marks[1]-nowM)] : [phase === "show" ? t().inShow : t().afterShow, ""];
   const pickup = phase === "arrive" && notice && notice.place === "lawn" ? notice : null;
   let todo = t().todo[phase](s, pickup);
   const add = feel >= 33 ? t().heatAdd : feel <= -10 ? t().coldAdd : "";
@@ -646,7 +657,8 @@ function viewDash(){
       <div class="ht">${L(s.title)}</div><div class="hv">${L(place(s.venue).name)}  |  ${s.date}  ${s.start}</div></div></div>
     <div class="cd"><span>${cd[0]}</span><b>${cd[1]}</b></div>
     <div><div class="prog"><i style="width:${pct}%"></i></div></div>
-    <div class="steps">${[s.arrive,s.gate,s.start,s.end].map((x,i)=>`<div class="${i===idx?"on":""}"><b>${x}</b>${t().timeline[i]}</div>`).join("")}</div>
+    <div class="steps">${marks.map((m,i)=>`<div class="${i===idx?"on":""}"><b>${i===2&&tl.endEst?"~":""}${fmtMin(m)}</b>${i===2&&tl.endEst?t().endEst:t().timeline[i]}</div>`).join("")}</div>
+    <p class="tlnote">${t().tlNote(tl.endEst)}</p>
   </section>
 
   <div class="todo"><div class="lab">${t().nowLab}</div><p>${todo}</p>${add?`<small>${add}</small>`:""}</div>
@@ -913,8 +925,8 @@ setInterval(() => { loadLockers().then(() => { if (["dash","locker","map"].inclu
 const VENUE_IDS = ["dome","hall","arena","lawn"];
 function loadShows(){
   return getJSON("data/shows.json").then(d => {
-    const ok = (d.shows || []).filter(s => s && s.id && VENUE_IDS.includes(s.venue) && s.title && s.date && s.start && s.gate && s.end && s.arrive);
-    if (ok.length){ SHOWS = ok.map(s => ({ ...s, title: typeof s.title === "string" ? {ko:s.title, en:s.title} : s.title })); SHOWS_SAMPLE = d.sample !== false; fillPosters(); }
+    const ok = (d.shows || []).filter(s => s && s.id && VENUE_IDS.includes(s.venue) && s.title && s.date && /^\d{1,2}:\d{2}$/.test(s.start));
+    if (ok.length){ SHOWS = ok.map(s => ({ ...s, end: /^\d{1,2}:\d{2}$/.test(s.end || "") ? s.end : "", title: typeof s.title === "string" ? {ko:s.title, en:s.title} : s.title })); SHOWS_SAMPLE = d.sample !== false; fillPosters(); }
   });
 }
 Promise.allSettled([
