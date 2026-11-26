@@ -112,6 +112,13 @@ h3{font-family:var(--display);font-size:15px;margin:0 0 8px}
 .composer input:focus{outline:none;border-color:var(--brand)}
 .composer button{flex:none;border:0;border-radius:999px;background:var(--brand);color:var(--brand-ink);font:700 14px var(--body);padding:0 16px;cursor:pointer}
 .composer button:disabled{opacity:.45;cursor:default}
+/* 채팅 탭: 공연 제목 목록 */
+.clist{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.clist button{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:14px;font:500 15px var(--body);color:var(--fg);cursor:pointer}
+.clist button:first-child{border-top:0}
+.clist button:hover,.clist button:focus-visible{background:color-mix(in srgb,var(--brand) 6%,transparent)}
+.clist button span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.clist button em{font-style:normal;color:var(--muted);flex:none}
 /* notice */
 .notice{background:var(--bad-soft);border:1px solid color-mix(in srgb,var(--bad) 40%,transparent);border-radius:14px;padding:12px 14px;display:flex;gap:10px}
 .notice .ic{width:22px;height:22px;flex:none;border-radius:50%;background:var(--bad);color:var(--card);display:grid;place-items:center;font-weight:700;font-size:13px}
@@ -404,7 +411,7 @@ const T = {
     crowdMsg:{"여유":"사람이 많지 않아 편하게 이동할 수 있어요.","보통":"사람이 조금 있지만 이동에 큰 불편은 없어요.","약간 붐빔":"사람이 몰리기 시작했어요. 역 출구와 입장 줄이 붐빌 수 있어요.","붐빔":"매우 붐벼요. 몽촌토성역 등 다른 길로 오고, 일행과 만날 곳을 미리 정하세요."},
     crowdPp:(a,b)=>`추정 ${fmtMan(a)}~${fmtMan(b)}명`, crowdNext:"앞으로 예상", crowdAt:(m,d,hm)=>`${m}월 ${d}일 ${hm} 기준`, crowdStale:"1시간 넘게 갱신되지 않아 실제와 다를 수 있어요",
     srcCrowd:"서울시 실시간 인구데이터 (올림픽공원)", srcCrowdSample:"샘플 값 (서울시 인증키 등록 전)",
-    chatT:"실시간 채팅", chatOpen:"채팅 열기", chatPeople:(n)=>`${n}명 참여 중`, chatPh:"메시지 보내기", chatSend:"보내기", chatMe:"나",
+    chatT:"실시간 채팅", chatsH:"공연별 채팅", chatsSub:"채팅방에 들어갈 공연을 고르세요.", chatOpen:"채팅 열기", chatPeople:(n)=>`${n}명 참여 중`, chatPh:"메시지 보내기", chatSend:"보내기", chatMe:"나",
     chatRoomSub:"같은 공연을 보는 관객끼리 줄 상황, 길 안내, 날씨를 나눠요.", chatChange:"공연 바꾸기",
     chatReport:"신고", chatReported:"신고한 메시지라 가렸어요.", chatUndo:"되돌리기", chatDel:"삭제",
     chatDemo:"데모: 위 대화는 샘플이고, 내가 쓴 메시지는 이 기기에만 저장됩니다.", chatEmpty:"아직 메시지가 없어요.",
@@ -471,7 +478,7 @@ const T = {
     crowdMsg:{"여유":"Not many people around. Easy to move.","보통":"Some people around, but moving is easy.","약간 붐빔":"Crowds are building. Station exits and entry lines may be busy.","붐빔":"Very crowded. Try another route such as Mongchontoseong Stn and set a meeting spot with your group."},
     crowdPp:(a,b)=>`Est. ${a.toLocaleString("en-US")} to ${b.toLocaleString("en-US")} people`, crowdNext:"Coming hours", crowdAt:(m,d,hm)=>`As of ${m}/${d} ${hm}`, crowdStale:"Not updated for over an hour, may be out of date",
     srcCrowd:"Seoul real-time population data (Olympic Park)", srcCrowdSample:"Sample values (before Seoul API key is added)",
-    chatT:"Live chat", chatOpen:"Open chat", chatPeople:(n)=>`${n} people here`, chatPh:"Send a message", chatSend:"Send", chatMe:"Me",
+    chatT:"Live chat", chatsH:"Chat by show", chatsSub:"Pick a show to join its chat room.", chatOpen:"Open chat", chatPeople:(n)=>`${n} people here`, chatPh:"Send a message", chatSend:"Send", chatMe:"Me",
     chatRoomSub:"Fans at the same show share lines, directions and weather.", chatChange:"Change show",
     chatReport:"Report", chatReported:"Hidden because you reported it.", chatUndo:"Undo", chatDel:"Delete",
     chatDemo:"Demo: the messages above are samples. Your messages are saved on this device only.", chatEmpty:"No messages yet.",
@@ -536,8 +543,9 @@ const T = {
 /* ===== 상태와 유틸 ===== */
 const store = { get(k,d){ try{ return localStorage.getItem(k) ?? d }catch(e){ return d } }, set(k,v){ try{ localStorage.setItem(k,v) }catch(e){} } };
 const state = { lang: store.get("lang","ko"), show: store.get("show","s1"), temp:null, filter:"all", place:null, q:"", venue:"all" };
-const VIEWS = ["home","dash","chat","parking","map"];   // 아래 탭에 보이는 화면
-const SUBVIEWS = ["locker","safety"];             // 탭 없이 대시보드에서 들어가는 화면 (아래 탭은 '대시보드' 유지, 뒤로 가기로 복귀)
+const VIEWS = ["home","dash","chats","parking","map"];   // 아래 탭에 보이는 화면
+const SUBVIEWS = ["locker","safety","chat"];      // 탭 없이 들어가는 화면. 아래 탭은 부모 탭에 불이 들어옴
+const PARENT = { locker:"dash", safety:"dash", chat:"chats" };   // chat = 공연 하나의 채팅방, chats = 채팅 탭(공연 제목 목록)
 const t = () => T[state.lang];
 const L = (o) => o[state.lang];
 const show = () => SHOWS.find(s => s.id === state.show) || SHOWS[0];
@@ -747,12 +755,18 @@ function chatListHTML(){
     return `<div class="m"><div class="who"><b>${esc(m.nick)}</b><span>${m.time}</span><button class="act" data-rep="${m.id}">${t().chatReport}</button></div><div class="bub">${esc(m.text)}</div></div>`;
   }).join("");
 }
+function viewChats(){
+  const list = [...SHOWS].sort((a,b) => (a.date + a.start).localeCompare(b.date + b.start));
+  return `
+  <div><h2>${t().chatsH}</h2><p class="sub">${t().chatsSub}</p></div>
+  <div class="clist">${list.map(s => `<button data-chat="${esc(s.id)}"><span>${esc(L(s.title))}</span><em aria-hidden="true">›</em></button>`).join("")}</div>`;
+}
 function viewChat(){
   const s = show();
   return `
   <div class="card room">
     <div style="min-width:0"><div class="rt">${L(s.title)}</div><div class="rs">${L(place(s.venue).name)}  |  ${s.date}  ${s.start}  |  ${t().chatPeople(CHAT_PEOPLE(s.id))}</div></div>
-    <button class="chip" data-go="home" style="flex:none">${t().chatChange}</button>
+    <button class="chip" data-go="chats" style="flex:none">${t().chatChange}</button>
   </div>
   <p class="sub" style="margin:-6px 0 0">${t().chatRoomSub}</p>
   <div class="msgs" id="msgs" aria-live="polite">${chatListHTML()}</div>
@@ -1000,13 +1014,13 @@ const ICONS = [
 function render(){
   const v = currentView();
   document.documentElement.lang = state.lang;
-  document.getElementById("title").textContent = v === "home" ? t().app : v === "locker" ? t().lockerT : v === "safety" ? t().wxSafeT : L(show().title);
+  document.getElementById("title").textContent = v === "home" ? t().app : v === "locker" ? t().lockerT : v === "safety" ? t().wxSafeT : v === "chats" ? t().chatT : L(show().title);
   document.getElementById("back").hidden = v === "home";
   document.getElementById("replay").innerHTML = `<span>${t().replay}</span><span>${t().demoTime} <b>${DEMO.date} ${DEMO.now}:00</b></span>`;
   ["ko","en"].forEach(l => document.getElementById("lang-"+l).setAttribute("aria-pressed", state.lang === l));
   document.getElementById("tabs").innerHTML = VIEWS.map((x,i) =>
-    `<a href="#${x}" ${x===v||(x==="dash"&&SUBVIEWS.includes(v))?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[i]}</svg>${t().tabs[i]}</a>`).join("");
-  document.getElementById("view").innerHTML = { home:viewHome, dash:viewDash, parking:viewParking, chat:viewChat, safety:viewSafety, map:viewMap, locker:viewLocker }[v]();
+    `<a href="#${x}" ${x===v||PARENT[v]===x?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[i]}</svg>${t().tabs[i]}</a>`).join("");
+  document.getElementById("view").innerHTML = { home:viewHome, dash:viewDash, parking:viewParking, chat:viewChat, chats:viewChats, safety:viewSafety, map:viewMap, locker:viewLocker }[v]();
   document.documentElement.style.setProperty("--toph", document.querySelector(".top").offsetHeight + "px");
   if (v === "home") updateList();
   const r = document.getElementById("temp-range");
@@ -1014,11 +1028,12 @@ function render(){
 }
 
 document.addEventListener("click", e => {
-  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],[data-venue],[data-reset],[data-rep],[data-unrep],[data-del],#q-x,#back,#temp-reset");
+  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],[data-venue],[data-reset],[data-rep],[data-unrep],[data-del],[data-chat],#q-x,#back,#temp-reset");
   if (!el) return;
   if (el.dataset.goplace){ state.place = el.dataset.goplace; state.filter = "all"; go("map"); }
   else if (el.dataset.show){ state.show = el.dataset.show; state.place = null; store.set("show", state.show); go("dash"); }
-  else if (el.dataset.go) go(el.dataset.go);
+  else if (el.dataset.go){ if (el.dataset.go === "chat") state.chatFrom = "dash"; go(el.dataset.go); }
+  else if (el.dataset.chat){ state.show = el.dataset.chat; state.place = null; store.set("show", state.show); state.chatFrom = "chats"; go("chat"); }
   else if (el.dataset.rep) toggleReport(el.dataset.rep, true);
   else if (el.dataset.unrep) toggleReport(el.dataset.unrep, false);
   else if (el.dataset.del) deleteMine(el.dataset.del);
@@ -1028,7 +1043,7 @@ document.addEventListener("click", e => {
   else if (el.dataset.filter){ state.filter = el.dataset.filter; render(); }
   else if (el.dataset.place){ state.place = el.dataset.place; render(); }
   else if (el.dataset.l){ state.lang = el.dataset.l; store.set("lang", state.lang); render(); }
-  else if (el.id === "back") go(currentView() === "dash" ? "home" : "dash");
+  else if (el.id === "back"){ const v = currentView(); go(v === "dash" ? "home" : v === "chat" ? (state.chatFrom || "chats") : "dash"); }
   else if (el.id === "temp-reset"){ state.temp = null; render(); }
 });
 document.addEventListener("keydown", e => {
