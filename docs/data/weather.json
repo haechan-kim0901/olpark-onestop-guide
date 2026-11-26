@@ -7,26 +7,18 @@
   "ny": 126,
   "name": "서울 송파구 방이동 (올림픽공원)"
  },
- "fetched_at": "2026-11-26 09:00",
- "forecast_base": "2026-11-26 08:30",
+ "fetched_at": "2026-11-26 10:00",
+ "forecast_base": "2026-11-26 09:30",
  "now": {
-  "temp": 9.8,
-  "feels": 9.2,
-  "humidity": 67.0,
-  "wind_ms": 1.7,
+  "temp": 11.3,
+  "feels": 11.3,
+  "humidity": 64.0,
+  "wind_ms": 1.4,
   "rain_1h_mm": 0.0,
   "pty": 0,
   "sky": 4
  },
  "hours": [
-  {
-   "time": "09:00",
-   "temp": 10.0,
-   "feels": 9.2,
-   "sky": 4,
-   "pty": 0,
-   "rain_mm": 0.0
-  },
   {
    "time": "10:00",
    "temp": 12.0,
@@ -45,8 +37,8 @@
   },
   {
    "time": "12:00",
-   "temp": 14.0,
-   "feels": 14.0,
+   "temp": 15.0,
+   "feels": 15.0,
    "sky": 4,
    "pty": 0,
    "rain_mm": 0.0
@@ -55,12 +47,20 @@
    "time": "13:00",
    "temp": 15.0,
    "feels": 15.0,
-   "sky": 1,
+   "sky": 4,
    "pty": 0,
    "rain_mm": 0.0
   },
   {
    "time": "14:00",
+   "temp": 16.0,
+   "feels": 16.0,
+   "sky": 1,
+   "pty": 0,
+   "rain_mm": 0.0
+  },
+  {
+   "time": "15:00",
    "temp": 16.0,
    "feels": 16.0,
    "sky": 1,
