@@ -99,7 +99,7 @@ h3{font-family:var(--display);font-size:15px;margin:0 0 8px}
 .room .rt{font-weight:700;font-size:15px;line-height:1.35}
 .room .rs{font-size:12.5px;color:var(--muted)}
 .ctag{flex:none;display:inline-block;font:700 11px/1.5 var(--body);padding:1px 8px;border-radius:999px;background:color-mix(in srgb,var(--c) 16%,transparent);color:color-mix(in srgb,var(--c) 75%,var(--fg))}
-.ctag.c-line{--c:#2f6fd6}.ctag.c-goods{--c:#9a3fc2}.ctag.c-lost{--c:#c2571f}.ctag.c-transit{--c:#1f8a5b}
+.ctag.c-line{--c:#2f6fd6}.ctag.c-goods{--c:#9a3fc2}.ctag.c-lost{--c:#c2571f}.ctag.c-transit{--c:#1f8a5b}.ctag.c-etc{--c:#6b7280}
 .write{display:flex;flex-direction:column;gap:10px}
 .write .lab{font-size:12.5px;color:var(--muted);font-weight:500}
 .write textarea{width:100%;box-sizing:border-box;min-height:72px;resize:vertical;font:500 16px/1.45 var(--body);color:var(--fg);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:9px 12px}
@@ -351,7 +351,7 @@ const CROWD_LEVELS = ["여유","보통","약간 붐빔","붐빔"];
 
 // 공연별 현장 제보 게시판 (데모: 서버 없이 샘플 글 + 내가 쓴 글은 이 기기에만 저장)
 // 실제 서비스에서는 Firebase 같은 DB 에 공연별로 글을 쌓고, 공연 다음 날 0시에 그 공연 글을 모두 지움
-const BOARD_CATS = ["line","goods","lost","transit"];   // 말머리: 입장 줄, 굿즈, 분실물, 교통
+const BOARD_CATS = ["line","goods","lost","transit","etc"];   // 말머리: 입장, 굿즈, 분실물, 교통, 기타
 const BOARD_SEED = [   // [시각, 말머리, 닉네임, 글]  {v} = 공연장 이름
   ["14:40","line","Haru","{v} 입장 대기 펜스 설치 시작했어요. 아직 줄은 짧아요"],
   ["15:12","goods","별빛토끼","{v} 앞 굿즈 줄 지금 200m 정도예요. 1시간은 기다려야 할 듯"],
@@ -359,7 +359,8 @@ const BOARD_SEED = [   // [시각, 말머리, 닉네임, 글]  {v} = 공연장 �
   ["15:24","transit","공원산책러","올림픽공원역 3번 출구 엄청 붐벼요. 몽촌토성역에서 걸어오는 게 덜 막혀요"],
   ["15:31","lost","응원봉충전중","{v} 앞 벤치에서 파란 응원봉 주웠어요. 공원 안내소에 맡겼어요"],
   ["15:42","line","초록우산","입장 줄은 {v} 정문 왼쪽 안내판부터 서요. 지금 50m 정도"],
-  ["15:50","lost","Kenji","Found a black card wallet near the gate. Handed it to the info desk."],
+  ["15:46","etc","Kenji","Water is sold out at the store by the gate. Bring your own!"],
+  ["15:50","lost","Yuna","Found a black card wallet near the gate. Handed it to the info desk."],
   ["15:57","goods","별빛토끼","굿즈 줄 많이 줄었어요. 지금 오면 20분이면 될 것 같아요"]
 ];
 const boardKey = (id) => "board:" + id, repKey = (id) => "boardrep:" + id;
@@ -456,8 +457,8 @@ const T = {
     crowdPp:(a,b)=>`추정 ${fmtMan(a)}~${fmtMan(b)}명`, crowdNext:"앞으로 예상", crowdAt:(m,d,hm)=>`${m}월 ${d}일 ${hm} 기준`, crowdStale:"1시간 넘게 갱신되지 않아 실제와 다를 수 있어요",
     srcCrowd:"서울시 실시간 인구데이터 (올림픽공원)", srcCrowdSample:"샘플 값 (서울시 인증키 등록 전)",
     chatT:"현장 제보", chatsH:"공연별 현장 제보", chatsSub:"제보 게시판을 볼 공연을 고르세요.", chatOpen:"게시판 보기", chatPeople:(n)=>`글 ${n}개`, chatMe:"나",
-    cats:{all:"전체", line:"입장 줄", goods:"굿즈", lost:"분실물", transit:"교통"},
-    chatRoomSub:"같은 공연을 보는 관객끼리 입장 줄, 굿즈, 분실물, 교통 상황을 알려 줘요.", chatChange:"공연 바꾸기",
+    cats:{all:"전체", line:"입장", goods:"굿즈", lost:"분실물", transit:"교통", etc:"기타"},
+    chatRoomSub:"같은 공연을 보는 관객끼리 입장, 굿즈, 분실물, 교통 등 현장 상황을 알려 줘요.", chatChange:"공연 바꾸기",
     wrH:"제보 쓰기", wrCat:"말머리 고르기", chatPh:"지금 현장 상황을 알려 주세요", chatSend:"올리기", wrHint:(n)=>`${n}/200`,
     chatReport:"신고", chatReported:"신고한 글이라 가렸어요.", chatUndo:"되돌리기", chatDel:"삭제", justNow:"방금", minAgo:(n)=>`${n}분 전`,
     expire:(m,d)=>`이 게시판 글은 공연 다음 날인 ${m}월 ${d}일 0시에 모두 지워져요.`, closed:"공연이 끝나 이 게시판의 글이 모두 지워졌어요.",
@@ -527,8 +528,8 @@ const T = {
     crowdPp:(a,b)=>`Est. ${a.toLocaleString("en-US")} to ${b.toLocaleString("en-US")} people`, crowdNext:"Coming hours", crowdAt:(m,d,hm)=>`As of ${m}/${d} ${hm}`, crowdStale:"Not updated for over an hour, may be out of date",
     srcCrowd:"Seoul real-time population data (Olympic Park)", srcCrowdSample:"Sample values (before Seoul API key is added)",
     chatT:"On-site reports", chatsH:"On-site reports by show", chatsSub:"Pick a show to see its report board.", chatOpen:"Open board", chatPeople:(n)=>`${n} post${n===1?"":"s"}`, chatMe:"Me",
-    cats:{all:"All", line:"Entry line", goods:"Merch", lost:"Lost & found", transit:"Getting here"},
-    chatRoomSub:"Fans at the same show post updates on entry lines, merch, lost items and transport.", chatChange:"Change show",
+    cats:{all:"All", line:"Entry", goods:"Merch", lost:"Lost & found", transit:"Getting here", etc:"Other"},
+    chatRoomSub:"Fans at the same show post updates on entry, merch, lost items, transport and more.", chatChange:"Change show",
     wrH:"Post a report", wrCat:"Pick a topic", chatPh:"What is happening on site right now?", chatSend:"Post", wrHint:(n)=>`${n}/200`,
     chatReport:"Report", chatReported:"Hidden because you reported it.", chatUndo:"Undo", chatDel:"Delete", justNow:"Just now", minAgo:(n)=>`${n} min ago`,
     expire:(m,d)=>`All posts on this board are deleted at midnight on ${m}/${d}, the day after the show.`, closed:"The show is over, so all posts on this board have been deleted.",
