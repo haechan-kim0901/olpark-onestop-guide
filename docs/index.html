@@ -79,6 +79,39 @@ h3{font-family:var(--display);font-size:15px;margin:0 0 8px}
 .show .g{font-size:11.5px;color:var(--brand);font-weight:700}
 .show mark{background:var(--accent-soft);color:inherit;border-radius:3px;padding:0 1px}
 .empty{text-align:center;padding:28px 12px;color:var(--muted);font-size:14px}
+/* 인구 밀집도 */
+.crowd .lv{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.crowd .lv b{font:700 22px/1.1 var(--display)}
+.crowd .pp{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+.crowd .msg{font-size:13.5px;line-height:1.45}
+.cstrip{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;align-items:end;height:40px}
+.cstrip i{display:block;border-radius:3px 3px 1px 1px}
+.clab{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;font-size:10.5px;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums}
+.pill.g-mid{background:color-mix(in srgb,var(--brand) 14%,transparent);color:var(--brand)}
+/* 채팅 */
+.cprev{display:flex;flex-direction:column;gap:5px;font-size:13px}
+.cprev div{display:flex;gap:6px;min-width:0}
+.cprev b{flex:none;max-width:40%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.cprev span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+.cprev time{flex:none;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.room{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.room .rt{font-weight:700;font-size:15px;line-height:1.35}
+.room .rs{font-size:12.5px;color:var(--muted)}
+.msgs{display:flex;flex-direction:column;gap:10px}
+.m{display:flex;flex-direction:column;gap:3px;max-width:84%;align-self:flex-start}
+.m .who{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}
+.m .who b{color:var(--fg)}
+.m .bub{background:var(--card);border:1px solid var(--line);border-radius:4px 14px 14px 14px;padding:8px 12px;font-size:14.5px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}
+.m.me{align-self:flex-end;align-items:flex-end}
+.m.me .bub{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);border-radius:14px 4px 14px 14px}
+.m .act{background:none;border:0;padding:0;font:500 11.5px var(--body);color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.m.hidden .bub{background:none;border-style:dashed;color:var(--muted);font-size:13px}
+.daysep{align-self:center;font-size:11.5px;color:var(--muted);background:var(--line);border-radius:999px;padding:2px 10px}
+.composer{position:sticky;bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;gap:8px;background:var(--bg);margin:0 -16px -16px;padding:10px 16px;border-top:1px solid var(--line)}
+.composer input{flex:1;min-width:0;font:500 16px var(--body);color:var(--fg);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:9px 14px}
+.composer input:focus{outline:none;border-color:var(--brand)}
+.composer button{flex:none;border:0;border-radius:999px;background:var(--brand);color:var(--brand-ink);font:700 14px var(--body);padding:0 16px;cursor:pointer}
+.composer button:disabled{opacity:.45;cursor:default}
 /* notice */
 .notice{background:var(--bad-soft);border:1px solid color-mix(in srgb,var(--bad) 40%,transparent);border-radius:14px;padding:12px 14px;display:flex;gap:10px}
 .notice .ic{width:22px;height:22px;flex:none;border-radius:50%;background:var(--bad);color:var(--card);display:grid;place-items:center;font-weight:700;font-size:13px}
@@ -137,7 +170,7 @@ input[type=range]{width:100%;accent-color:var(--brand)}
 .info .sw{width:14px;height:14px;border-radius:4px;flex:none;margin-top:4px}
 /* tab bar */
 nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:6;display:flex;justify-content:center;pointer-events:none}
-nav.tabs .in{pointer-events:auto;width:100%;max-width:440px;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);
+nav.tabs .in{pointer-events:auto;width:100%;max-width:440px;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);
   padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
 nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0 9px;font-size:11px;color:var(--muted);text-decoration:none}
 nav.tabs a svg{width:22px;height:22px}
@@ -273,15 +306,33 @@ const POSTER = { dome:[["#0f4c5c","#e8a33a"],["#123a6b","#5fb3c6"]], hall:[["#6b
 function fillPosters(){ const n = {}; SHOWS.forEach(s => { if (!s.poster){ const k = n[s.venue] = (n[s.venue] || 0) + 1; s.poster = (POSTER[s.venue] || POSTER.dome)[(k - 1) % 2]; } }); }
 fillPosters();
 
-// 공지: 팀이 JSON으로 직접 입력 (가상 예시)
-const NOTICES = {
-  s1:[{ when:{ko:"공연 전날 20:10", en:"Day before, 20:10"}, topic:{ko:"팔찌 배부처 변경",en:"Wristband pickup moved"},
-        from:{ko:"남2문 광장",en:"South Gate 2 Plaza"}, to:{ko:"88잔디마당 입구",en:"88 Lawn entrance"}, place:"lawn" }],
-  s2:[{ when:{ko:"오늘 11:00", en:"Today, 11:00"}, topic:{ko:"입장 시각 변경",en:"Door time changed"},
-        from:{ko:"17:30",en:"17:30"}, to:{ko:"18:00",en:"18:00"}, place:"hall" }],
-  s3:[{ when:{ko:"오늘 09:30", en:"Today, 09:30"}, topic:{ko:"반입 물품 추가 허용",en:"More items allowed"},
-        from:{ko:"우산 반입 불가",en:"No umbrellas"}, to:{ko:"우산, 양산, 생수 1병 허용",en:"Umbrellas, parasols, 1 water bottle OK"}, place:"lawn" }]
-};
+// 올림픽공원 인구 밀집도 (서울시 실시간 인구데이터 citydata_ppltn)
+// data/crowd.json 이 있으면 그 값으로 바뀜 (GitHub Actions 15분마다, scripts/update_crowd.py). 아래는 파일이 없을 때 보이는 샘플
+let CROWD = { sample:true, area:"올림픽공원", fetched_at:"", level:"약간 붐빔", message:"", min:14000, max:16000,
+  forecast:[ {time:"17:00",level:"약간 붐빔"}, {time:"18:00",level:"붐빔"}, {time:"19:00",level:"붐빔"}, {time:"20:00",level:"약간 붐빔"}, {time:"21:00",level:"붐빔"}, {time:"22:00",level:"보통"} ] };
+const CROWD_LEVELS = ["여유","보통","약간 붐빔","붐빔"];
+
+// 공연별 실시간 채팅 (데모: 서버 없이 샘플 대화 + 내가 쓴 글은 이 기기에만 저장)
+// 실제 서비스에서는 Firebase 같은 실시간 DB 로 같은 공연을 고른 관객끼리 연결
+const CHAT_SEED = [
+  ["15:12","별빛토끼","{v} 앞 굿즈 줄 지금 200m 정도예요. 1시간은 기다려야 할 듯"],
+  ["15:18","Mia_LA","Just got out at Olympic Park Stn Exit 3. Is the merch line moving?"],
+  ["15:24","공원산책러","올림픽공원역 3번 출구 엄청 붐벼요. 몽촌토성역에서 걸어오는 게 덜 막혀요"],
+  ["15:31","응원봉충전중","{v} 근처 보관함 소형은 거의 찼어요. 역 보관함은 아직 남아 있어요"],
+  ["15:39","Haru","입장 줄은 어디부터 서요? 처음 와 봐서요"],
+  ["15:42","초록우산","@Haru {v} 정문 왼쪽 안내판 보고 서면 돼요"],
+  ["15:50","Kenji","Water is sold out at the store by the gate. Bring your own!"],
+  ["15:57","별빛토끼","굿즈 줄 많이 줄었어요. 지금 오면 20분이면 될 것 같아요"]
+];
+const CHAT_PEOPLE = (id) => 80 + ([...String(id)].reduce((a,c) => a + c.charCodeAt(0), 0) * 37) % 240;   // 참여 인원 (샘플)
+const chatKey = (id) => "chat:" + id, repKey = (id) => "chatrep:" + id;
+const readJSON = (k, d) => { try { return JSON.parse(store.get(k, "") || "null") ?? d; } catch(e){ return d; } };
+function chatMsgs(s){
+  const seed = CHAT_SEED.map(([time, nick, text], i) => ({ id:"seed"+i, time, nick, text:text.replaceAll("{v}", L(place(s.venue).name)) }));
+  const mine = readJSON(chatKey(s.id), []);
+  const rep = new Set(readJSON(repKey(s.id), []));
+  return [...seed, ...mine].map(m => ({ ...m, reported: rep.has(m.id) }));
+}
 
 // 2025 공연일 vs 비공연일 시간대별 평균 입차 (3개 주차장 합계, 샘플 값)
 let HOURS = [10,11,12,13,14,15,16,17,18,19,20,21,22];
@@ -348,11 +399,19 @@ const TYPE_COLOR = { venue:"var(--brand)", station:"var(--accent)", parking:"var
 const T = {
   ko:{ app:"올팍 공연일 가이드", replay:"2025년 공연일 재생 모드", demoTime:"데모 시각",
     homeH:"어떤 공연을 보러 오셨나요?", homeSub:"공연을 고르면 도착부터 귀가까지 필요한 정보를 한 화면에 모아 드립니다.",
-    exData:"예시", exNote:"공연명과 공지는 가상 예시입니다.",
+    exData:"예시", exNote:"공연명은 가상 예시입니다.",
+    crowdT:"주변 인구 밀집도", crowdLv:{"여유":"여유","보통":"보통","약간 붐빔":"약간 붐빔","붐빔":"붐빔"},
+    crowdMsg:{"여유":"사람이 많지 않아 편하게 이동할 수 있어요.","보통":"사람이 조금 있지만 이동에 큰 불편은 없어요.","약간 붐빔":"사람이 몰리기 시작했어요. 역 출구와 입장 줄이 붐빌 수 있어요.","붐빔":"매우 붐벼요. 몽촌토성역 등 다른 길로 오고, 일행과 만날 곳을 미리 정하세요."},
+    crowdPp:(a,b)=>`추정 ${fmtMan(a)}~${fmtMan(b)}명`, crowdNext:"앞으로 예상", crowdAt:(m,d,hm)=>`${m}월 ${d}일 ${hm} 기준`, crowdStale:"1시간 넘게 갱신되지 않아 실제와 다를 수 있어요",
+    srcCrowd:"서울시 실시간 인구데이터 (올림픽공원)", srcCrowdSample:"샘플 값 (서울시 인증키 등록 전)",
+    chatT:"실시간 채팅", chatOpen:"채팅 열기", chatPeople:(n)=>`${n}명 참여 중`, chatPh:"메시지 보내기", chatSend:"보내기", chatMe:"나",
+    chatRoomSub:"같은 공연을 보는 관객끼리 줄 상황, 길 안내, 날씨를 나눠요.", chatChange:"공연 바꾸기",
+    chatReport:"신고", chatReported:"신고한 메시지라 가렸어요.", chatUndo:"되돌리기", chatDel:"삭제",
+    chatDemo:"데모: 위 대화는 샘플이고, 내가 쓴 메시지는 이 기기에만 저장됩니다.", chatEmpty:"아직 메시지가 없어요.",
     searchPh:"공연명, 공연장, 날짜로 검색", searchLab:"공연 검색", allVenues:"전체", clear:"지우기",
     resN:(n)=>`공연 ${n}개`, noRes:(q)=>`"${q}"에 맞는 공연이 없어요.`, noResTip:"철자를 확인하거나 공연장 필터를 '전체'로 바꿔 보세요.", resetAll:"검색 초기화",
     today:"데모 오늘", wd:["일","월","화","수","목","금","토"], dayFmt:(y,m,d,w)=>`${m}월 ${d}일 (${w})`,
-    tabs:["공연","대시보드","주차","지도"], wxSafeT:"날씨, 대기 안전",
+    tabs:["공연","대시보드","채팅","주차","지도"], wxSafeT:"날씨, 대기 안전",
     noticeH:"변경 공지", timeline:["도착 권장","공연 시작","퇴장"], endEst:"퇴장 (예상)", tlNote:(est)=>est?"퇴장 시각은 시작 후 2시간 30분으로 잡은 예상이에요. 공연 상황에 따라 바뀔 수 있어요.":"시각은 공연 상황에 따라 바뀔 수 있어요.",
     toDoors:"입장 시작까지", toShow:"공연 시작까지", min:"분", hr:"시간", inShow:"공연 중", afterShow:"공연 종료",
     nowLab:"지금 할 일", seeMap:"지도에서 위치 보기 ›",
@@ -407,11 +466,19 @@ const T = {
     srcLocker:"현재 화면은 샘플 값입니다 (공원 안 임시 보관함은 가상 예시). 실제 값은 행정안전부 한국지역정보개발원 공영 물품보관함 실시간 API를 노트북 02로 변환해 넣습니다." },
   en:{ app:"Olympic Park Show Day Guide", replay:"Replaying a 2025 show day", demoTime:"Demo time",
     homeH:"Which show are you here for?", homeSub:"Pick a show and see everything from arrival to heading home on one screen.",
-    exData:"SAMPLE", exNote:"Show names and notices are fictional examples.",
+    exData:"SAMPLE", exNote:"Show names are fictional examples.",
+    crowdT:"Crowd level nearby", crowdLv:{"여유":"Relaxed","보통":"Normal","약간 붐빔":"Slightly busy","붐빔":"Crowded"},
+    crowdMsg:{"여유":"Not many people around. Easy to move.","보통":"Some people around, but moving is easy.","약간 붐빔":"Crowds are building. Station exits and entry lines may be busy.","붐빔":"Very crowded. Try another route such as Mongchontoseong Stn and set a meeting spot with your group."},
+    crowdPp:(a,b)=>`Est. ${a.toLocaleString("en-US")} to ${b.toLocaleString("en-US")} people`, crowdNext:"Coming hours", crowdAt:(m,d,hm)=>`As of ${m}/${d} ${hm}`, crowdStale:"Not updated for over an hour, may be out of date",
+    srcCrowd:"Seoul real-time population data (Olympic Park)", srcCrowdSample:"Sample values (before Seoul API key is added)",
+    chatT:"Live chat", chatOpen:"Open chat", chatPeople:(n)=>`${n} people here`, chatPh:"Send a message", chatSend:"Send", chatMe:"Me",
+    chatRoomSub:"Fans at the same show share lines, directions and weather.", chatChange:"Change show",
+    chatReport:"Report", chatReported:"Hidden because you reported it.", chatUndo:"Undo", chatDel:"Delete",
+    chatDemo:"Demo: the messages above are samples. Your messages are saved on this device only.", chatEmpty:"No messages yet.",
     searchPh:"Search by show, venue or date", searchLab:"Search shows", allVenues:"All", clear:"Clear",
     resN:(n)=>`${n} show${n===1?"":"s"}`, noRes:(q)=>`No shows match "${q}".`, noResTip:"Check the spelling or set the venue filter to All.", resetAll:"Reset search",
     today:"Demo today", wd:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], dayFmt:(y,m,d,w)=>`${w}, ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m-1]} ${d}`,
-    tabs:["Shows","Today","Parking","Map"], wxSafeT:"Weather and wait safety",
+    tabs:["Shows","Today","Chat","Parking","Map"], wxSafeT:"Weather and wait safety",
     noticeH:"Change notice", timeline:["Arrive by","Show starts","Ends"], endEst:"Ends (est.)", tlNote:(est)=>est?"End time is an estimate (2 h 30 min after the start) and may change on the day.":"Times may change on the day.",
     toDoors:"Doors open in", toShow:"Show starts in", min:"min", hr:"h", inShow:"Show in progress", afterShow:"Show ended",
     nowLab:"Do this now", seeMap:"See it on the map ›",
@@ -469,7 +536,7 @@ const T = {
 /* ===== 상태와 유틸 ===== */
 const store = { get(k,d){ try{ return localStorage.getItem(k) ?? d }catch(e){ return d } }, set(k,v){ try{ localStorage.setItem(k,v) }catch(e){} } };
 const state = { lang: store.get("lang","ko"), show: store.get("show","s1"), temp:null, filter:"all", place:null, q:"", venue:"all" };
-const VIEWS = ["home","dash","parking","map"];   // 아래 탭에 보이는 화면
+const VIEWS = ["home","dash","chat","parking","map"];   // 아래 탭에 보이는 화면
 const SUBVIEWS = ["locker","safety"];             // 탭 없이 대시보드에서 들어가는 화면 (아래 탭은 '대시보드' 유지, 뒤로 가기로 복귀)
 const t = () => T[state.lang];
 const L = (o) => o[state.lang];
@@ -638,6 +705,86 @@ function viewHome(){
   <div class="showlist" id="showlist"></div>`;
 }
 
+/* ===== 인구 밀집도 카드 ===== */
+const fmtMan = (n) => n >= 10000 ? `${(Math.round(n/1000)/10).toString()}만` : n.toLocaleString("ko-KR");
+const crowdIdx = (lv) => Math.max(0, CROWD_LEVELS.indexOf(lv));
+const crowdPill = (lv) => { const i = crowdIdx(lv); const cls = ["g-ok","g-mid","g-warn","g-bad"][i]; return `<span class="pill ${cls}">${t().crowdLv[lv] || lv}</span>`; };
+const crowdColor = (lv) => ["var(--ok)","var(--brand)","var(--warn)","var(--bad)"][crowdIdx(lv)];
+function crowdMins(){ if (!CROWD.fetched_at) return null; const d = new Date(CROWD.fetched_at.replace(" ","T")+":00+09:00"); return isNaN(d) ? null : Math.round((Date.now()-d)/60000); }
+const crowdStale = () => { const m = crowdMins(); return !CROWD.sample && m != null && m > 60; };
+function crowdCard(){
+  const c = CROWD, fc = (c.forecast || []).slice(0, 6);
+  const tag = c.sample ? `<span class="tag ex">${t().exData}</span>` : `<span class="live">${t().live}</span>`;
+  let stamp = t().srcCrowdSample;
+  if (!c.sample && c.fetched_at){ const [ymd, hm] = c.fetched_at.split(" "), [, mo, da] = ymd.split("-").map(Number); stamp = `${t().srcCrowd}, ${t().crowdAt(mo, da, hm)}`; }
+  const msg = state.lang === "ko" && c.message ? c.message : t().crowdMsg[c.level] || "";
+  return `
+    <div class="sc wide crowd" style="cursor:default">
+      <div class="hd"><span>${t().crowdT} ${tag}</span></div>
+      <div class="lv"><b style="color:${crowdColor(c.level)}">${t().crowdLv[c.level] || c.level}</b>${c.min ? `<span class="pp">${t().crowdPp(c.min, c.max || c.min)}</span>` : ""}</div>
+      <div class="msg">${esc(msg)}</div>
+      ${fc.length ? `<div><div class="sub" style="margin:0 0 4px;font-size:12px">${t().crowdNext}</div>
+        <div class="cstrip">${fc.map(f => `<i title="${f.time} ${t().crowdLv[f.level] || f.level}" style="height:${25 + crowdIdx(f.level)*25}%;background:${crowdColor(f.level)}"></i>`).join("")}</div>
+        <div class="clab">${fc.map(f => `<span>${f.time.slice(0,2)}${state.lang==="ko"?"시":""}</span>`).join("")}</div></div>` : ""}
+      <span style="font-size:12px;color:${crowdStale() ? "var(--bad)" : "var(--muted)"}">${stamp}${crowdStale() ? `, ${t().crowdStale}` : ""}</span>
+    </div>`;
+}
+
+/* ===== 채팅 (대시보드 미리보기 + 채팅 탭) ===== */
+function chatPreview(){
+  const s = show(), list = chatMsgs(s).filter(m => !m.reported).slice(-3);
+  return `
+    <button class="sc wide" data-go="chat">
+      <div class="hd"><span>${t().chatT} ${SHOWS_SAMPLE ? `<span class="tag ex">${t().exData}</span>` : ""}</span><em>${t().chatPeople(CHAT_PEOPLE(s.id))} ›</em></div>
+      <div class="cprev">${list.length ? list.map(m => `<div><b>${esc(m.mine ? t().chatMe : m.nick)}</b><span>${esc(m.text)}</span><time>${m.time}</time></div>`).join("") : `<div><span>${t().chatEmpty}</span></div>`}</div>
+      <div class="linkbtn" style="margin:0">${t().chatOpen} ›</div>
+    </button>`;
+}
+function chatListHTML(){
+  return chatMsgs(show()).map(m => {
+    if (m.reported) return `<div class="m hidden"><div class="bub">${t().chatReported}</div><div class="who"><button class="act" data-unrep="${m.id}">${t().chatUndo}</button></div></div>`;
+    if (m.mine) return `<div class="m me"><div class="who"><span>${m.time}</span><button class="act" data-del="${m.id}">${t().chatDel}</button></div><div class="bub">${esc(m.text)}</div></div>`;
+    return `<div class="m"><div class="who"><b>${esc(m.nick)}</b><span>${m.time}</span><button class="act" data-rep="${m.id}">${t().chatReport}</button></div><div class="bub">${esc(m.text)}</div></div>`;
+  }).join("");
+}
+function viewChat(){
+  const s = show();
+  return `
+  <div class="card room">
+    <div style="min-width:0"><div class="rt">${L(s.title)}</div><div class="rs">${L(place(s.venue).name)}  |  ${s.date}  ${s.start}  |  ${t().chatPeople(CHAT_PEOPLE(s.id))}</div></div>
+    <button class="chip" data-go="home" style="flex:none">${t().chatChange}</button>
+  </div>
+  <p class="sub" style="margin:-6px 0 0">${t().chatRoomSub}</p>
+  <div class="msgs" id="msgs" aria-live="polite">${chatListHTML()}</div>
+  <p class="sub" style="margin:0;font-size:12px">${t().chatDemo}</p>
+  <form class="composer" id="composer" autocomplete="off">
+    <input id="chat-in" maxlength="200" placeholder="${t().chatPh}" aria-label="${t().chatPh}" enterkeyhint="send">
+    <button type="submit" id="chat-send" disabled>${t().chatSend}</button>
+  </form>`;
+}
+function updateChat(){ const box = document.getElementById("msgs"); if (box) box.innerHTML = chatListHTML(); }
+const nowHM = () => { const d = new Date(); return `${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`; };
+function sendChat(){
+  const inp = document.getElementById("chat-in"), text = inp.value.trim();
+  if (!text) return;
+  const s = show(), mine = readJSON(chatKey(s.id), []);
+  mine.push({ id:"me" + Date.now(), time:nowHM(), nick:"me", text, mine:true });
+  store.set(chatKey(s.id), JSON.stringify(mine.slice(-50)));
+  inp.value = ""; document.getElementById("chat-send").disabled = true;
+  updateChat(); scrollTo(0, document.body.scrollHeight); inp.focus();
+}
+function toggleReport(id, on){
+  const s = show(), rep = new Set(readJSON(repKey(s.id), []));
+  on ? rep.add(id) : rep.delete(id);
+  store.set(repKey(s.id), JSON.stringify([...rep]));
+  updateChat();
+}
+function deleteMine(id){
+  const s = show();
+  store.set(chatKey(s.id), JSON.stringify(readJSON(chatKey(s.id), []).filter(m => m.id !== id)));
+  updateChat();
+}
+
 /* ===== 화면 1-2: 공연 대시보드 ===== */
 function dur(m){ const h = Math.floor(m/60), r = m % 60; return h ? (r ? `${h}${t().hr} ${r}${t().min}` : `${h}${t().hr}`) : `${r}${t().min}`; }
 function viewDash(){
@@ -646,10 +793,8 @@ function viewDash(){
   const phase = nowM < marks[0] ? "before" : nowM < marks[1] ? "arrive" : nowM < marks[2] ? "show" : "after";
   const idx = { before:-1, arrive:0, show:1, after:2 }[phase];
   const pct = Math.max(0, Math.min(100, (nowM - marks[0]) / (marks[2] - marks[0]) * 100));
-  const notice = (NOTICES[s.id]||[])[0];
   const cd = phase === "before" || phase === "arrive" ? [t().toShow, dur(marks[1]-nowM)] : [phase === "show" ? t().inShow : t().afterShow, ""];
-  const pickup = phase === "arrive" && notice && notice.place === "lawn" ? notice : null;
-  let todo = t().todo[phase](s, pickup);
+  let todo = t().todo[phase](s);
   const add = feel >= 33 ? t().heatAdd : feel <= -10 ? t().coldAdd : "";
   return `
   <section class="hero" style="background:linear-gradient(150deg,${s.poster[0]},${s.poster[1]})">
@@ -665,11 +810,7 @@ function viewDash(){
 
   <div class="stat">${wxCard(true)}</div>
 
-  ${notice ? `
-  <div class="notice" role="alert"><div class="ic">!</div>
-    <div style="flex:1;min-width:0"><p><b>${L(notice.topic)}</b></p><small>${L(notice.when)}  <span class="tag ex">${t().exData}</span></small>
-      <div class="chg"><div class="was">${L(notice.from)}</div><span class="arrow">→</span><div class="now">${L(notice.to)}</div></div>
-      <button class="linkbtn" data-goplace="${notice.place}">${t().seeMap}</button></div></div>` : ""}
+  <div class="stat">${chatPreview()}${crowdCard()}</div>
 
   <div class="stat">
     <button class="sc" data-go="parking">
@@ -852,6 +993,7 @@ function viewMap(){
 const ICONS = [
   '<path d="M4 6h16v12H4z M8 6v12 M4 10h4 M4 14h4" fill="none" stroke="currentColor" stroke-width="1.8"/>',
   '<path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 7h6V4h-6z" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+  '<path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
   '<rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 17V8h3a2.5 2.5 0 0 1 0 5h-3" fill="none" stroke="currentColor" stroke-width="1.8"/>',
   '<path d="M12 21s-6-6.2-6-11a6 6 0 0 1 12 0c0 4.8-6 11-6 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2" fill="currentColor"/>'
 ];
@@ -864,7 +1006,7 @@ function render(){
   ["ko","en"].forEach(l => document.getElementById("lang-"+l).setAttribute("aria-pressed", state.lang === l));
   document.getElementById("tabs").innerHTML = VIEWS.map((x,i) =>
     `<a href="#${x}" ${x===v||(x==="dash"&&SUBVIEWS.includes(v))?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[i]}</svg>${t().tabs[i]}</a>`).join("");
-  document.getElementById("view").innerHTML = { home:viewHome, dash:viewDash, parking:viewParking, safety:viewSafety, map:viewMap, locker:viewLocker }[v]();
+  document.getElementById("view").innerHTML = { home:viewHome, dash:viewDash, parking:viewParking, chat:viewChat, safety:viewSafety, map:viewMap, locker:viewLocker }[v]();
   document.documentElement.style.setProperty("--toph", document.querySelector(".top").offsetHeight + "px");
   if (v === "home") updateList();
   const r = document.getElementById("temp-range");
@@ -872,11 +1014,14 @@ function render(){
 }
 
 document.addEventListener("click", e => {
-  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],[data-venue],[data-reset],#q-x,#back,#temp-reset");
+  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],[data-venue],[data-reset],[data-rep],[data-unrep],[data-del],#q-x,#back,#temp-reset");
   if (!el) return;
   if (el.dataset.goplace){ state.place = el.dataset.goplace; state.filter = "all"; go("map"); }
   else if (el.dataset.show){ state.show = el.dataset.show; state.place = null; store.set("show", state.show); go("dash"); }
   else if (el.dataset.go) go(el.dataset.go);
+  else if (el.dataset.rep) toggleReport(el.dataset.rep, true);
+  else if (el.dataset.unrep) toggleReport(el.dataset.unrep, false);
+  else if (el.dataset.del) deleteMine(el.dataset.del);
   else if (el.dataset.venue){ state.venue = el.dataset.venue; document.querySelectorAll("[data-venue]").forEach(b => b.setAttribute("aria-pressed", b.dataset.venue === state.venue)); updateList(); }
   else if (el.dataset.reset){ state.q = ""; state.venue = "all"; render(); }
   else if (el.id === "q-x"){ state.q = ""; const q = document.getElementById("q"); q.value = ""; updateList(); q.focus(); }
@@ -894,12 +1039,16 @@ document.addEventListener("keydown", e => {
 document.addEventListener("input", e => { if (e.target.id === "q"){ state.q = e.target.value; updateList(); } });
 document.addEventListener("keydown", e => { if (e.target.id === "q" && e.key === "Enter") e.target.blur(); });
 addEventListener("resize", () => document.documentElement.style.setProperty("--toph", document.querySelector(".top").offsetHeight + "px"));
-addEventListener("hashchange", () => { render(); scrollTo(0,0); });
+addEventListener("hashchange", () => { render(); scrollTo(0, currentView() === "chat" ? document.body.scrollHeight : 0); });
+// 채팅 입력: 글자가 있을 때만 보내기 버튼 켜기, 엔터나 보내기 버튼으로 전송
+document.addEventListener("input", e => { if (e.target.id === "chat-in") document.getElementById("chat-send").disabled = !e.target.value.trim(); });
+document.addEventListener("submit", e => { if (e.target.id === "composer"){ e.preventDefault(); sendChat(); } });
 
 /* ===== JSON 데이터 불러오기 =====
    data/parking_entry.json : Colab 전처리 결과 (주차 그래프)
    data/lockers.json       : 물품보관함 현황 (GitHub Actions 15분마다 실시간 API 로 갱신)
    data/weather.json       : 올림픽공원 실시간 날씨 (GitHub Actions 15분마다 기상청 API 로 갱신)
+   data/crowd.json         : 올림픽공원 인구 밀집도 (GitHub Actions 15분마다 서울시 실시간 인구데이터로 갱신)
    data/shows.json         : 공연 목록 (data/01_공연정보 CSV 를 올리면 GitHub Actions 가 변환)
    파일이 없거나 PC에서 index.html 을 그냥 더블클릭해 연 경우(file://)에는 위 샘플 값 그대로 보임. */
 const getJSON = (url) => fetch(url + "?t=" + Date.now(), { cache:"no-store" }).then(r => r.ok ? r.json() : Promise.reject());
@@ -913,6 +1062,11 @@ function loadWeather(){
 }
 setInterval(() => { loadWeather().then(() => { if (["dash","safety"].includes(currentView()) && !document.activeElement?.matches("#temp-range")){ const y = scrollY; render(); scrollTo(0, y); } }).catch(() => {}); }, 5 * 60 * 1000);
 setInterval(() => { loadLockers().then(() => { if (["dash","locker","map"].includes(currentView())){ const y = scrollY; render(); scrollTo(0, y); } }).catch(() => {}); }, 5 * 60 * 1000);
+// 인구 밀집도: GitHub Actions 가 15분마다 docs/data/crowd.json 을 갱신 (scripts/update_crowd.py)
+function loadCrowd(){
+  return getJSON("data/crowd.json").then(d => { if (d && CROWD_LEVELS.includes(d.level)){ CROWD = { ...d, forecast: Array.isArray(d.forecast) ? d.forecast : [], sample: d.sample !== false }; } });
+}
+setInterval(() => { loadCrowd().then(() => { if (currentView() === "dash"){ const y = scrollY; render(); scrollTo(0, y); } }).catch(() => {}); }, 5 * 60 * 1000);
 // 공연 목록: 공연장 표준 id(dome, hall, arena, lawn)와 날짜, 시작 시각이 있는 줄만 씀
 const VENUE_IDS = ["dome","hall","arena","lawn"];
 function loadShows(){
@@ -923,6 +1077,7 @@ function loadShows(){
 }
 Promise.allSettled([
   loadShows(),
+  loadCrowd(),
   getJSON("data/parking_entry.json").then(d => { if (d.hours && d.entry_show && d.entry_norm){ HOURS = d.hours; ENTRY_SHOW = d.entry_show; ENTRY_NORM = d.entry_norm; } }),
   loadLockers(),
   loadWeather()
