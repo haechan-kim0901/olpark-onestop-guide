@@ -90,37 +90,42 @@ h3{font-family:var(--display);font-size:15px;margin:0 0 8px}
 .cstrip i{display:block;border-radius:3px 3px 1px 1px}
 .clab{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:4px;font-size:10.5px;color:var(--muted);text-align:center;font-variant-numeric:tabular-nums}
 .pill.g-mid{background:color-mix(in srgb,var(--brand) 14%,transparent);color:var(--brand)}
-/* 채팅 */
-.cprev{display:flex;flex-direction:column;gap:5px;font-size:13px}
-.cprev div{display:flex;gap:6px;min-width:0}
-.cprev b{flex:none;max-width:40%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.cprev span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+/* 현장 제보 게시판 */
+.cprev{display:flex;flex-direction:column;gap:6px;font-size:13px}
+.cprev div{display:flex;gap:6px;align-items:center;min-width:0}
+.cprev .tx{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
 .cprev time{flex:none;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
 .room{display:flex;justify-content:space-between;align-items:center;gap:10px}
 .room .rt{font-weight:700;font-size:15px;line-height:1.35}
 .room .rs{font-size:12.5px;color:var(--muted)}
-.msgs{display:flex;flex-direction:column;gap:10px}
-.m{display:flex;flex-direction:column;gap:3px;max-width:84%;align-self:flex-start}
-.m .who{font-size:12px;color:var(--muted);display:flex;gap:8px;align-items:center}
-.m .who b{color:var(--fg)}
-.m .bub{background:var(--card);border:1px solid var(--line);border-radius:4px 14px 14px 14px;padding:8px 12px;font-size:14.5px;line-height:1.45;white-space:pre-wrap;overflow-wrap:anywhere}
-.m.me{align-self:flex-end;align-items:flex-end}
-.m.me .bub{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);border-radius:14px 4px 14px 14px}
-.m .act{background:none;border:0;padding:0;font:500 11.5px var(--body);color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
-.m.hidden .bub{background:none;border-style:dashed;color:var(--muted);font-size:13px}
-.daysep{align-self:center;font-size:11.5px;color:var(--muted);background:var(--line);border-radius:999px;padding:2px 10px}
-.composer{position:sticky;bottom:calc(64px + env(safe-area-inset-bottom,0px));z-index:3;display:flex;gap:8px;background:var(--bg);margin:0 -16px -16px;padding:10px 16px;border-top:1px solid var(--line)}
-.composer input{flex:1;min-width:0;font:500 16px var(--body);color:var(--fg);background:var(--card);border:1.5px solid var(--line);border-radius:999px;padding:9px 14px}
-.composer input:focus{outline:none;border-color:var(--brand)}
-.composer button{flex:none;border:0;border-radius:999px;background:var(--brand);color:var(--brand-ink);font:700 14px var(--body);padding:0 16px;cursor:pointer}
-.composer button:disabled{opacity:.45;cursor:default}
-/* 채팅 탭: 공연 제목 목록 */
+.ctag{flex:none;display:inline-block;font:700 11px/1.5 var(--body);padding:1px 8px;border-radius:999px;background:color-mix(in srgb,var(--c) 16%,transparent);color:color-mix(in srgb,var(--c) 75%,var(--fg))}
+.ctag.c-line{--c:#2f6fd6}.ctag.c-goods{--c:#9a3fc2}.ctag.c-lost{--c:#c2571f}.ctag.c-transit{--c:#1f8a5b}.ctag.c-etc{--c:#6b7280}
+.write{display:flex;flex-direction:column;gap:10px}
+.write .lab{font-size:12.5px;color:var(--muted);font-weight:500}
+.write textarea{width:100%;box-sizing:border-box;min-height:72px;resize:vertical;font:500 16px/1.45 var(--body);color:var(--fg);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:9px 12px}
+.write textarea:focus{outline:none;border-color:var(--brand)}
+.write .row{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.write .row small{font-size:12px;color:var(--muted)}
+.write button[type=submit]{flex:none;border:0;border-radius:999px;background:var(--brand);color:var(--brand-ink);font:700 14px var(--body);padding:9px 18px;cursor:pointer}
+.write button[type=submit]:disabled{opacity:.45;cursor:default}
+.posts{display:flex;flex-direction:column;gap:8px}
+.post{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:flex;flex-direction:column;gap:6px}
+.post.me{border-color:color-mix(in srgb,var(--brand) 45%,var(--line))}
+.post p{margin:0;font-size:14.5px;line-height:1.5;white-space:pre-wrap;overflow-wrap:anywhere}
+.post .meta{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}
+.post .meta b{color:var(--fg);font-weight:600}
+.post .meta .act{margin-left:auto}
+.post .act{background:none;border:0;padding:0;font:500 12px var(--body);color:var(--muted);cursor:pointer;text-decoration:underline;text-underline-offset:2px}
+.post.hidden{background:none;border-style:dashed;flex-direction:row;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted)}
+.bempty{text-align:center;color:var(--muted);font-size:14px;padding:18px 8px;border:1px dashed var(--line);border-radius:14px}
+.expire{font-size:12.5px;color:var(--muted);display:flex;gap:6px;align-items:center}
+/* 제보 탭: 공연 제목 목록 */
 .clist{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .clist button{display:flex;justify-content:space-between;align-items:center;gap:10px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line);padding:14px;font:500 15px var(--body);color:var(--fg);cursor:pointer}
 .clist button:first-child{border-top:0}
 .clist button:hover,.clist button:focus-visible{background:color-mix(in srgb,var(--brand) 6%,transparent)}
 .clist button span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.clist button em{font-style:normal;color:var(--muted);flex:none}
+.clist button em{font-style:normal;color:var(--muted);flex:none;font-size:13px}
 /* notice */
 .notice{background:var(--bad-soft);border:1px solid color-mix(in srgb,var(--bad) 40%,transparent);border-radius:14px;padding:12px 14px;display:flex;gap:10px}
 .notice .ic{width:22px;height:22px;flex:none;border-radius:50%;background:var(--bad);color:var(--card);display:grid;place-items:center;font-weight:700;font-size:13px}
@@ -344,26 +349,32 @@ let CROWD = { sample:true, area:"올림픽공원", fetched_at:"", level:"약간 
   forecast:[ {time:"17:00",level:"약간 붐빔"}, {time:"18:00",level:"붐빔"}, {time:"19:00",level:"붐빔"}, {time:"20:00",level:"약간 붐빔"}, {time:"21:00",level:"붐빔"}, {time:"22:00",level:"보통"} ] };
 const CROWD_LEVELS = ["여유","보통","약간 붐빔","붐빔"];
 
-// 공연별 실시간 채팅 (데모: 서버 없이 샘플 대화 + 내가 쓴 글은 이 기기에만 저장)
-// 실제 서비스에서는 Firebase 같은 실시간 DB 로 같은 공연을 고른 관객끼리 연결
-const CHAT_SEED = [
-  ["15:12","별빛토끼","{v} 앞 굿즈 줄 지금 200m 정도예요. 1시간은 기다려야 할 듯"],
-  ["15:18","Mia_LA","Just got out at Olympic Park Stn Exit 3. Is the merch line moving?"],
-  ["15:24","공원산책러","올림픽공원역 3번 출구 엄청 붐벼요. 몽촌토성역에서 걸어오는 게 덜 막혀요"],
-  ["15:31","응원봉충전중","{v} 근처 보관함 소형은 거의 찼어요. 역 보관함은 아직 남아 있어요"],
-  ["15:39","Haru","입장 줄은 어디부터 서요? 처음 와 봐서요"],
-  ["15:42","초록우산","@Haru {v} 정문 왼쪽 안내판 보고 서면 돼요"],
-  ["15:50","Kenji","Water is sold out at the store by the gate. Bring your own!"],
-  ["15:57","별빛토끼","굿즈 줄 많이 줄었어요. 지금 오면 20분이면 될 것 같아요"]
+// 공연별 현장 제보 게시판 (데모: 서버 없이 샘플 글 + 내가 쓴 글은 이 기기에만 저장)
+// 실제 서비스에서는 Firebase 같은 DB 에 공연별로 글을 쌓고, 공연 다음 날 0시에 그 공연 글을 모두 지움
+const BOARD_CATS = ["line","goods","lost","transit","etc"];   // 말머리: 입장, 굿즈, 분실물, 교통, 기타
+const BOARD_SEED = [   // [시각, 말머리, 닉네임, 글]  {v} = 공연장 이름
+  ["14:40","line","Haru","{v} 입장 대기 펜스 설치 시작했어요. 아직 줄은 짧아요"],
+  ["15:12","goods","별빛토끼","{v} 앞 굿즈 줄 지금 200m 정도예요. 1시간은 기다려야 할 듯"],
+  ["15:18","transit","Mia_LA","Olympic Park Stn Exit 3 is packed. Exit 4 was much quicker for me."],
+  ["15:24","transit","공원산책러","올림픽공원역 3번 출구 엄청 붐벼요. 몽촌토성역에서 걸어오는 게 덜 막혀요"],
+  ["15:31","lost","응원봉충전중","{v} 앞 벤치에서 파란 응원봉 주웠어요. 공원 안내소에 맡겼어요"],
+  ["15:42","line","초록우산","입장 줄은 {v} 정문 왼쪽 안내판부터 서요. 지금 50m 정도"],
+  ["15:46","etc","Kenji","Water is sold out at the store by the gate. Bring your own!"],
+  ["15:50","lost","Yuna","Found a black card wallet near the gate. Handed it to the info desk."],
+  ["15:57","goods","별빛토끼","굿즈 줄 많이 줄었어요. 지금 오면 20분이면 될 것 같아요"]
 ];
-const CHAT_PEOPLE = (id) => 80 + ([...String(id)].reduce((a,c) => a + c.charCodeAt(0), 0) * 37) % 240;   // 참여 인원 (샘플)
-const chatKey = (id) => "chat:" + id, repKey = (id) => "chatrep:" + id;
+const boardKey = (id) => "board:" + id, repKey = (id) => "boardrep:" + id;
 const readJSON = (k, d) => { try { return JSON.parse(store.get(k, "") || "null") ?? d; } catch(e){ return d; } };
-function chatMsgs(s){
-  const seed = CHAT_SEED.map(([time, nick, text], i) => ({ id:"seed"+i, time, nick, text:text.replaceAll("{v}", L(place(s.venue).name)) }));
-  const mine = readJSON(chatKey(s.id), []);
+// 공연 다음 날 0시에 글이 지워짐. 데모 시각(DEMO.date) 기준으로 판단
+const nextDay = (date) => { const d = new Date(date + "T00:00:00"); d.setDate(d.getDate() + 1); return d; };
+const boardClosed = (s) => new Date(DEMO.date + "T00:00:00") >= nextDay(s.date);
+function boardPosts(s){
+  if (boardClosed(s)){ store.set(boardKey(s.id), "[]"); return []; }
+  const seed = s.date !== DEMO.date ? [] : BOARD_SEED.map(([time, cat, nick, text], i) => ({ id:"seed"+i, time, cat, nick, text:text.replaceAll("{v}", L(place(s.venue).name)) }));
+  const mine = readJSON(boardKey(s.id), []).filter(m => BOARD_CATS.includes(m.cat));
   const rep = new Set(readJSON(repKey(s.id), []));
-  return [...seed, ...mine].map(m => ({ ...m, reported: rep.has(m.id) }));
+  // 샘플 글은 데모 오늘(DEMO.date) 공연에만 보임. 최신순: 내가 쓴 글(방금 쓴 것)이 맨 위, 그다음 샘플 글을 시각 역순으로
+  return [...mine.slice().reverse(), ...seed.reverse()].map(m => ({ ...m, reported: rep.has(m.id) }));
 }
 
 // 2025 공연일 vs 비공연일 시간대별 평균 입차 (3개 주차장 합계, 샘플 값)
@@ -445,14 +456,17 @@ const T = {
     crowdMsg:{"여유":"사람이 많지 않아 편하게 이동할 수 있어요.","보통":"사람이 조금 있지만 이동에 큰 불편은 없어요.","약간 붐빔":"사람이 몰리기 시작했어요. 역 출구와 입장 줄이 붐빌 수 있어요.","붐빔":"매우 붐벼요. 몽촌토성역 등 다른 길로 오고, 일행과 만날 곳을 미리 정하세요."},
     crowdPp:(a,b)=>`추정 ${fmtMan(a)}~${fmtMan(b)}명`, crowdNext:"앞으로 예상", crowdAt:(m,d,hm)=>`${m}월 ${d}일 ${hm} 기준`, crowdStale:"1시간 넘게 갱신되지 않아 실제와 다를 수 있어요",
     srcCrowd:"서울시 실시간 인구데이터 (올림픽공원)", srcCrowdSample:"샘플 값 (서울시 인증키 등록 전)",
-    chatT:"실시간 채팅", chatsH:"공연별 채팅", chatsSub:"채팅방에 들어갈 공연을 고르세요.", chatOpen:"채팅 열기", chatPeople:(n)=>`${n}명 참여 중`, chatPh:"메시지 보내기", chatSend:"보내기", chatMe:"나",
-    chatRoomSub:"같은 공연을 보는 관객끼리 줄 상황, 길 안내, 날씨를 나눠요.", chatChange:"공연 바꾸기",
-    chatReport:"신고", chatReported:"신고한 메시지라 가렸어요.", chatUndo:"되돌리기", chatDel:"삭제",
-    chatDemo:"데모: 위 대화는 샘플이고, 내가 쓴 메시지는 이 기기에만 저장됩니다.", chatEmpty:"아직 메시지가 없어요.",
+    chatT:"현장 제보", chatsH:"공연별 현장 제보", chatsSub:"제보 게시판을 볼 공연을 고르세요.", chatOpen:"게시판 보기", chatPeople:(n)=>`글 ${n}개`, chatMe:"나",
+    cats:{all:"전체", line:"입장", goods:"굿즈", lost:"분실물", transit:"교통", etc:"기타"},
+    chatRoomSub:"같은 공연을 보는 관객끼리 입장, 굿즈, 분실물, 교통 등 현장 상황을 알려 줘요.", chatChange:"공연 바꾸기",
+    wrH:"제보 쓰기", wrCat:"말머리 고르기", chatPh:"지금 현장 상황을 알려 주세요", chatSend:"올리기", wrHint:(n)=>`${n}/200`,
+    chatReport:"신고", chatReported:"신고한 글이라 가렸어요.", chatUndo:"되돌리기", chatDel:"삭제", justNow:"방금", minAgo:(n)=>`${n}분 전`,
+    expire:(m,d)=>`이 게시판 글은 공연 다음 날인 ${m}월 ${d}일 0시에 모두 지워져요.`, closed:"공연이 끝나 이 게시판의 글이 모두 지워졌어요.",
+    chatDemo:"데모: 위 글은 샘플이고, 내가 쓴 글은 이 기기에만 저장됩니다.", chatEmpty:"아직 글이 없어요. 공연 당일에 관객 제보가 올라와요.", catEmpty:"이 말머리의 글이 아직 없어요.",
     searchPh:"공연명, 공연장, 날짜로 검색", searchLab:"공연 검색", allVenues:"전체", clear:"지우기",
     resN:(n)=>`공연 ${n}개`, noRes:(q)=>`"${q}"에 맞는 공연이 없어요.`, noResTip:"철자를 확인하거나 공연장 필터를 '전체'로 바꿔 보세요.", resetAll:"검색 초기화",
     today:"데모 오늘", wd:["일","월","화","수","목","금","토"], dayFmt:(y,m,d,w)=>`${m}월 ${d}일 (${w})`,
-    tabs:["공연","대시보드","채팅","주차","지도"], wxSafeT:"날씨, 대기 안전",
+    tabs:["공연","대시보드","제보","주차","지도"], wxSafeT:"날씨, 대기 안전",
     noticeH:"변경 공지", timeline:["도착 권장","공연 시작","퇴장"], endEst:"퇴장 (예상)", tlNote:(est)=>est?"퇴장 시각은 시작 후 2시간 30분으로 잡은 예상이에요. 공연 상황에 따라 바뀔 수 있어요.":"시각은 공연 상황에 따라 바뀔 수 있어요.",
     toDoors:"입장 시작까지", toShow:"공연 시작까지", min:"분", hr:"시간", inShow:"공연 중", afterShow:"공연 종료",
     nowLab:"지금 할 일", seeMap:"지도에서 위치 보기 ›",
@@ -513,14 +527,17 @@ const T = {
     crowdMsg:{"여유":"Not many people around. Easy to move.","보통":"Some people around, but moving is easy.","약간 붐빔":"Crowds are building. Station exits and entry lines may be busy.","붐빔":"Very crowded. Try another route such as Mongchontoseong Stn and set a meeting spot with your group."},
     crowdPp:(a,b)=>`Est. ${a.toLocaleString("en-US")} to ${b.toLocaleString("en-US")} people`, crowdNext:"Coming hours", crowdAt:(m,d,hm)=>`As of ${m}/${d} ${hm}`, crowdStale:"Not updated for over an hour, may be out of date",
     srcCrowd:"Seoul real-time population data (Olympic Park)", srcCrowdSample:"Sample values (before Seoul API key is added)",
-    chatT:"Live chat", chatsH:"Chat by show", chatsSub:"Pick a show to join its chat room.", chatOpen:"Open chat", chatPeople:(n)=>`${n} people here`, chatPh:"Send a message", chatSend:"Send", chatMe:"Me",
-    chatRoomSub:"Fans at the same show share lines, directions and weather.", chatChange:"Change show",
-    chatReport:"Report", chatReported:"Hidden because you reported it.", chatUndo:"Undo", chatDel:"Delete",
-    chatDemo:"Demo: the messages above are samples. Your messages are saved on this device only.", chatEmpty:"No messages yet.",
+    chatT:"On-site reports", chatsH:"On-site reports by show", chatsSub:"Pick a show to see its report board.", chatOpen:"Open board", chatPeople:(n)=>`${n} post${n===1?"":"s"}`, chatMe:"Me",
+    cats:{all:"All", line:"Entry", goods:"Merch", lost:"Lost & found", transit:"Getting here", etc:"Other"},
+    chatRoomSub:"Fans at the same show post updates on entry, merch, lost items, transport and more.", chatChange:"Change show",
+    wrH:"Post a report", wrCat:"Pick a topic", chatPh:"What is happening on site right now?", chatSend:"Post", wrHint:(n)=>`${n}/200`,
+    chatReport:"Report", chatReported:"Hidden because you reported it.", chatUndo:"Undo", chatDel:"Delete", justNow:"Just now", minAgo:(n)=>`${n} min ago`,
+    expire:(m,d)=>`All posts on this board are deleted at midnight on ${m}/${d}, the day after the show.`, closed:"The show is over, so all posts on this board have been deleted.",
+    chatDemo:"Demo: the posts above are samples. Your posts are saved on this device only.", chatEmpty:"No posts yet. Fans post updates on the show day.", catEmpty:"No posts with this topic yet.",
     searchPh:"Search by show, venue or date", searchLab:"Search shows", allVenues:"All", clear:"Clear",
     resN:(n)=>`${n} show${n===1?"":"s"}`, noRes:(q)=>`No shows match "${q}".`, noResTip:"Check the spelling or set the venue filter to All.", resetAll:"Reset search",
     today:"Demo today", wd:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], dayFmt:(y,m,d,w)=>`${w}, ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m-1]} ${d}`,
-    tabs:["Shows","Today","Chat","Parking","Map"], wxSafeT:"Weather and wait safety",
+    tabs:["Shows","Today","Reports","Parking","Map"], wxSafeT:"Weather and wait safety",
     noticeH:"Change notice", timeline:["Arrive by","Show starts","Ends"], endEst:"Ends (est.)", tlNote:(est)=>est?"End time is an estimate (2 h 30 min after the start) and may change on the day.":"Times may change on the day.",
     toDoors:"Doors open in", toShow:"Show starts in", min:"min", hr:"h", inShow:"Show in progress", afterShow:"Show ended",
     nowLab:"Do this now", seeMap:"See it on the map ›",
@@ -581,7 +598,7 @@ const store = { get(k,d){ try{ return localStorage.getItem(k) ?? d }catch(e){ re
 const state = { lang: store.get("lang","ko"), show: store.get("show","s1"), temp:null, filter:"all", place:null, q:"", venue:"all" };
 const VIEWS = ["home","dash","chats","parking","map"];   // 아래 탭에 보이는 화면
 const SUBVIEWS = ["locker","safety","chat"];      // 탭 없이 들어가는 화면. 아래 탭은 부모 탭에 불이 들어옴
-const PARENT = { locker:"dash", safety:"dash", chat:"chats" };   // chat = 공연 하나의 채팅방, chats = 채팅 탭(공연 제목 목록)
+const PARENT = { locker:"dash", safety:"dash", chat:"chats" };   // chat = 공연 하나의 제보 게시판, chats = 제보 탭(공연 제목 목록)
 const t = () => T[state.lang];
 const L = (o) => o[state.lang];
 const show = () => SHOWS.find(s => s.id === state.show) || SHOWS[0];
@@ -774,54 +791,89 @@ function crowdCard(){
     </div>`;
 }
 
-/* ===== 채팅 (대시보드 미리보기 + 채팅 탭) ===== */
+/* ===== 현장 제보 게시판 (대시보드 미리보기 + 제보 탭) ===== */
+const catTag = (c) => `<span class="ctag c-${c}">${t().cats[c]}</span>`;
+function postTime(m){
+  if (!m.mine) return m.time;
+  const ago = Math.floor((Date.now() - (m.ts || 0)) / 60000);
+  return ago < 1 ? t().justNow : ago < 60 ? t().minAgo(ago) : m.time;
+}
 function chatPreview(){
-  const s = show(), list = chatMsgs(s).filter(m => !m.reported).slice(-3);
+  const s = show(), all = boardPosts(s).filter(m => !m.reported), list = all.slice(0, 3);
   return `
     <button class="sc wide" data-go="chat">
-      <div class="hd"><span>${t().chatT} ${SHOWS_SAMPLE ? `<span class="tag ex">${t().exData}</span>` : ""}</span><em>${t().chatPeople(CHAT_PEOPLE(s.id))} ›</em></div>
-      <div class="cprev">${list.length ? list.map(m => `<div><b>${esc(m.mine ? t().chatMe : m.nick)}</b><span>${esc(m.text)}</span><time>${m.time}</time></div>`).join("") : `<div><span>${t().chatEmpty}</span></div>`}</div>
+      <div class="hd"><span>${t().chatT} ${SHOWS_SAMPLE ? `<span class="tag ex">${t().exData}</span>` : ""}</span><em>${t().chatPeople(all.length)} ›</em></div>
+      <div class="cprev">${list.length ? list.map(m => `<div>${catTag(m.cat)}<span class="tx">${esc(m.text)}</span><time>${postTime(m)}</time></div>`).join("") : `<div><span class="tx">${boardClosed(s) ? t().closed : t().chatEmpty}</span></div>`}</div>
       <div class="linkbtn" style="margin:0">${t().chatOpen} ›</div>
     </button>`;
 }
 function chatListHTML(){
-  return chatMsgs(show()).map(m => {
-    if (m.reported) return `<div class="m hidden"><div class="bub">${t().chatReported}</div><div class="who"><button class="act" data-unrep="${m.id}">${t().chatUndo}</button></div></div>`;
-    if (m.mine) return `<div class="m me"><div class="who"><span>${m.time}</span><button class="act" data-del="${m.id}">${t().chatDel}</button></div><div class="bub">${esc(m.text)}</div></div>`;
-    return `<div class="m"><div class="who"><b>${esc(m.nick)}</b><span>${m.time}</span><button class="act" data-rep="${m.id}">${t().chatReport}</button></div><div class="bub">${esc(m.text)}</div></div>`;
+  const s = show();
+  if (boardClosed(s)) return `<div class="bempty">${t().closed}</div>`;
+  const f = state.boardCat || "all", list = boardPosts(s).filter(m => f === "all" || m.cat === f);
+  if (!list.length) return `<div class="bempty">${f === "all" ? t().chatEmpty : t().catEmpty}</div>`;
+  return list.map(m => {
+    if (m.reported) return `<div class="post hidden"><span>${t().chatReported}</span><button class="act" data-unrep="${m.id}">${t().chatUndo}</button></div>`;
+    const who = m.mine ? t().chatMe : esc(m.nick);
+    const act = m.mine ? `<button class="act" data-del="${m.id}">${t().chatDel}</button>` : `<button class="act" data-rep="${m.id}">${t().chatReport}</button>`;
+    return `<article class="post${m.mine ? " me" : ""}"><div class="meta">${catTag(m.cat)}<b>${who}</b><span>${postTime(m)}</span>${act}</div><p>${esc(m.text)}</p></article>`;
+  }).join("");
+}
+function boardFilterHTML(){
+  const posts = boardPosts(show()).filter(m => !m.reported), f = state.boardCat || "all";
+  return ["all", ...BOARD_CATS].map(c => {
+    const n = c === "all" ? posts.length : posts.filter(m => m.cat === c).length;
+    return `<button class="chip" data-bcat="${c}" aria-pressed="${c === f}">${t().cats[c]} ${n}</button>`;
   }).join("");
 }
 function viewChats(){
   const list = [...SHOWS].sort((a,b) => (a.date + a.start).localeCompare(b.date + b.start));
   return `
   <div><h2>${t().chatsH}</h2><p class="sub">${t().chatsSub}</p></div>
-  <div class="clist">${list.map(s => `<button data-chat="${esc(s.id)}"><span>${esc(L(s.title))}</span><em aria-hidden="true">›</em></button>`).join("")}</div>`;
+  <div class="clist">${list.map(s => `<button data-chat="${esc(s.id)}"><span>${esc(L(s.title))}</span><em aria-hidden="true">${boardClosed(s) ? "" : t().chatPeople(boardPosts(s).filter(m => !m.reported).length) + " "}›</em></button>`).join("")}</div>`;
 }
 function viewChat(){
-  const s = show();
+  const s = show(), nd = nextDay(s.date), closed = boardClosed(s), wc = state.writeCat;
   return `
   <div class="card room">
-    <div style="min-width:0"><div class="rt">${L(s.title)}</div><div class="rs">${L(place(s.venue).name)}  |  ${s.date}  ${s.start}  |  ${t().chatPeople(CHAT_PEOPLE(s.id))}</div></div>
+    <div style="min-width:0"><div class="rt">${L(s.title)}</div><div class="rs">${L(place(s.venue).name)}  |  ${s.date}  ${s.start}</div></div>
     <button class="chip" data-go="chats" style="flex:none">${t().chatChange}</button>
   </div>
   <p class="sub" style="margin:-6px 0 0">${t().chatRoomSub}</p>
-  <div class="msgs" id="msgs" aria-live="polite">${chatListHTML()}</div>
-  <p class="sub" style="margin:0;font-size:12px">${t().chatDemo}</p>
-  <form class="composer" id="composer" autocomplete="off">
-    <input id="chat-in" maxlength="200" placeholder="${t().chatPh}" aria-label="${t().chatPh}" enterkeyhint="send">
-    <button type="submit" id="chat-send" disabled>${t().chatSend}</button>
-  </form>`;
+  ${closed ? "" : `<form class="card write" id="composer" autocomplete="off">
+    <h3 style="margin:0">${t().wrH}</h3>
+    <div class="lab">${t().wrCat}</div>
+    <div class="chips">${BOARD_CATS.map(c => `<button type="button" class="chip" data-wcat="${c}" aria-pressed="${c === wc}">${t().cats[c]}</button>`).join("")}</div>
+    <textarea id="chat-in" maxlength="200" placeholder="${t().chatPh}" aria-label="${t().chatPh}"></textarea>
+    <div class="row"><small id="wr-n">${t().wrHint(0)}</small><button type="submit" id="chat-send" disabled>${t().chatSend}</button></div>
+  </form>`}
+  <div class="expire">${closed ? "" : t().expire(nd.getMonth() + 1, nd.getDate())}</div>
+  ${closed ? "" : `<div class="chips scroll" id="bfilter">${boardFilterHTML()}</div>`}
+  <div class="posts" id="msgs" aria-live="polite">${chatListHTML()}</div>
+  <p class="sub" style="margin:0;font-size:12px">${t().chatDemo}</p>`;
 }
-function updateChat(){ const box = document.getElementById("msgs"); if (box) box.innerHTML = chatListHTML(); }
+function updateChat(){
+  const box = document.getElementById("msgs"); if (box) box.innerHTML = chatListHTML();
+  const f = document.getElementById("bfilter"); if (f) f.innerHTML = boardFilterHTML();
+}
+function updateSend(){
+  const inp = document.getElementById("chat-in"), btn = document.getElementById("chat-send");
+  if (!inp || !btn) return;
+  btn.disabled = !inp.value.trim() || !state.writeCat;
+  document.getElementById("wr-n").textContent = t().wrHint(inp.value.length);
+}
 const nowHM = () => { const d = new Date(); return `${String(d.getHours()).padStart(2,"0")}:${String(d.getMinutes()).padStart(2,"0")}`; };
 function sendChat(){
-  const inp = document.getElementById("chat-in"), text = inp.value.trim();
-  if (!text) return;
-  const s = show(), mine = readJSON(chatKey(s.id), []);
-  mine.push({ id:"me" + Date.now(), time:nowHM(), nick:"me", text, mine:true });
-  store.set(chatKey(s.id), JSON.stringify(mine.slice(-50)));
-  inp.value = ""; document.getElementById("chat-send").disabled = true;
-  updateChat(); scrollTo(0, document.body.scrollHeight); inp.focus();
+  const inp = document.getElementById("chat-in"), text = inp.value.trim(), cat = state.writeCat;
+  if (!text || !cat) return;
+  const s = show(), mine = readJSON(boardKey(s.id), []);
+  mine.push({ id:"me" + Date.now(), ts:Date.now(), time:nowHM(), cat, nick:"me", text, mine:true });
+  store.set(boardKey(s.id), JSON.stringify(mine.slice(-50)));
+  inp.value = ""; state.writeCat = null;
+  if (state.boardCat && state.boardCat !== "all" && state.boardCat !== cat) state.boardCat = "all";
+  document.querySelectorAll("[data-wcat]").forEach(b => b.setAttribute("aria-pressed", "false"));
+  updateSend(); updateChat();
+  document.getElementById("msgs").scrollIntoView({ behavior:"smooth", block:"start" });
 }
 function toggleReport(id, on){
   const s = show(), rep = new Set(readJSON(repKey(s.id), []));
@@ -831,7 +883,7 @@ function toggleReport(id, on){
 }
 function deleteMine(id){
   const s = show();
-  store.set(chatKey(s.id), JSON.stringify(readJSON(chatKey(s.id), []).filter(m => m.id !== id)));
+  store.set(boardKey(s.id), JSON.stringify(readJSON(boardKey(s.id), []).filter(m => m.id !== id)));
   updateChat();
 }
 
@@ -1102,7 +1154,7 @@ function viewMap(){
 const ICONS = [
   '<path d="M4 6h16v12H4z M8 6v12 M4 10h4 M4 14h4" fill="none" stroke="currentColor" stroke-width="1.8"/>',
   '<path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 7h6V4h-6z" fill="none" stroke="currentColor" stroke-width="1.8"/>',
-  '<path d="M4 5h16v11H9l-5 4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 9.5h8M8 12.5h5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
+  '<rect x="5" y="4" width="14" height="17" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 3.5h6v3H9z" fill="currentColor"/><path d="M8.5 11h7M8.5 14.5h7M8.5 18h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>',
   '<rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 17V8h3a2.5 2.5 0 0 1 0 5h-3" fill="none" stroke="currentColor" stroke-width="1.8"/>',
   '<path d="M12 21s-6-6.2-6-11a6 6 0 0 1 12 0c0 4.8-6 11-6 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2" fill="currentColor"/>'
 ];
@@ -1125,12 +1177,14 @@ function render(){
 }
 
 document.addEventListener("click", e => {
-  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],[data-venue],[data-reset],[data-rep],[data-unrep],[data-del],[data-chat],#q-x,#back,#temp-reset");
+  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],[data-venue],[data-reset],[data-rep],[data-unrep],[data-del],[data-chat],[data-bcat],[data-wcat],#q-x,#back,#temp-reset");
   if (!el) return;
   if (el.dataset.goplace){ state.place = el.dataset.goplace; state.filter = "all"; go("map"); }
   else if (el.dataset.show){ state.show = el.dataset.show; state.place = null; store.set("show", state.show); go("dash"); }
   else if (el.dataset.go){ if (el.dataset.go === "chat") state.chatFrom = "dash"; go(el.dataset.go); }
-  else if (el.dataset.chat){ state.show = el.dataset.chat; state.place = null; store.set("show", state.show); state.chatFrom = "chats"; go("chat"); }
+  else if (el.dataset.chat){ state.boardCat = "all"; state.writeCat = null; state.show = el.dataset.chat; state.place = null; store.set("show", state.show); state.chatFrom = "chats"; go("chat"); }
+  else if (el.dataset.bcat){ state.boardCat = el.dataset.bcat; updateChat(); }
+  else if (el.dataset.wcat){ state.writeCat = state.writeCat === el.dataset.wcat ? null : el.dataset.wcat; document.querySelectorAll("[data-wcat]").forEach(b => b.setAttribute("aria-pressed", b.dataset.wcat === state.writeCat)); updateSend(); }
   else if (el.dataset.rep) toggleReport(el.dataset.rep, true);
   else if (el.dataset.unrep) toggleReport(el.dataset.unrep, false);
   else if (el.dataset.del) deleteMine(el.dataset.del);
@@ -1151,9 +1205,9 @@ document.addEventListener("keydown", e => {
 document.addEventListener("input", e => { if (e.target.id === "q"){ state.q = e.target.value; updateList(); } });
 document.addEventListener("keydown", e => { if (e.target.id === "q" && e.key === "Enter") e.target.blur(); });
 addEventListener("resize", () => document.documentElement.style.setProperty("--toph", document.querySelector(".top").offsetHeight + "px"));
-addEventListener("hashchange", () => { render(); scrollTo(0, currentView() === "chat" ? document.body.scrollHeight : 0); });
-// 채팅 입력: 글자가 있을 때만 보내기 버튼 켜기, 엔터나 보내기 버튼으로 전송
-document.addEventListener("input", e => { if (e.target.id === "chat-in") document.getElementById("chat-send").disabled = !e.target.value.trim(); });
+addEventListener("hashchange", () => { render(); scrollTo(0, 0); });
+// 제보 쓰기: 말머리를 고르고 글자가 있을 때만 올리기 버튼 켜기
+document.addEventListener("input", e => { if (e.target.id === "chat-in") updateSend(); });
 document.addEventListener("submit", e => { if (e.target.id === "composer"){ e.preventDefault(); sendChat(); } });
 
 /* ===== JSON 데이터 불러오기 =====
