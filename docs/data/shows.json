@@ -1,0 +1,212 @@
+{
+ "sample": true,
+ "source_file": "01_shows_20261126_SAMPLE.csv",
+ "updated": "2026-11-26 09:06",
+ "count": 12,
+ "shows": [
+  {
+   "id": "s3",
+   "venue": "lawn",
+   "title": {
+    "ko": "여름밤 야외 페스티벌",
+    "en": "Summer Night Outdoor Festival"
+   },
+   "genre": {
+    "ko": "페스티벌",
+    "en": "Festival"
+   },
+   "date": "2025-08-09",
+   "start": "17:00",
+   "gate": "14:00",
+   "end": "22:00",
+   "arrive": "13:30"
+  },
+  {
+   "id": "s1",
+   "venue": "dome",
+   "title": {
+    "ko": "아티스트 A 월드투어 서울",
+    "en": "Artist A World Tour Seoul"
+   },
+   "genre": {
+    "ko": "콘서트",
+    "en": "Concert"
+   },
+   "date": "2025-08-09",
+   "start": "18:00",
+   "gate": "16:30",
+   "end": "20:40",
+   "arrive": "15:30"
+  },
+  {
+   "id": "s2",
+   "venue": "hall",
+   "title": {
+    "ko": "밴드 B 단독 콘서트",
+    "en": "Band B Live Concert"
+   },
+   "genre": {
+    "ko": "콘서트",
+    "en": "Concert"
+   },
+   "date": "2025-08-09",
+   "start": "19:00",
+   "gate": "18:00",
+   "end": "21:10",
+   "arrive": "17:20"
+  },
+  {
+   "id": "s4",
+   "venue": "arena",
+   "title": {
+    "ko": "그룹 C 팬미팅",
+    "en": "Group C Fan Meeting"
+   },
+   "genre": {
+    "ko": "팬미팅",
+    "en": "Fan meeting"
+   },
+   "date": "2025-08-10",
+   "start": "17:00",
+   "gate": "15:30",
+   "end": "19:30",
+   "arrive": "14:30"
+  },
+  {
+   "id": "s5",
+   "venue": "dome",
+   "title": {
+    "ko": "아티스트 A 월드투어 서울 (2일차)",
+    "en": "Artist A World Tour Seoul (Day 2)"
+   },
+   "genre": {
+    "ko": "콘서트",
+    "en": "Concert"
+   },
+   "date": "2025-08-10",
+   "start": "17:00",
+   "gate": "15:30",
+   "end": "19:40",
+   "arrive": "14:30"
+  },
+  {
+   "id": "s6",
+   "venue": "hall",
+   "title": {
+    "ko": "인디 밴드 연합 공연",
+    "en": "Indie Band Showcase"
+   },
+   "genre": {
+    "ko": "콘서트",
+    "en": "Concert"
+   },
+   "date": "2025-08-15",
+   "start": "18:00",
+   "gate": "17:00",
+   "end": "20:30",
+   "arrive": "16:20"
+  },
+  {
+   "id": "s7",
+   "venue": "lawn",
+   "title": {
+    "ko": "광복절 기념 시민 음악회",
+    "en": "Liberation Day Citizens' Concert"
+   },
+   "genre": {
+    "ko": "클래식",
+    "en": "Classical"
+   },
+   "date": "2025-08-15",
+   "start": "19:30",
+   "gate": "18:00",
+   "end": "21:30",
+   "arrive": "17:30"
+  },
+  {
+   "id": "s8",
+   "venue": "arena",
+   "title": {
+    "ko": "가수 D 전국투어 서울",
+    "en": "Singer D Nationwide Tour Seoul"
+   },
+   "genre": {
+    "ko": "콘서트",
+    "en": "Concert"
+   },
+   "date": "2025-08-16",
+   "start": "18:00",
+   "gate": "16:30",
+   "end": "20:30",
+   "arrive": "15:30"
+  },
+  {
+   "id": "s9",
+   "venue": "dome",
+   "title": {
+    "ko": "힙합 페스티벌 E",
+    "en": "Hip-hop Festival E"
+   },
+   "genre": {
+    "ko": "페스티벌",
+    "en": "Festival"
+   },
+   "date": "2025-08-23",
+   "start": "16:00",
+   "gate": "14:00",
+   "end": "22:00",
+   "arrive": "13:00"
+  },
+  {
+   "id": "s10",
+   "venue": "hall",
+   "title": {
+    "ko": "뮤지컬 갈라 콘서트",
+    "en": "Musical Gala Concert"
+   },
+   "genre": {
+    "ko": "뮤지컬",
+    "en": "Musical"
+   },
+   "date": "2025-08-24",
+   "start": "15:00",
+   "gate": "14:00",
+   "end": "17:30",
+   "arrive": "13:20"
+  },
+  {
+   "id": "s11",
+   "venue": "dome",
+   "title": {
+    "ko": "그룹 F 데뷔 10주년 콘서트",
+    "en": "Group F 10th Anniversary Concert"
+   },
+   "genre": {
+    "ko": "콘서트",
+    "en": "Concert"
+   },
+   "date": "2025-08-30",
+   "start": "18:00",
+   "gate": "16:30",
+   "end": "21:00",
+   "arrive": "15:30"
+  },
+  {
+   "id": "s12",
+   "venue": "lawn",
+   "title": {
+    "ko": "가을맞이 재즈 피크닉",
+    "en": "Autumn Jazz Picnic"
+   },
+   "genre": {
+    "ko": "페스티벌",
+    "en": "Festival"
+   },
+   "date": "2025-08-31",
+   "start": "16:00",
+   "gate": "14:30",
+   "end": "20:00",
+   "arrive": "14:00"
+  }
+ ]
+}
