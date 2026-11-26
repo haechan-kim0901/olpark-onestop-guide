@@ -137,7 +137,7 @@ input[type=range]{width:100%;accent-color:var(--brand)}
 .info .sw{width:14px;height:14px;border-radius:4px;flex:none;margin-top:4px}
 /* tab bar */
 nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:6;display:flex;justify-content:center;pointer-events:none}
-nav.tabs .in{pointer-events:auto;width:100%;max-width:440px;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);
+nav.tabs .in{pointer-events:auto;width:100%;max-width:440px;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);
   padding-bottom:env(safe-area-inset-bottom,0px);padding-left:env(safe-area-inset-left,0px);padding-right:env(safe-area-inset-right,0px)}
 nav.tabs a{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0 9px;font-size:11px;color:var(--muted);text-decoration:none}
 nav.tabs a svg{width:22px;height:22px}
@@ -352,7 +352,7 @@ const T = {
     searchPh:"공연명, 공연장, 날짜로 검색", searchLab:"공연 검색", allVenues:"전체", clear:"지우기",
     resN:(n)=>`공연 ${n}개`, noRes:(q)=>`"${q}"에 맞는 공연이 없어요.`, noResTip:"철자를 확인하거나 공연장 필터를 '전체'로 바꿔 보세요.", resetAll:"검색 초기화",
     today:"데모 오늘", wd:["일","월","화","수","목","금","토"], dayFmt:(y,m,d,w)=>`${m}월 ${d}일 (${w})`,
-    tabs:["공연","대시보드","주차","대기 안전","지도"],
+    tabs:["공연","대시보드","주차","지도"], wxSafeT:"날씨, 대기 안전",
     noticeH:"변경 공지", timeline:["도착 권장","공연 시작","퇴장"], endEst:"퇴장 (예상)", tlNote:(est)=>est?"퇴장 시각은 시작 후 2시간 30분으로 잡은 예상이에요. 공연 상황에 따라 바뀔 수 있어요.":"시각은 공연 상황에 따라 바뀔 수 있어요.",
     toDoors:"입장 시작까지", toShow:"공연 시작까지", min:"분", hr:"시간", inShow:"공연 중", afterShow:"공연 종료",
     nowLab:"지금 할 일", seeMap:"지도에서 위치 보기 ›",
@@ -369,7 +369,7 @@ const T = {
     tip:"동2문과 남2문은 16시 이후 빠르게 찹니다. 지하철 5, 9호선 올림픽공원역 3번 출구를 이용하면 공연장까지 도보 5~7분입니다.",
     srcChart:"데이터: 한국체육산업개발 '차량입출차, 공연, 날씨정보 등 연계 데이터' 2025년 기준으로 계산 (현재 화면은 샘플 값)",
     srcLive:"데이터: 한국체육산업개발 실시간 주차현황 API (현재 화면은 샘플 응답). 장기주차 차량 때문에 실제와 차이가 날 수 있습니다.",
-    safeH:"대기 안전 등급", safeSub:"야외에서 기다리는 동안의 더위, 추위 위험을 알려 드립니다.",
+    safeH:"날씨와 대기 안전", safeSub:"야외에서 기다리는 동안의 더위, 추위 위험을 알려 드립니다.",
     feels:"체감온도", nowAt:(h)=>`${h}시 기준`, hourly:"오늘 시간대별 등급",
     grade:{ok:"안전",warn:"주의",bad:"경고"},
     gradeMsg:{ok:"야외 대기에 큰 위험이 없습니다.",warn:"30분마다 그늘에서 쉬고 물을 자주 마시세요.",bad:"야외 대기를 줄이세요. 그늘, 실내에서 기다리다 입장 시각에 맞춰 이동하세요."},
@@ -411,7 +411,7 @@ const T = {
     searchPh:"Search by show, venue or date", searchLab:"Search shows", allVenues:"All", clear:"Clear",
     resN:(n)=>`${n} show${n===1?"":"s"}`, noRes:(q)=>`No shows match "${q}".`, noResTip:"Check the spelling or set the venue filter to All.", resetAll:"Reset search",
     today:"Demo today", wd:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], dayFmt:(y,m,d,w)=>`${w}, ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m-1]} ${d}`,
-    tabs:["Shows","Today","Parking","Wait safety","Map"],
+    tabs:["Shows","Today","Parking","Map"], wxSafeT:"Weather and wait safety",
     noticeH:"Change notice", timeline:["Arrive by","Show starts","Ends"], endEst:"Ends (est.)", tlNote:(est)=>est?"End time is an estimate (2 h 30 min after the start) and may change on the day.":"Times may change on the day.",
     toDoors:"Doors open in", toShow:"Show starts in", min:"min", hr:"h", inShow:"Show in progress", afterShow:"Show ended",
     nowLab:"Do this now", seeMap:"See it on the map ›",
@@ -428,7 +428,7 @@ const T = {
     tip:"East Gate 2 and South Gate 2 fill fast after 16:00. Take Subway Line 5 or 9 to Olympic Park Station, Exit 3: a 5 to 7 minute walk to the venues.",
     srcChart:"Data: KSPO 'vehicle entry, show and weather linked dataset', computed for 2025 (sample values shown)",
     srcLive:"Data: KSPO real-time parking API (sample response shown). Long-stay vehicles can skew the counts.",
-    safeH:"Wait safety level", safeSub:"Heat and cold risk while you wait outdoors.",
+    safeH:"Weather and wait safety", safeSub:"Heat and cold risk while you wait outdoors.",
     feels:"Feels like", nowAt:(h)=>`at ${h}:00`, hourly:"Today by hour",
     grade:{ok:"Safe",warn:"Caution",bad:"Warning"},
     gradeMsg:{ok:"No major risk for waiting outdoors.",warn:"Rest in the shade every 30 minutes and drink water often.",bad:"Limit outdoor waiting. Stay in shade or indoors and come back at door time."},
@@ -469,8 +469,8 @@ const T = {
 /* ===== 상태와 유틸 ===== */
 const store = { get(k,d){ try{ return localStorage.getItem(k) ?? d }catch(e){ return d } }, set(k,v){ try{ localStorage.setItem(k,v) }catch(e){} } };
 const state = { lang: store.get("lang","ko"), show: store.get("show","s1"), temp:null, filter:"all", place:null, q:"", venue:"all" };
-const VIEWS = ["home","dash","parking","safety","map"];   // 아래 탭에 보이는 화면
-const SUBVIEWS = ["locker"];                                 // 탭 없이 대시보드에서 들어가는 화면
+const VIEWS = ["home","dash","parking","map"];   // 아래 탭에 보이는 화면
+const SUBVIEWS = ["locker","safety"];             // 탭 없이 대시보드에서 들어가는 화면 (아래 탭은 '대시보드' 유지, 뒤로 가기로 복귀)
 const t = () => T[state.lang];
 const L = (o) => o[state.lang];
 const show = () => SHOWS.find(s => s.id === state.show) || SHOWS[0];
@@ -546,8 +546,9 @@ function wxCard(compact){
         ${pill(g, t().grade[g])}</div>`;
   if (compact) return `
     <button class="sc wide wx" data-go="safety">
-      <div class="hd"><span>${t().wxT} ${tag}</span><em>${t().more} ›</em></div>${head}
-      <div style="font-size:13.5px;font-weight:600">${hints[0]}</div>${stamp}
+      <div class="hd"><span>${t().wxSafeT} ${tag}</span><em>${t().more} ›</em></div>${head}
+      <div style="font-size:13.5px;font-weight:600">${t().gradeMsg[g]}</div>
+      <div style="font-size:13px">${hints[0]}</div>${stamp}
     </button>`;
   const hs = WEATHER.hours || [];
   return `
@@ -650,7 +651,6 @@ function viewDash(){
   const pickup = phase === "arrive" && notice && notice.place === "lawn" ? notice : null;
   let todo = t().todo[phase](s, pickup);
   const add = feel >= 33 ? t().heatAdd : feel <= -10 ? t().coldAdd : "";
-  const vs = Object.values(FEELS), vmax = 38;
   return `
   <section class="hero" style="background:linear-gradient(150deg,${s.poster[0]},${s.poster[1]})">
     <div class="row"><div><span class="tag">${t().exData}</span>
@@ -672,13 +672,6 @@ function viewDash(){
       <button class="linkbtn" data-goplace="${notice.place}">${t().seeMap}</button></div></div>` : ""}
 
   <div class="stat">
-    <button class="sc wide" data-go="safety">
-      <div class="hd"><span>${t().wait}</span><em>${t().more} ›</em></div>
-      <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
-        <div class="val">${feel.toFixed(1)}°<small> ${t().feels}</small></div>${pill(g, t().grade[g])}</div>
-      <div class="strip">${Object.entries(FEELS).map(([h,v])=>`<i class="${+h===DEMO.now?"cur":""}" style="height:${Math.max(15,(v-20)/(vmax-20)*100)}%;background:${GC[gradeOf(v)]}"></i>`).join("")}</div>
-      <div class="striplab"><span>${Object.keys(FEELS)[0]}${state.lang==="ko"?"시":":00"}</span><span>${Object.keys(FEELS).slice(-1)[0]}${state.lang==="ko"?"시":":00"}</span></div>
-    </button>
     <button class="sc" data-go="parking">
       <div class="hd"><span>${t().park}</span><em>›</em></div>
       <div class="mini">${LOTS.map(l=>{const st=lotState(l),r=Math.round(l.used/l.cap*100);return `<div><span>${t().lotShort[l.id]}</span><span class="b"><i style="width:${r}%;background:${GC[st]}"></i></span><span>${r}%</span></div>`}).join("")}</div>
@@ -860,13 +853,12 @@ const ICONS = [
   '<path d="M4 6h16v12H4z M8 6v12 M4 10h4 M4 14h4" fill="none" stroke="currentColor" stroke-width="1.8"/>',
   '<path d="M4 13h6V4H4zM14 20h6v-9h-6zM4 20h6v-4H4zM14 7h6V4h-6z" fill="none" stroke="currentColor" stroke-width="1.8"/>',
   '<rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 17V8h3a2.5 2.5 0 0 1 0 5h-3" fill="none" stroke="currentColor" stroke-width="1.8"/>',
-  '<path d="M12 3v11 M9 14a3 3 0 1 0 6 0 M12 3a2 2 0 0 1 2 2v7.5a4 4 0 1 1-4 0V5a2 2 0 0 1 2-2z" fill="none" stroke="currentColor" stroke-width="1.8"/>',
   '<path d="M12 21s-6-6.2-6-11a6 6 0 0 1 12 0c0 4.8-6 11-6 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.2" fill="currentColor"/>'
 ];
 function render(){
   const v = currentView();
   document.documentElement.lang = state.lang;
-  document.getElementById("title").textContent = v === "home" ? t().app : v === "locker" ? t().lockerT : L(show().title);
+  document.getElementById("title").textContent = v === "home" ? t().app : v === "locker" ? t().lockerT : v === "safety" ? t().wxSafeT : L(show().title);
   document.getElementById("back").hidden = v === "home";
   document.getElementById("replay").innerHTML = `<span>${t().replay}</span><span>${t().demoTime} <b>${DEMO.date} ${DEMO.now}:00</b></span>`;
   ["ko","en"].forEach(l => document.getElementById("lang-"+l).setAttribute("aria-pressed", state.lang === l));
