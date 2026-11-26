@@ -44,7 +44,8 @@ olpark-onestop-guide/
 | 화면 | 지금 | 바꿀 방법 |
 |---|---|---|
 | 주차 혼잡 그래프 (`HOURS`, `ENTRY_SHOW`, `ENTRY_NORM`) | **JSON 연결 완료** (값은 샘플) | 노트북을 진짜 CSV로 실행 → JSON 교체 |
-| 공연 목록 (`SHOWS`), 공지 (`NOTICES`) | 샘플 | 공연 일정 데이터로 채우거나 팀이 직접 입력 |
+| 공연 목록 (`SHOWS`) | **CSV 자동 변환** (값은 샘플 12건) | `data/01_공연정보/processed/` 에 CSV 를 올리면 Actions 가 `docs/data/shows.json` 으로 바꿈. 첫 화면에서 스크롤 목록, 검색, 공연장 필터 |
+| 공지 (`NOTICES`) | 샘플 | 팀이 직접 입력 |
 | 실시간 주차 (`LOTS`) | 샘플 | 실시간 주차 API 를 `fetch` 로 호출 |
 | 물품보관함 (`LOCKERS`) | **JSON 연결 완료** (값은 샘플) | `docs/data/lockers.json` 의 `empty`(빈 칸), `total`(전체 칸) 숫자만 고치면 화면이 바뀜. 실시간 API 가 생기면 같은 형식으로 변환 |
 | 실시간 날씨 (`WEATHER`) | **자동 갱신** (기상청 API) | GitHub Actions 가 15분마다 `docs/data/weather.json` 생성. 아래 '실시간 날씨' 참고 |

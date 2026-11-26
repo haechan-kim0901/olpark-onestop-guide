@@ -1,0 +1,48 @@
+# 공연정보 자동 변환
+# data/01_공연정보/processed/ 에 CSV 를 올리거나 고치면(main 에 합쳐지면)
+# scripts/build_shows.py 를 실행해 웹 데모가 읽는 docs/data/shows.json 을 새로 만들고 main 에 커밋합니다.
+# Actions 탭에서 "Run workflow" 버튼으로 바로 실행할 수도 있습니다.
+name: 공연정보 자동 변환
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/01_공연정보/processed/**"
+      - "scripts/build_shows.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: build-shows
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: CSV 를 shows.json 으로 바꾸기
+        run: python scripts/build_shows.py
+
+      - name: 바뀌었으면 커밋
+        run: |
+          git add docs/data/shows.json
+          # 시각(updated)만 바뀐 경우는 커밋하지 않음
+          if git diff --cached -I '"updated"' --quiet; then
+            echo "변경 없음"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "공연정보 자동 변환"
+          git pull --rebase origin main
+          git push

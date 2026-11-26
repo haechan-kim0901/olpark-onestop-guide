@@ -55,10 +55,30 @@ h3{font-family:var(--display);font-size:15px;margin:0 0 8px}
 /* show cards */
 .show{display:flex;gap:12px;align-items:stretch;text-align:left;width:100%;cursor:pointer;font:inherit;color:inherit}
 .show:hover,.show:focus-visible{border-color:var(--brand)}
-.poster{width:72px;flex:none;border-radius:10px;display:flex;align-items:flex-end;padding:8px;color:#fff;font:700 11px var(--display);line-height:1.2}
+.poster{width:72px;flex:none;word-break:keep-all;border-radius:10px;display:flex;align-items:flex-end;padding:8px;color:#fff;font:700 11px var(--display);line-height:1.2}
 .show .meta{min-width:0;display:flex;flex-direction:column;gap:2px}
 .show .t{font-weight:700;font-size:15px}
 .show .v,.show .d{font-size:13px;color:var(--muted);font-variant-numeric:tabular-nums}
+/* 공연 검색, 목록 */
+.finder{position:sticky;top:calc(env(safe-area-inset-top,0px) + var(--toph,50px));z-index:4;background:var(--bg);
+  margin:-6px -16px -6px;padding:10px 16px 10px;display:flex;flex-direction:column;gap:8px;border-bottom:1px solid var(--line)}
+.sbox{position:relative}
+.sbox input{width:100%;font:500 16px var(--body);color:var(--fg);background:var(--card);border:1.5px solid var(--line);border-radius:12px;padding:10px 40px 10px 38px;-webkit-appearance:none;appearance:none}
+.sbox input::-webkit-search-cancel-button{display:none}
+.sbox input:focus{outline:none;border-color:var(--brand)}
+.sbox svg{position:absolute;left:12px;top:50%;width:18px;height:18px;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+.sbox .x{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:30px;height:30px;border:0;border-radius:50%;background:none;color:var(--muted);font-size:18px;cursor:pointer}
+.chips.scroll{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0 -16px;padding:0 16px}
+.chips.scroll::-webkit-scrollbar{display:none}
+.chips.scroll .chip{flex:none}
+.chip small{opacity:.75;margin-left:3px;font-variant-numeric:tabular-nums}
+.rescount{font-size:12.5px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.showlist{display:flex;flex-direction:column;gap:10px}
+.dayhd{font:700 13px var(--display);color:var(--muted);margin:6px 0 -2px;font-variant-numeric:tabular-nums}
+.dayhd .tag{margin-left:6px;vertical-align:1px}
+.show .g{font-size:11.5px;color:var(--brand);font-weight:700}
+.show mark{background:var(--accent-soft);color:inherit;border-radius:3px;padding:0 1px}
+.empty{text-align:center;padding:28px 12px;color:var(--muted);font-size:14px}
 /* notice */
 .notice{background:var(--bad-soft);border:1px solid color-mix(in srgb,var(--bad) 40%,transparent);border-radius:14px;padding:12px 14px;display:flex;gap:10px}
 .notice .ic{width:22px;height:22px;flex:none;border-radius:50%;background:var(--bad);color:var(--card);display:grid;place-items:center;font-weight:700;font-size:13px}
@@ -215,17 +235,28 @@ button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-off
 /* ===== 샘플 데이터 (실제 데모에서는 API, JSON 파일로 교체) ===== */
 const DEMO = { date:"2025-08-09", now:16 }; // 2025년 공연일 재생 모드, 데모 시각 16시
 
-const SHOWS = [
-  { id:"s1", venue:"dome", poster:["#0f4c5c","#e8a33a"],
-    title:{ko:"아티스트 A 월드투어 서울", en:"Artist A World Tour Seoul"},
-    date:"2025-08-09", start:"18:00", gate:"16:30", end:"20:40", arrive:"15:30" },
-  { id:"s2", venue:"hall", poster:["#6b3fa0","#f07a6e"],
-    title:{ko:"밴드 B 단독 콘서트", en:"Band B Live Concert"},
-    date:"2025-08-09", start:"19:00", gate:"18:00", end:"21:10", arrive:"17:20" },
-  { id:"s3", venue:"lawn", poster:["#2f8a57","#cfe3ec"],
-    title:{ko:"여름밤 야외 페스티벌", en:"Summer Night Outdoor Festival"},
-    date:"2025-08-09", start:"17:00", gate:"14:00", end:"22:00", arrive:"13:30" }
-];
+// 공연 목록: data/shows.json (data/01_공연정보 CSV 를 scripts/build_shows.py 로 변환한 것) 이 있으면 그 값으로 바뀜.
+// 아래는 파일이 없을 때 보이는 샘플. 공연명은 모두 가상 예시입니다.
+let SHOWS_SAMPLE = true;
+let SHOWS = [
+  ["s1","dome","아티스트 A 월드투어 서울","Artist A World Tour Seoul","2025-08-09","18:00","16:30","20:40","15:30","콘서트","Concert"],
+  ["s2","hall","밴드 B 단독 콘서트","Band B Live Concert","2025-08-09","19:00","18:00","21:10","17:20","콘서트","Concert"],
+  ["s3","lawn","여름밤 야외 페스티벌","Summer Night Outdoor Festival","2025-08-09","17:00","14:00","22:00","13:30","페스티벌","Festival"],
+  ["s4","arena","그룹 C 팬미팅","Group C Fan Meeting","2025-08-10","17:00","15:30","19:30","14:30","팬미팅","Fan meeting"],
+  ["s5","dome","아티스트 A 월드투어 서울 (2일차)","Artist A World Tour Seoul (Day 2)","2025-08-10","17:00","15:30","19:40","14:30","콘서트","Concert"],
+  ["s6","hall","인디 밴드 연합 공연","Indie Band Showcase","2025-08-15","18:00","17:00","20:30","16:20","콘서트","Concert"],
+  ["s7","lawn","광복절 기념 시민 음악회","Liberation Day Citizens' Concert","2025-08-15","19:30","18:00","21:30","17:30","클래식","Classical"],
+  ["s8","arena","가수 D 전국투어 서울","Singer D Nationwide Tour Seoul","2025-08-16","18:00","16:30","20:30","15:30","콘서트","Concert"],
+  ["s9","dome","힙합 페스티벌 E","Hip-hop Festival E","2025-08-23","16:00","14:00","22:00","13:00","페스티벌","Festival"],
+  ["s10","hall","뮤지컬 갈라 콘서트","Musical Gala Concert","2025-08-24","15:00","14:00","17:30","13:20","뮤지컬","Musical"],
+  ["s11","dome","그룹 F 데뷔 10주년 콘서트","Group F 10th Anniversary Concert","2025-08-30","18:00","16:30","21:00","15:30","콘서트","Concert"],
+  ["s12","lawn","가을맞이 재즈 피크닉","Autumn Jazz Picnic","2025-08-31","16:00","14:30","20:00","14:00","페스티벌","Festival"]
+].map(([id,venue,ko,en,date,start,gate,end,arrive,gk,ge]) => ({ id, venue, title:{ko,en}, genre:{ko:gk,en:ge}, date, start, gate, end, arrive }));
+// 포스터 색: 공연장마다 기본 색 두 쌍을 번갈아 씀 (데이터에 poster 가 없을 때)
+const POSTER = { dome:[["#0f4c5c","#e8a33a"],["#123a6b","#5fb3c6"]], hall:[["#6b3fa0","#f07a6e"],["#4a2d7a","#e8a33a"]],
+  arena:[["#8a3b12","#f0b552"],["#5c2a0f","#f07a6e"]], lawn:[["#2f8a57","#cfe3ec"],["#1f6b43","#f0b552"]] };
+function fillPosters(){ const n = {}; SHOWS.forEach(s => { if (!s.poster){ const k = n[s.venue] = (n[s.venue] || 0) + 1; s.poster = (POSTER[s.venue] || POSTER.dome)[(k - 1) % 2]; } }); }
+fillPosters();
 
 // 공지: 팀이 JSON으로 직접 입력 (가상 예시)
 const NOTICES = {
@@ -303,6 +334,9 @@ const T = {
   ko:{ app:"올팍 공연일 가이드", replay:"2025년 공연일 재생 모드", demoTime:"데모 시각",
     homeH:"어떤 공연을 보러 오셨나요?", homeSub:"공연을 고르면 도착부터 귀가까지 필요한 정보를 한 화면에 모아 드립니다.",
     exData:"예시", exNote:"공연명과 공지는 가상 예시입니다.",
+    searchPh:"공연명, 공연장, 날짜로 검색", searchLab:"공연 검색", allVenues:"전체", clear:"지우기",
+    resN:(n)=>`공연 ${n}개`, noRes:(q)=>`"${q}"에 맞는 공연이 없어요.`, noResTip:"철자를 확인하거나 공연장 필터를 '전체'로 바꿔 보세요.", resetAll:"검색 초기화",
+    today:"데모 오늘", wd:["일","월","화","수","목","금","토"], dayFmt:(y,m,d,w)=>`${m}월 ${d}일 (${w})`,
     tabs:["공연","대시보드","주차","대기 안전","지도"],
     noticeH:"변경 공지", timeline:["도착 권장","입장","공연","퇴장"],
     toDoors:"입장 시작까지", toShow:"공연 시작까지", min:"분", hr:"시간", inShow:"공연 중", afterShow:"공연 종료",
@@ -360,6 +394,9 @@ const T = {
   en:{ app:"Olympic Park Show Day Guide", replay:"Replaying a 2025 show day", demoTime:"Demo time",
     homeH:"Which show are you here for?", homeSub:"Pick a show and see everything from arrival to heading home on one screen.",
     exData:"SAMPLE", exNote:"Show names and notices are fictional examples.",
+    searchPh:"Search by show, venue or date", searchLab:"Search shows", allVenues:"All", clear:"Clear",
+    resN:(n)=>`${n} show${n===1?"":"s"}`, noRes:(q)=>`No shows match "${q}".`, noResTip:"Check the spelling or set the venue filter to All.", resetAll:"Reset search",
+    today:"Demo today", wd:["Sun","Mon","Tue","Wed","Thu","Fri","Sat"], dayFmt:(y,m,d,w)=>`${w}, ${["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"][m-1]} ${d}`,
     tabs:["Shows","Today","Parking","Wait safety","Map"],
     noticeH:"Change notice", timeline:["Arrive by","Doors","Show","Ends"],
     toDoors:"Doors open in", toShow:"Show starts in", min:"min", hr:"h", inShow:"Show in progress", afterShow:"Show ended",
@@ -418,7 +455,7 @@ const T = {
 
 /* ===== 상태와 유틸 ===== */
 const store = { get(k,d){ try{ return localStorage.getItem(k) ?? d }catch(e){ return d } }, set(k,v){ try{ localStorage.setItem(k,v) }catch(e){} } };
-const state = { lang: store.get("lang","ko"), show: store.get("show","s1"), temp:null, filter:"all", place:null };
+const state = { lang: store.get("lang","ko"), show: store.get("show","s1"), temp:null, filter:"all", place:null, q:"", venue:"all" };
 const VIEWS = ["home","dash","parking","safety","map"];   // 아래 탭에 보이는 화면
 const SUBVIEWS = ["locker"];                                 // 탭 없이 대시보드에서 들어가는 화면
 const t = () => T[state.lang];
@@ -512,21 +549,79 @@ function wxCard(compact){
 }
 function go(v){ if (location.hash.slice(1) === v) render(); else location.hash = v; }
 
-/* ===== 화면 1: 공연 선택 ===== */
-function viewHome(){
-  return `
-  <div><h2>${t().homeH}</h2><p class="sub">${t().homeSub}</p></div>
-  ${SHOWS.map(s => `
-    <button class="card show" data-show="${s.id}">
-      <div class="poster" style="background:linear-gradient(160deg,${s.poster[0]},${s.poster[1]})">${L(place(s.venue).name)}</div>
+/* ===== 화면 1: 공연 선택 (검색 + 스크롤 목록) ===== */
+// 검색: 띄어쓰기, 대소문자 무시. 공연명(한, 영), 공연장(한, 영), 장르, 날짜(2025-08-09, 08-09, 8/9, 8월 9일)로 찾음
+// 여러 단어를 쓰면 모두 들어 있는 공연만 (예: "돔 8월")
+const VENUE_ALIAS = { dome:"돔 체조경기장 kspo", hall:"올림픽홀 olympic hall", arena:"핸드볼 handball", lawn:"잔디 88 lawn 야외" };
+const norm = (x) => String(x || "").toLowerCase().replace(/\s+/g, "");
+function hay(s){
+  const [y, m, d] = s.date.split("-"), mm = +m, dd = +d;
+  return norm([s.title.ko, s.title.en, s.genre?.ko, s.genre?.en, place(s.venue)?.name.ko, place(s.venue)?.name.en, VENUE_ALIAS[s.venue],
+    s.date, `${m}-${d}`, `${m}.${d}`, `${mm}/${dd}`, `${mm}월${dd}일`, `${mm}월`, `${y}년`].join("|"));
+}
+const terms = () => state.q.trim().split(/\s+/).map(norm).filter(Boolean);
+function filteredShows(){
+  const ts = terms();
+  return SHOWS.filter(s => (state.venue === "all" || s.venue === state.venue) && ts.every(x => hay(s).includes(x)))
+              .sort((a,b) => (a.date + a.start).localeCompare(b.date + b.start));
+}
+const esc = (x) => String(x).replace(/[&<>"']/g, c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+// 공연명에서 검색어와 같은 부분을 형광펜으로 표시
+function hl(text){
+  const ts = state.q.trim().split(/\s+/).filter(Boolean);
+  if (!ts.length) return esc(text);
+  const re = new RegExp("(" + ts.map(x => x.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|") + ")", "gi");
+  return text.split(re).map((part, i) => i % 2 ? `<mark>${esc(part)}</mark>` : esc(part)).join("");
+}
+function dayLabel(date){
+  const [y, m, d] = date.split("-").map(Number), w = new Date(Date.UTC(y, m-1, d)).getUTCDay();
+  return t().dayFmt(y, m, d, t().wd[w]);
+}
+function showListHTML(){
+  const list = filteredShows();
+  if (!list.length) return `
+    <div class="empty"><p style="margin:0 0 4px;color:var(--fg);font-weight:700">${t().noRes(esc(state.q.trim() || t().allVenues))}</p>
+      <p style="margin:0 0 12px">${t().noResTip}</p><button class="chip" data-reset="1">${t().resetAll}</button></div>`;
+  let last = "", out = "";
+  list.forEach(s => {
+    if (s.date !== last){ last = s.date; out += `<div class="dayhd">${dayLabel(s.date)}${s.date === DEMO.date ? `<span class="tag ex">${t().today}</span>` : ""}</div>`; }
+    const vn = L(place(s.venue).name);
+    out += `
+    <button class="card show" data-show="${esc(s.id)}">
+      <div class="poster" style="background:linear-gradient(160deg,${s.poster[0]},${s.poster[1]})">${vn}</div>
       <div class="meta">
-        <span class="tag ex" style="align-self:flex-start">${t().exData}</span>
-        <span class="t">${L(s.title)}</span>
-        <span class="v">${L(place(s.venue).name)}</span>
+        ${SHOWS_SAMPLE ? `<span class="tag ex" style="align-self:flex-start">${t().exData}</span>` : ""}
+        ${s.genre && L(s.genre) ? `<span class="g">${esc(L(s.genre))}</span>` : ""}
+        <span class="t">${hl(L(s.title))}</span>
+        <span class="v">${vn}</span>
         <span class="d">${s.date}  ${s.start}</span>
       </div>
-    </button>`).join("")}
-  <p class="sub">${t().exNote}</p>`;
+    </button>`;
+  });
+  return out;
+}
+// 검색할 때는 목록 부분만 다시 그려서 입력칸 커서가 사라지지 않게 함
+function updateList(){
+  const box = document.getElementById("showlist"); if (!box) return;
+  box.innerHTML = showListHTML();
+  document.getElementById("rescount").innerHTML = `<span>${t().resN(filteredShows().length)}</span>${SHOWS_SAMPLE ? `<span>${t().exNote}</span>` : ""}`;
+  document.getElementById("q-x").hidden = !state.q;
+}
+function viewHome(){
+  const cnt = (v) => v === "all" ? SHOWS.length : SHOWS.filter(s => s.venue === v).length;
+  const venues = ["all", ...["dome","hall","arena","lawn"].filter(v => cnt(v))];
+  return `
+  <div><h2>${t().homeH}</h2><p class="sub">${t().homeSub}</p></div>
+  <div class="finder">
+    <div class="sbox" role="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 16l4.5 4.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="search" id="q" value="${esc(state.q)}" placeholder="${t().searchPh}" aria-label="${t().searchLab}" autocomplete="off" enterkeyhint="search">
+      <button class="x" id="q-x" aria-label="${t().clear}" ${state.q ? "" : "hidden"}>×</button>
+    </div>
+    <div class="chips scroll">${venues.map(v => `<button class="chip" data-venue="${v}" aria-pressed="${state.venue===v}">${v === "all" ? t().allVenues : L(place(v).name)}<small>${cnt(v)}</small></button>`).join("")}</div>
+    <div class="rescount" id="rescount" aria-live="polite"></div>
+  </div>
+  <div class="showlist" id="showlist"></div>`;
 }
 
 /* ===== 화면 1-2: 공연 대시보드 ===== */
@@ -766,16 +861,21 @@ function render(){
   document.getElementById("tabs").innerHTML = VIEWS.map((x,i) =>
     `<a href="#${x}" ${x===v||(x==="dash"&&SUBVIEWS.includes(v))?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[i]}</svg>${t().tabs[i]}</a>`).join("");
   document.getElementById("view").innerHTML = { home:viewHome, dash:viewDash, parking:viewParking, safety:viewSafety, map:viewMap, locker:viewLocker }[v]();
+  document.documentElement.style.setProperty("--toph", document.querySelector(".top").offsetHeight + "px");
+  if (v === "home") updateList();
   const r = document.getElementById("temp-range");
   if (r) r.oninput = e => { state.temp = parseFloat(e.target.value); const y = scrollY; render(); scrollTo(0,y); document.getElementById("temp-range").focus(); };
 }
 
 document.addEventListener("click", e => {
-  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],#back,#temp-reset");
+  const el = e.target.closest("[data-goplace],[data-show],[data-go],[data-filter],[data-place],[data-l],[data-venue],[data-reset],#q-x,#back,#temp-reset");
   if (!el) return;
   if (el.dataset.goplace){ state.place = el.dataset.goplace; state.filter = "all"; go("map"); }
   else if (el.dataset.show){ state.show = el.dataset.show; state.place = null; store.set("show", state.show); go("dash"); }
   else if (el.dataset.go) go(el.dataset.go);
+  else if (el.dataset.venue){ state.venue = el.dataset.venue; document.querySelectorAll("[data-venue]").forEach(b => b.setAttribute("aria-pressed", b.dataset.venue === state.venue)); updateList(); }
+  else if (el.dataset.reset){ state.q = ""; state.venue = "all"; render(); }
+  else if (el.id === "q-x"){ state.q = ""; const q = document.getElementById("q"); q.value = ""; updateList(); q.focus(); }
   else if (el.dataset.filter){ state.filter = el.dataset.filter; render(); }
   else if (el.dataset.place){ state.place = el.dataset.place; render(); }
   else if (el.dataset.l){ state.lang = el.dataset.l; store.set("lang", state.lang); render(); }
@@ -786,12 +886,17 @@ document.addEventListener("keydown", e => {
   const g = e.target.closest && e.target.closest(".mk");
   if (g && (e.key === "Enter" || e.key === " ")){ e.preventDefault(); state.place = g.dataset.place; render(); }
 });
+// 검색칸: 한 글자 칠 때마다 바로 목록을 거름. 엔터를 누르면 휴대폰 키보드를 닫음
+document.addEventListener("input", e => { if (e.target.id === "q"){ state.q = e.target.value; updateList(); } });
+document.addEventListener("keydown", e => { if (e.target.id === "q" && e.key === "Enter") e.target.blur(); });
+addEventListener("resize", () => document.documentElement.style.setProperty("--toph", document.querySelector(".top").offsetHeight + "px"));
 addEventListener("hashchange", () => { render(); scrollTo(0,0); });
 
 /* ===== JSON 데이터 불러오기 =====
    data/parking_entry.json : Colab 전처리 결과 (주차 그래프)
    data/lockers.json       : 물품보관함 현황 (GitHub Actions 15분마다 실시간 API 로 갱신)
    data/weather.json       : 올림픽공원 실시간 날씨 (GitHub Actions 15분마다 기상청 API 로 갱신)
+   data/shows.json         : 공연 목록 (data/01_공연정보 CSV 를 올리면 GitHub Actions 가 변환)
    파일이 없거나 PC에서 index.html 을 그냥 더블클릭해 연 경우(file://)에는 위 샘플 값 그대로 보임. */
 const getJSON = (url) => fetch(url + "?t=" + Date.now(), { cache:"no-store" }).then(r => r.ok ? r.json() : Promise.reject());
 // 보관함은 GitHub Actions 가 15분마다 새 파일을 올림. 화면을 열어 둔 사람도 5분마다 새 값을 받아 다시 그림
@@ -804,7 +909,16 @@ function loadWeather(){
 }
 setInterval(() => { loadWeather().then(() => { if (["dash","safety"].includes(currentView()) && !document.activeElement?.matches("#temp-range")){ const y = scrollY; render(); scrollTo(0, y); } }).catch(() => {}); }, 5 * 60 * 1000);
 setInterval(() => { loadLockers().then(() => { if (["dash","locker","map"].includes(currentView())){ const y = scrollY; render(); scrollTo(0, y); } }).catch(() => {}); }, 5 * 60 * 1000);
+// 공연 목록: 공연장 표준 id(dome, hall, arena, lawn)와 날짜, 시작 시각이 있는 줄만 씀
+const VENUE_IDS = ["dome","hall","arena","lawn"];
+function loadShows(){
+  return getJSON("data/shows.json").then(d => {
+    const ok = (d.shows || []).filter(s => s && s.id && VENUE_IDS.includes(s.venue) && s.title && s.date && s.start && s.gate && s.end && s.arrive);
+    if (ok.length){ SHOWS = ok.map(s => ({ ...s, title: typeof s.title === "string" ? {ko:s.title, en:s.title} : s.title })); SHOWS_SAMPLE = d.sample !== false; fillPosters(); }
+  });
+}
 Promise.allSettled([
+  loadShows(),
   getJSON("data/parking_entry.json").then(d => { if (d.hours && d.entry_show && d.entry_norm){ HOURS = d.hours; ENTRY_SHOW = d.entry_show; ENTRY_NORM = d.entry_norm; } }),
   loadLockers(),
   loadWeather()
