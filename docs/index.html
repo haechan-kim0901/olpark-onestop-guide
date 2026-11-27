@@ -216,6 +216,14 @@ input[type=range]{width:100%;accent-color:var(--brand)}
 .mk:focus-visible circle,.mk:focus-visible rect{stroke:var(--accent);stroke-width:3}
 .info{display:flex;gap:12px;align-items:flex-start}
 .info .sw{width:14px;height:14px;border-radius:4px;flex:none;margin-top:4px}
+.map-language{display:flex;align-items:center;gap:8px;font-size:13px}
+.map-language select{font:inherit;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px}
+.poi-list{margin-top:8px}
+.poi-list summary{cursor:pointer;font-size:14px;font-weight:700;padding:8px 0}
+.poi-items{display:flex;flex-direction:column;gap:5px;max-height:240px;overflow-y:auto;padding:3px}
+.poi-items button{display:flex;justify-content:space-between;gap:8px;text-align:left;font:13px var(--body);color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:8px;padding:9px;cursor:pointer}
+.poi-items button[aria-pressed="true"]{border-color:var(--accent);outline:1px solid var(--accent)}
+.poi-items small{color:var(--muted);flex-shrink:0}
 /* tab bar */
 nav.tabs{position:fixed;bottom:0;left:0;right:0;z-index:6;display:flex;justify-content:center;pointer-events:none}
 nav.tabs .in{pointer-events:auto;width:100%;max-width:440px;background:var(--card);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);
@@ -447,29 +455,11 @@ const PLACES = [
   { id:"p-s2", lat:37.51490, lon:127.12400, type:"parking", x:190, y:278, lot:"s2", name:{ko:"남2문 주차장",en:"South Gate 2 Lot"}, desc:{ko:"규모가 가장 큼",en:"Largest lot"} },
   { id:"p-n2", lat:37.52430, lon:127.12150, type:"parking", x:206, y:26, lot:"n2", name:{ko:"북2문 주차장",en:"North Gate 2 Lot"}, desc:{ko:"공연장까지 도보 약 15분, 여유가 많음",en:"About 15 min walk to venues, usually spaces left"} }
 ];
-// 공중화장실: 아직 샘플 위치 (소영님 공중화장실 CSV 가 들어오면 그 위도, 경도로 바꿈)
-const TOILETS_SAMPLE = true;
-const TOILETS = [
-  { id:"wc-dome", lat:37.51985, lon:127.12590, name:{ko:"KSPO DOME 서쪽 화장실",en:"Restroom, KSPO DOME west"}, desc:{ko:"공연장 매표소 옆 (샘플 위치)",en:"Next to the box office (sample position)"} },
-  { id:"wc-hall", lat:37.51700, lon:127.12720, name:{ko:"올림픽홀 앞 화장실",en:"Restroom, Olympic Hall"}, desc:{ko:"올림픽홀 광장 쪽 (샘플 위치)",en:"Plaza side of Olympic Hall (sample position)"} },
-  { id:"wc-plaza", lat:37.51850, lon:127.12330, name:{ko:"평화의광장 화장실",en:"Restroom, Peace Plaza"}, desc:{ko:"광장 남쪽 (샘플 위치)",en:"South side of the plaza (sample position)"} },
-  { id:"wc-lawn", lat:37.52230, lon:127.11880, name:{ko:"88잔디마당 화장실",en:"Restroom, 88 Lawn"}, desc:{ko:"잔디마당 서쪽 입구 (샘플 위치)",en:"West entrance of the lawn (sample position)"} },
-  { id:"wc-st-o", lat:37.51720, lon:127.13120, name:{ko:"올림픽공원역 3번 출구 화장실",en:"Restroom, Olympic Park Stn Exit 3"}, desc:{ko:"출구 나와 오른쪽 (샘플 위치)",en:"Right after the exit (sample position)"} }
-].map(p => ({ ...p, type:"toilet" }));
-// 볼거리/놀거리, 편의시설: 아직 샘플 위치 (06_공원볼거리 데이터, 편의시설 정보가 들어오면 교체)
-const FUN = [
-  { id:"fun-lake", lat:37.52000, lon:127.11850, name:{ko:"몽촌호수",en:"Mongchon Lake"}, desc:{ko:"호수 둘레 산책길, 공연 전 쉬어 가기 좋아요 (샘플 위치)",en:"Lakeside walk, good for a break before the show (sample position)"} },
-  { id:"fun-gate", lat:37.51680, lon:127.11870, name:{ko:"세계평화의 문",en:"World Peace Gate"}, desc:{ko:"올림픽공원 대표 사진 명소 (샘플 위치)",en:"The park's signature photo spot (sample position)"} },
-  { id:"fun-tree", lat:37.52180, lon:127.11760, name:{ko:"나홀로나무",en:"Lone Tree"}, desc:{ko:"몽촌토성 언덕 위 사진 명소 (샘플 위치)",en:"Photo spot on the Mongchon Fortress hill (sample position)"} },
-  { id:"fun-soma", lat:37.51610, lon:127.12140, name:{ko:"소마미술관",en:"SOMA Museum of Art"}, desc:{ko:"실내 전시, 비 오는 날 대기 장소로 좋아요 (샘플 위치)",en:"Indoor exhibits, a good rainy-day wait (sample position)"} },
-  { id:"fun-rose", lat:37.52260, lon:127.12880, name:{ko:"장미광장",en:"Rose Garden"}, desc:{ko:"5~6월 장미 축제 (샘플 위치)",en:"Rose festival in May and June (sample position)"} }
-].map(p => ({ ...p, type:"fun" }));
-const AMENS = [
-  { id:"am-info", lat:37.51780, lon:127.12150, name:{ko:"평화의광장 안내소",en:"Info Center, Peace Plaza"}, desc:{ko:"공원 안내, 분실물 접수 (샘플 위치)",en:"Park info and lost and found (sample position)"} },
-  { id:"am-med", lat:37.51900, lon:127.12480, name:{ko:"의무실",en:"First Aid Room"}, desc:{ko:"공연일 응급 처치 (샘플 위치)",en:"First aid on show days (sample position)"} },
-  { id:"am-store", lat:37.51760, lon:127.12880, name:{ko:"편의점",en:"Convenience Store"}, desc:{ko:"물, 우비, 보조배터리 (샘플 위치)",en:"Water, ponchos, power banks (sample position)"} },
-  { id:"am-baby", lat:37.51960, lon:127.12620, name:{ko:"수유실",en:"Nursing Room"}, desc:{ko:"KSPO DOME 1층 (샘플 위치)",en:"KSPO DOME, 1st floor (sample position)"} }
-].map(p => ({ ...p, type:"amenity" }));
+// park_poi.csv에서 지정한 행을 data/park_poi.json으로 변환해 불러온다.
+// 기존 지도 그룹과 변수명은 유지한다. 원본 14개 컬럼은 각 장소의 poi에 그대로 보존한다.
+const TOILETS_SAMPLE = false;
+let TOILETS = [], FUN = [], AMENS = [];
+let PARK_POI_STATUS = "loading";
 const TYPE_COLOR = { venue:"var(--brand)", station:"var(--accent)", parking:"var(--muted)", lawn:"var(--ok)", locker:"var(--locker)", toilet:"var(--wc)", fun:"var(--fun)", amenity:"var(--amen)" };
 // 지도 위 버튼(그룹): 잔디마당은 공연장 버튼에 함께 들어감
 const GROUPS = { venue:["venue","lawn"], station:["station"], parking:["parking"], locker:["locker"], toilet:["toilet"], fun:["fun"], amenity:["amenity"] };
@@ -1101,6 +1091,44 @@ function viewLocker(){
 /* ===== 화면 4: 현장 지도 (Leaflet + OpenStreetMap, 키 없이 무료) =====
    모든 표시는 위도(lat), 경도(lon)로 찍음. 보관함은 data/lockers.json 의 lat, lon 을 그대로 씀.
    공연을 고르면 그 공연장을 가운데에 두고, 가장 가까운 "빈 칸 있는" 보관함과 화장실을 강조함 */
+// 지도에서만 언어를 선택한다. 다른 화면의 기존 한국어/영어 설정은 유지한다.
+state.mapLang = null;
+const mapLang = () => state.mapLang || state.lang;
+const mapL = (o) => o[mapLang()] || o.en || o.ko || "";
+const hasMapCoords = (p) => Number.isFinite(p.lat) && Number.isFinite(p.lon) && Math.abs(p.lat) <= 90 && Math.abs(p.lon) <= 180;
+const POI_MAP_TEXT = {
+  ko:{ language:"지도 언어", missing:"위치정보 없음", loading:"공원 장소 정보를 불러오는 중입니다.", error:"공원 장소 정보를 불러오지 못했습니다. 새로고침해 주세요.",
+    count:(n)=>`${n}곳`, coverage:(n,m)=>`선택한 공원 장소 ${n}곳 중 좌표가 있는 ${m}곳을 지도에 표시합니다. 위치정보가 없는 장소도 아래 목록에서 설명을 확인할 수 있습니다.`,
+    srcMap:"지도: OpenStreetMap. 보관함: 행정안전부 공영 물품보관함 실시간 정보. 공연장, 역, 주차장 위치는 팀이 정리한 좌표. 화장실, 볼거리/놀거리, 편의시설: park_poi 제공 자료. 시설의 현재 운영 여부는 원본 설명을 확인하세요. 보관함 테두리 색은 빈 칸 상태" },
+  en:{ language:"Map language", missing:"Location unavailable", loading:"Loading park places.", error:"Park places could not be loaded. Please refresh.",
+    count:(n)=>`${n} places`, coverage:(n,m)=>`${m} of ${n} selected park places have coordinates and appear on the map. Places without coordinates are also available in the lists below.`,
+    srcMap:"Map: OpenStreetMap. Lockers: Ministry of the Interior public locker real-time data. Venue, station and parking positions set by our team. Restrooms, things to do and facilities: supplied park_poi data. See the original descriptions for current availability. Locker outline color shows free space" },
+  ja:{ language:"地図の言語", missing:"位置情報なし", loading:"公園の場所情報を読み込み中です。", error:"場所情報を読み込めませんでした。再読み込みしてください。", count:(n)=>`${n}か所`,
+    coverage:(n,m)=>`選択した公園の場所${n}か所のうち、座標のある${m}か所を地図に表示します。座標のない場所も下の一覧で説明を確認できます。`,
+    mapH:"現地マップ", mapSub:"公演会場を中心に表示しています。種類を選び、アイコンを押してください。", mapSubNo:"表示したい種類を選び、アイコンを押してください。", mapPick:"公演を選ぶと会場を基準に表示します。", pickBtn:"公演を選ぶ",
+    filters:{venue:"公演会場",station:"駅",parking:"駐車場",locker:"ロッカー",toilet:"トイレ",fun:"見どころ／遊びどころ",amenity:"便利な施設"}, mapHint:"上のボタンで表示したい場所を選んでください。複数選択できます。",
+    nearLk:"最寄りの空きロッカー", nearWc:"最寄りのトイレ", noLk:"現在空きロッカーはありません", walk:(m)=>`徒歩約${m}分`, walkS:(m)=>`${m}分`, fromVenue:(d,m)=>`公演会場から約${d}、徒歩約${m}分`, fromStn:(d,m)=>`オリンピック公園駅から約${d}、徒歩約${m}分`, dirs:"Google マップで経路を検索 ›",
+    mapFail:"地図を読み込めませんでした。接続を確認して再読み込みしてください。", hlLk:"空きロッカー", hlWc:"トイレ", myVenue:"選択した会場", emptyN:(n)=>`空き${n}個`, mapNote:"徒歩時間は直線距離からの概算です。",
+    srcMap:"地図：OpenStreetMap。ロッカー：韓国内務安全部のリアルタイム情報。会場・駅・駐車場：チームが整理した座標。トイレ・見どころ・便利な施設：提供された park_poi データ。現在の利用可否は元の説明をご確認ください。ロッカーの枠色は空き状況を示します。" },
+  zh:{ language:"地图语言", missing:"暂无位置信息", loading:"正在加载公园地点信息。", error:"无法加载地点信息，请刷新。", count:(n)=>`${n}处`,
+    coverage:(n,m)=>`已选公园地点共${n}处，其中有坐标的${m}处显示在地图上。无坐标的地点也可在下方列表中查看说明。`,
+    mapH:"现场地图", mapSub:"以您的演出场馆为中心显示。请选择类别并点击图标。", mapSubNo:"请选择要显示的类别并点击图标。", mapPick:"选择演出后将以场馆为基准显示。", pickBtn:"选择演出",
+    filters:{venue:"演出场馆",station:"车站",parking:"停车场",locker:"储物柜",toilet:"洗手间",fun:"景点／游玩",amenity:"便利设施"}, mapHint:"点击上方按钮选择要显示的地点，可同时选择多个类别。",
+    nearLk:"最近的空闲储物柜", nearWc:"最近的洗手间", noLk:"目前没有空闲储物柜", walk:(m)=>`步行约${m}分钟`, walkS:(m)=>`${m}分钟`, fromVenue:(d,m)=>`距演出场馆约${d}，步行约${m}分钟`, fromStn:(d,m)=>`距奥林匹克公园站约${d}，步行约${m}分钟`, dirs:"在 Google 地图中查看路线 ›",
+    mapFail:"地图加载失败，请检查网络连接后刷新。", hlLk:"空闲储物柜", hlWc:"洗手间", myVenue:"我的演出场馆", emptyN:(n)=>`空闲${n}格`, mapNote:"步行时间根据直线距离估算。",
+    srcMap:"地图：OpenStreetMap。储物柜：韩国内政安全部实时信息。场馆、车站、停车场：团队整理的坐标。洗手间、景点和便利设施：提供的 park_poi 数据。当前开放情况请查看原始说明。储物柜边框颜色表示空闲状态。" }
+};
+const mapT = () => ({ ...t(), ...POI_MAP_TEXT[mapLang()] });
+function mapPOIHTML(){
+  const text = mapT();
+  if (PARK_POI_STATUS !== "ready") return `<p class="sub" role="status">${text[PARK_POI_STATUS]}</p>`;
+  const groups = [["fun", FUN], ["toilet", TOILETS], ["amenity", AMENS]].filter(([key]) => state.on.has(key));
+  if (!groups.length) return "";
+  const selected = groups.flatMap(([, places]) => places);
+  return `<p class="sub" role="status">${text.coverage(selected.length, selected.filter(hasMapCoords).length)}</p>` + groups.map(([key, places]) => `
+    <details class="poi-list" open><summary>${text.filters[key]} · ${text.count(places.length)}</summary>
+    <div class="poi-items">${places.map(p => `<button data-place="${esc(p.id)}" aria-pressed="${state.place === p.id}"><span>${esc(mapL(p.name))}</span>${hasMapCoords(p) ? "" : `<small>${text.missing}</small>`}</button>`).join("")}</div></details>`).join("");
+}
 const lockerPlaces = () => LOCKERS.map(k => ({ id:k.id, type:"locker", lat:k.lat, lon:k.lon, name:k.name, desc:k.spot, locker:k }));
 const allPlaces = () => [...PLACES, ...TOILETS, ...FUN, ...AMENS, ...lockerPlaces()];
 let MAP = null, MAP_LAYER = null;
@@ -1116,7 +1144,7 @@ const mapOrigin = () => hasShow() ? place(show().venue) : place("st-o");
 function mapHighlights(){
   const v = mapOrigin();
   const free = lockerPlaces().filter(p => p.lat && lockerState(p.locker) !== "off" && lkSum(p.locker).empty > 0);
-  return { v, lk: nearestOf(free, v), wc: nearestOf(TOILETS, v) };
+  return { v, lk: nearestOf(free, v), wc: nearestOf(TOILETS.filter(hasMapCoords), v) };
 }
 const cssVar = (n) => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
 const GLYPH = {
@@ -1135,7 +1163,7 @@ function pinIcon(p, o){
 }
 function mountMap(){
   const el = document.getElementById("lmap"); if (!el) return;
-  if (!window.L || !window.L.map){ el.innerHTML = `<p class="sub" style="padding:16px">${t().mapFail}</p>`; return; }
+  if (!window.L || !window.L.map){ el.innerHTML = `<p class="sub" style="padding:16px">${mapT().mapFail}</p>`; return; }
   MAP = window.L.map(el, { zoomControl:true });
   const th = document.documentElement.dataset.theme, dark = th ? th === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
   // 배경 지도: OpenStreetMap (키 없이 무료, 한국 지도가 자세함). 타일이 계속 안 오면 OSM 프랑스 서버(HOT 스타일)로 바꿈
@@ -1155,25 +1183,26 @@ function drawMarkers(fit){
   const { v, lk, wc } = mapHighlights(), mineId = hasShow() ? v.id : null;
   const vis = p => state.on.has(groupOf(p.type));
   // 보관함, 화장실 버튼을 켰을 때만 가장 가까운 곳을 강조 (공연을 골랐을 때)
-  const hls = mineId ? [lk && { ...lk, label:t().hlLk }, wc && { ...wc, label:t().hlWc }].filter(h => h && vis(h.p)) : [];
+  const hls = mineId ? [lk && { ...lk, label:mapT().hlLk }, wc && { ...wc, label:mapT().hlWc }].filter(h => h && vis(h.p)) : [];
   const hlMap = new Map(hls.map(h => [h.p.id, h]));
   hls.forEach(h => LF.polyline([[v.lat, v.lon], [h.p.lat, h.p.lon]], { color:cssVar("--accent"), weight:3, dashArray:"2 7", lineCap:"round", opacity:.95, interactive:false }).addTo(MAP_LAYER));
-  const shown = allPlaces().filter(p => p.lat && (vis(p) || p.id === mineId));
+  const shown = allPlaces().filter(p => hasMapCoords(p) && (vis(p) || p.id === mineId));
   shown.forEach(p => {
     const mine = p.id === mineId, h = hlMap.get(p.id), sel = state.place === p.id;
-    const short = L(p.name).replace(/ \(.*\)/, "");
-    const label = mine ? short + " ★" : h ? `${h.label} ${t().walkS(walkMin(h.d))}` : (sel || ["venue","station","lawn"].includes(p.type)) ? short : "";
-    const m = LF.marker([p.lat, p.lon], { icon:pinIcon(p, { mine, hl:!!h, sel, label }), title:L(p.name), alt:L(p.name), keyboard:true,
+    const short = mapL(p.name).replace(/ \(.*\)/, "");
+    const label = mine ? short + " ★" : h ? `${h.label} ${mapT().walkS(walkMin(h.d))}` : (sel || ["venue","station","lawn"].includes(p.type)) ? short : "";
+    const m = LF.marker([p.lat, p.lon], { icon:pinIcon(p, { mine, hl:!!h, sel, label }), title:mapL(p.name), alt:mapL(p.name), keyboard:true,
       zIndexOffset: mine ? 1000 : h ? 900 : sel ? 800 : 0, riseOnHover:true });
     m.on("click", () => selectPlace(p.id));
     m.addTo(MAP_LAYER);
   });
   if (fit){
     const sp = state.place && place(state.place);
-    if (sp && sp.lat){ MAP.setView([sp.lat, sp.lon], 17); return; }
-    if (shown.length > 1) MAP.fitBounds(shown.map(p => [p.lat, p.lon]), { paddingTopLeft:[40,40], paddingBottomRight:[40,50], maxZoom:17 });
-    else if (shown.length === 1) MAP.setView([shown[0].lat, shown[0].lon], 16);
-    else MAP.setView([PARK_CENTER.lat, PARK_CENTER.lon], 15);
+    // 종류/언어 변경 직후에도 지도를 안전하게 다시 그릴 수 있도록 범위 변경은 즉시 적용한다.
+    if (sp && hasMapCoords(sp)){ MAP.setView([sp.lat, sp.lon], 17, { animate:false }); return; }
+    if (shown.length > 1) MAP.fitBounds(shown.map(p => [p.lat, p.lon]), { paddingTopLeft:[40,40], paddingBottomRight:[40,50], maxZoom:17, animate:false });
+    else if (shown.length === 1) MAP.setView([shown[0].lat, shown[0].lon], 16, { animate:false });
+    else MAP.setView([PARK_CENTER.lat, PARK_CENTER.lon], 15, { animate:false });
   }
 }
 function selectPlace(id){
@@ -1181,45 +1210,48 @@ function selectPlace(id){
   const sp = state.place && place(state.place);
   if (sp && !state.on.has(groupOf(sp.type))){ state.on.add(groupOf(sp.type)); const b = document.querySelector(`[data-filter="${groupOf(sp.type)}"]`); if (b) b.setAttribute("aria-pressed", "true"); }
   drawMarkers(false); updateMapInfo();
-  const p = state.place && place(state.place); if (p && p.lat && MAP) MAP.panTo([p.lat, p.lon]);
+  const p = state.place && place(state.place); if (p && hasMapCoords(p) && MAP) MAP.panTo([p.lat, p.lon]);
 }
 function updateMapInfo(){
   const a = document.getElementById("mapinfo"), b = document.getElementById("mapnear");
   if (a) a.innerHTML = mapInfoHTML(); if (b) b.innerHTML = mapNearHTML();
+  const c = document.getElementById("mappoi"); if (c) c.innerHTML = mapPOIHTML();
 }
 function mapNearHTML(){
   if (!hasShow()) return "";
   const { lk, wc } = mapHighlights();
-  const btn = (h, lab, empty) => h ? `<button data-place="${h.p.id}" aria-pressed="${state.place === h.p.id}"><small>${lab}</small><b>${esc(L(h.p.name))}</b><em>${t().walk(walkMin(h.d))}${h.p.type === "locker" ? `, ${t().emptyN(lkSum(h.p.locker).empty)}` : ""}</em></button>`
+  const btn = (h, lab, empty) => h ? `<button data-place="${h.p.id}" aria-pressed="${state.place === h.p.id}"><small>${lab}</small><b>${esc(mapL(h.p.name))}</b><em>${mapT().walk(walkMin(h.d))}${h.p.type === "locker" ? `, ${mapT().emptyN(lkSum(h.p.locker).empty)}` : ""}</em></button>`
     : `<button disabled><small>${lab}</small><b>${empty}</b></button>`;
-  return btn(lk, t().nearLk, t().noLk) + btn(wc, t().nearWc, "-");
+  return btn(lk, mapT().nearLk, mapT().noLk) + btn(wc, mapT().nearWc, "-");
 }
 function mapInfoHTML(){
   const v = mapOrigin(), p = state.place ? place(state.place) : hasShow() ? v : null;
-  if (!p) return `<span class="sw" style="background:var(--line)"></span><div style="min-width:0"><p style="margin:0;font-size:14px">${t().mapHint}</p></div>`;
+  if (!p) return `<span class="sw" style="background:var(--line)"></span><div style="min-width:0"><p style="margin:0;font-size:14px">${mapT().mapHint}</p></div>`;
   let extra = "";
-  if (p.type === "parking") { const l = LOTS.find(x => x.id === p.lot), s = lotState(l); extra = ` ${pill(s, t().st[s])}`; }
-  if (p.type === "locker") { extra = ` ${lkPill(lockerState(p.locker))} <span class="sub" style="font-size:12.5px;white-space:nowrap">${t().emptyN(lkSum(p.locker).empty)}</span>`; }
-  if (hasShow() && p.id === v.id) extra += ` <span class="tag ex">${t().myVenue}</span>`;
+  if (p.type === "parking") { const l = LOTS.find(x => x.id === p.lot), s = lotState(l); extra = ` ${pill(s, mapT().st[s])}`; }
+  if (p.type === "locker") { extra = ` ${lkPill(lockerState(p.locker))} <span class="sub" style="font-size:12.5px;white-space:nowrap">${mapT().emptyN(lkSum(p.locker).empty)}</span>`; }
+  if (hasShow() && p.id === v.id) extra += ` <span class="tag ex">${mapT().myVenue}</span>`;
   let dist = "";
-  if (p.lat && p.id !== v.id){ const d = distM(v, p); dist = `<p class="sub" style="margin:4px 0 0;font-size:13px">${(hasShow() ? t().fromVenue : t().fromStn)(fmtDist(d), walkMin(d))}</p>`; }
-  const nm = L(p.name), link = p.lat ? (state.lang === "ko"
+  if (hasMapCoords(p) && p.id !== v.id){ const d = distM(v, p); dist = `<p class="sub" style="margin:4px 0 0;font-size:13px">${(hasShow() ? mapT().fromVenue : mapT().fromStn)(fmtDist(d), walkMin(d))}</p>`; }
+  const nm = mapL(p.name), link = hasMapCoords(p) ? (mapLang() === "ko"
     ? `https://map.kakao.com/link/to/${encodeURIComponent(nm)},${p.lat},${p.lon}`
     : `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lon}&travelmode=walking`) : "";
   return `<span class="sw" style="background:${TYPE_COLOR[p.type]}"></span>
-    <div style="min-width:0"><b>${esc(nm)}</b>${extra}<p style="margin:4px 0 0;font-size:14px">${esc(L(p.desc))}</p>${dist}
-    ${link ? `<a class="dirs" href="${link}" target="_blank" rel="noopener">${t().dirs}</a>` : ""}</div>`;
+    <div style="min-width:0"><b>${esc(nm)}</b>${extra}<p style="margin:4px 0 0;font-size:14px">${esc(mapL(p.desc))}</p>${p.poi && !hasMapCoords(p) ? `<p class="sub" style="margin:4px 0 0">${mapT().missing}</p>` : ""}${dist}
+    ${link ? `<a class="dirs" href="${link}" target="_blank" rel="noopener">${mapT().dirs}</a>` : ""}</div>`;
 }
 function viewMap(){
   return `
-  <div><h2>${t().mapH}</h2><p class="sub">${hasShow() ? t().mapSub : t().mapSubNo}</p></div>
-  ${hasShow() ? "" : `<div class="nopick-bar"><span>${t().mapPick}</span><button class="chip" data-pick="map">${t().pickBtn}</button></div>`}
+  <div><h2>${mapT().mapH}</h2><p class="sub">${hasShow() ? mapT().mapSub : mapT().mapSubNo}</p></div>
+  ${hasShow() ? "" : `<div class="nopick-bar"><span>${mapT().mapPick}</span><button class="chip" data-pick="map">${mapT().pickBtn}</button></div>`}
   ${hasShow() ? `<div class="near" id="mapnear">${mapNearHTML()}</div>` : ""}
-  <div class="chips">${Object.entries(t().filters).map(([k,v]) => `<button class="chip" data-filter="${k}" aria-pressed="${state.on.has(k)}"><i style="background:${TYPE_COLOR[k]}"></i>${v}</button>`).join("")}</div>
-  <div class="mapbox"><div id="lmap" role="region" aria-label="${t().mapH}"></div></div>
-  <div class="card info" id="mapinfo">${mapInfoHTML()}</div>
-  <p class="sub">${t().mapNote}</p>
-  <div class="src" style="margin-top:0">${t().srcMap}</div>`;
+  <label class="map-language" for="map-language">${mapT().language}<select id="map-language">${Object.entries({ko:"한국어",en:"English",ja:"日本語",zh:"中文"}).map(([k,v]) => `<option value="${k}" ${mapLang() === k ? "selected" : ""}>${v}</option>`).join("")}</select></label>
+  <div class="chips">${Object.entries(mapT().filters).map(([k,v]) => `<button class="chip" data-filter="${k}" aria-pressed="${state.on.has(k)}"><i style="background:${TYPE_COLOR[k]}"></i>${v}</button>`).join("")}</div>
+  <div class="mapbox"><div id="lmap" role="region" aria-label="${mapT().mapH}"></div></div>
+  <div class="card info" id="mapinfo" lang="${mapLang()}">${mapInfoHTML()}</div>
+  <div id="mappoi" lang="${mapLang()}">${mapPOIHTML()}</div>
+  <p class="sub">${mapT().mapNote}</p>
+  <div class="src" style="margin-top:0">${mapT().srcMap}</div>`;
 }
 
 /* ===== 렌더 ===== */
@@ -1278,6 +1310,12 @@ document.addEventListener("keydown", e => {
 });
 // 검색칸: 한 글자 칠 때마다 바로 목록을 거름. 엔터를 누르면 휴대폰 키보드를 닫음
 document.addEventListener("input", e => { if (e.target.id === "q"){ state.q = e.target.value; updateList(); } });
+document.addEventListener("change", e => {
+  if (e.target.id === "map-language" && Object.hasOwn(POI_MAP_TEXT, e.target.value)){
+    state.mapLang = e.target.value; const y = scrollY; render(); scrollTo(0, y);
+    document.getElementById("map-language")?.focus();
+  }
+});
 document.addEventListener("keydown", e => { if (e.target.id === "q" && e.key === "Enter") e.target.blur(); });
 addEventListener("resize", () => document.documentElement.style.setProperty("--toph", document.querySelector(".top").offsetHeight + "px"));
 addEventListener("hashchange", () => { render(); scrollTo(0, 0); });
@@ -1291,8 +1329,26 @@ document.addEventListener("submit", e => { if (e.target.id === "composer"){ e.pr
    data/weather.json       : 올림픽공원 실시간 날씨 (GitHub Actions 15분마다 기상청 API 로 갱신)
    data/crowd.json         : 올림픽공원 인구 밀집도 (GitHub Actions 15분마다 서울시 실시간 인구데이터로 갱신)
    data/shows.json         : 공연 목록 (data/01_공연정보 CSV 를 올리면 GitHub Actions 가 변환)
+   data/park_poi.json      : park_poi.csv 지정 행 (scripts/build_park_poi.py로 변환, 실패 시 지도에 오류 안내)
    파일이 없거나 PC에서 index.html 을 그냥 더블클릭해 연 경우(file://)에는 위 샘플 값 그대로 보임. */
 const getJSON = (url) => fetch(url + "?t=" + Date.now(), { cache:"no-store" }).then(r => r.ok ? r.json() : Promise.reject());
+// 원본 컬럼은 poi에 그대로 두고 기존 지도에서 쓰는 id/type/name/desc를 별도로 구성한다.
+function loadParkPOI(){
+  return getJSON("data/park_poi.json").then(rows => {
+    if (!Array.isArray(rows) || rows.length < 33) throw new Error("Invalid park_poi data");
+    const toPlace = (poi, type) => ({
+      id:poi.poi_id, type, poi,
+      lat:poi.lat.trim() ? Number(poi.lat) : null, lon:poi.lon.trim() ? Number(poi.lon) : null,
+      name:{ko:poi.name_ko,en:poi.name_en,zh:poi.name_zh,ja:poi.name_ja},
+      desc:{ko:poi.desc_ko,en:poi.desc_en,zh:poi.desc_zh,ja:poi.desc_ja}
+    });
+    const fun = rows.slice(0,33).map(row => toPlace(row, "fun"));
+    const facilities = rows.slice(33);
+    const toilets = facilities.filter(row => row.type === "facility_restroom").map(row => toPlace(row, "toilet"));
+    const amens = facilities.filter(row => ["facility_vending_machine","facility_smoking_area"].includes(row.type)).map(row => toPlace(row, "amenity"));
+    FUN = fun; TOILETS = toilets; AMENS = amens; PARK_POI_STATUS = "ready";
+  }).catch(error => { PARK_POI_STATUS = "error"; throw error; });
+}
 // 보관함은 GitHub Actions 가 15분마다 새 파일을 올림. 화면을 열어 둔 사람도 5분마다 새 값을 받아 다시 그림
 function loadLockers(){
   return getJSON("data/lockers.json").then(d => { if (Array.isArray(d.lockers) && d.lockers.length){ LOCKERS = d.lockers; if (d.updated) LOCKERS_UPDATED = d.updated; LOCKERS_FETCHED = String(d.fetched_at || "").replace(/^(\d{4})(\d{2})(\d{2}) /, "$1-$2-$3 "); LOCKERS_SAMPLE = d.sample !== false; } });
@@ -1317,6 +1373,7 @@ function loadShows(){
   });
 }
 Promise.allSettled([
+  loadParkPOI(),
   loadShows(),
   loadCrowd(),
   getJSON("data/parking_entry.json").then(d => { if (d.hours && d.entry_show && d.entry_norm){ HOURS = d.hours; ENTRY_SHOW = d.entry_show; ENTRY_NORM = d.entry_norm; } }),
